@@ -89,24 +89,26 @@ The four-dimensional action is written in terms of the curvature and torsion of 
 \end{equation}
 where $\hat{\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices. In the last equality the $A_\mu$ is a vector field that gives trace to the antisymmetric part of the full connection, and  $T^{\mu,\lambda\kappa}$ is a Curtright field~\cite{Curtright:1980yk}. Since no metric is present  the epsilon symbols are not related but instead we demand that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
 \begin{widetext}
-  Using the above decomposition, the most general (presumably renormalizable) action preserving diffeomorphisms is
+  Using the above decomposition, the most general (presumably renormalizable) action preserving diffeomorphisms is~\footnote{We have dropped the contribution to a boundary term, the complete action is written in Ref.~\cite{Skirzewski:2014eta}.}
   \begin{dmath}
     \label{4dfull}
     S[\hat{\Gamma},T,A] =
-    \int\dn{4}{x}\Bigg[\partial_\lambda\bigg(
-    A_1\hat{ R}_{\mu(\nu}{}^{\mu}{}_{\rho)} T^{\nu,\rho\lambda} 
-    +A_2\epsilon^{\lambda\mu\nu\rho}\hat{ R}_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
-    +A_3\epsilon^{\lambda\mu\nu\rho}A_\mu\partial_\nu A_\rho
-    +A_4T^{(\mu,\nu)\lambda}\hat\nabla_\mu A_\nu
-    +A_5T^{(\mu,\nu)\lambda}A_\mu A_\nu
-    +A_6\epsilon_{\mu\nu\rho\sigma}\epsilon_{\alpha\beta\gamma\delta} T^{\lambda,\mu\alpha} T^{\beta,\rho\sigma} T^{\nu,\gamma\delta} 
-    +A_7\epsilon^{\lambda\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
-    +\frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big) 
-    + A_8\epsilon^{\lambda\mu\nu\rho}\hat\Gamma^{\sigma}{}_{\mu\sigma}\partial_\nu\hat\Gamma^{\tau}{}_{\rho\tau}
-    +A_9 R_{\mu\nu}{}^{\lambda}{}_{\rho} T^{\rho,\mu\nu}
-    +A_{10}T^{\lambda,\alpha\beta}T^{\kappa,\gamma\delta} A_\kappa\epsilon_{\alpha\beta\gamma\delta}
-    \bigg)
-    +B_1 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} T^{\nu,\alpha\beta}T^{\rho,\gamma\delta}\epsilon_{\alpha\beta\gamma\delta}
+    \int\dn{4}{x}\Bigg[
+      %% \partial_\lambda\bigg(
+      %% A_1\hat{ R}_{\mu(\nu}{}^{\mu}{}_{\rho)} T^{\nu,\rho\lambda} 
+      %% +A_2\epsilon^{\lambda\mu\nu\rho}\hat{ R}_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
+      %% +A_3\epsilon^{\lambda\mu\nu\rho}A_\mu\partial_\nu A_\rho
+      %% +A_4T^{(\mu,\nu)\lambda}\hat\nabla_\mu A_\nu
+      %% +A_5T^{(\mu,\nu)\lambda}A_\mu A_\nu
+      %% +A_6\epsilon_{\mu\nu\rho\sigma}\epsilon_{\alpha\beta\gamma\delta} T^{\lambda,\mu\alpha} T^{\beta,\rho\sigma} T^{\nu,\gamma\delta} 
+      %% +A_7\epsilon^{\lambda\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
+      %% +\frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big) 
+      %% + A_8\epsilon^{\lambda\mu\nu\rho}\hat\Gamma^{\sigma}{}_{\mu\sigma}\partial_\nu\hat\Gamma^{\tau}{}_{\rho\tau}
+      %% +A_9 R_{\mu\nu}{}^{\lambda}{}_{\rho} T^{\rho,\mu\nu}
+      %% +A_{10}T^{\lambda,\alpha\beta}T^{\kappa,\gamma\delta} A_\kappa\epsilon_{\alpha\beta\gamma\delta}
+      %% \bigg)
+      %% +
+      B_1 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} T^{\nu,\alpha\beta}T^{\rho,\gamma\delta}\epsilon_{\alpha\beta\gamma\delta}
     +B_2 \Big(\hat R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu}\hat R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big) T^{\beta,\mu\nu}T^{\rho,\gamma\delta}\epsilon_{\sigma\beta\gamma\delta}
     +B_3 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} T^{(\nu,\rho)\sigma}A_\sigma
     + B_4\Big(\hat R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu}\hat R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big)\Big(T^{\rho,\mu\nu}A_\sigma-\frac{1}{4}\delta^\rho_\sigma T^{\kappa,\mu\nu}A_\kappa\Big)
@@ -131,11 +133,13 @@ where $\hat{\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices. In th
   \end{dmath}
 \end{widetext}
 There is no obvious equivalence of the action in Eq.~\eqref{4dfull} with General Relativity (GR), particularly due to the lack of a source metric field. Nonetheless, we performed the analysis of scalar perturbations around a static homogeneous and isotropic background, following the irreducible decomposition of the fields
-\begin{align}
-  A_\mu &= \delta_\mu^0 A + a_\mu,\\
-  T^{\mu,\nu\rho} &= \delta^{\mu}_m\delta^{\nu\rho}_{m0}T + t^{\mu,\nu\rho},\\
-  \hat{\Gamma}^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu}.
-\end{align}
+\begin{equation}
+  \begin{split}
+    A_\mu &= \delta_\mu^0 A + a_\mu,\\
+    T^{\mu,\nu\rho} &= \delta^{\mu}_m\delta^{\nu\rho}_{m0}T + t^{\mu,\nu\rho},\\
+    \hat{\Gamma}^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu}.
+  \end{split}
+\end{equation}
 \begin{widetext}
   The first order perturbations of the action yields
   \begin{dmath}
@@ -145,29 +149,68 @@ There is no obvious equivalence of the action in Eq.~\eqref{4dfull} with General
     + \bigg( ( \tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) A F + ( B_3 - \tfrac{4}{3}\, B_4 - \tfrac{1}{2}\, E_2) A G + (C_1 - \tfrac{4}{3}\, C_2) F^2 + ( - C_1 + \tfrac{4}{3}\, C_2) F G - D_6 A^2 \bigg) T \delta{\Gamma}^{0 m}\,_{m}
     + \bigg( \Big(- (\tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) A F + ( - B_3+ \tfrac{4}{3}\, B_4 + \tfrac{1}{2}\, E_2) A G + ( - C_1 + \tfrac{4}{3}\, C_2) F^2 + (C_1 - \tfrac{4}{3}\, C_2) F G + D_6 A^2 \Big) E + \Big( 12\, ( D_1 - 2\, D_2 - D_3) F + 24\, L_3 A \Big) T^2 \bigg)\delta{T}_{m}\,^{0 m}
     + \bigg( ( 3\, B_3 - 4\, B_4 - \tfrac{3}{2}\, E_2) A + ( - 3\, C_1 + 4\, C_2) F \bigg) E T \delta{\Gamma}^{0}\,_{0 0}
-    + \bigg( 3\Big( - 2\, D_6 A + ( \tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) F + ( B_3 - \tfrac{4}{3}\, B_4 - \tfrac{1}{2}\, E_2) G \Big) E - 24\, L_3 T^2 \bigg) T \delta{A}_{0}=0,
+    + \bigg( 3\Big( - 2\, D_6 A + ( \tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) F + ( B_3 - \tfrac{4}{3}\, B_4 - \tfrac{1}{2}\, E_2) G \Big) E - 24\, L_3 T^2 \bigg) T \delta{A}_{0}=0.
   \end{dmath}
 \end{widetext}
-
-
-\paragraph{Introduction.---}
-In a critique to Newtonian mechanics, Mach proposed that inertial forces should have a dynamical rather than a kinematical origin. Consider for a second the scenario where there were no stars to be seen and no reference with respect to which an astronaut on empty space, could say that he is rotating. Which reference frame should we take to be inertial for the astronaut?  Thus, the question arises, Should inertial forces  be in correspondence with the presence of matter elsewhere in the universe? For a deeper discussion on the subject of Mach's principle see Ref.~\cite{Lichtenegger:2004re} and references therein.  We wish to call the attention of the reader to the fact that any locally Minkowskian metric in the kinematics of the description of spacetime will introduce a notion of inertial forces at a microscopic level~\cite{Sciama:1964wt}. With this in mind, we will explore the dynamical origin of inertial forces, studying the appearance of a spacetime metric from a renormalizable model to describe the dynamics of the affine connection of a manifold with torsion. In this model, we use the most general action that might be power counting renormalizable that includes only the sixty-four components gauge connection associated with diffeomorphisms invariance.
-
-During the last years there have been an increasing amount of alternative theories of gravity being tested. Yet, General Relativity (GR) has proven to be the most successful theory of gravity.  Still,  it is not as successful as we may wish~\cite{Kiefer:2013jqa}. Part of the problem is that the standard quantization procedure cannot be applied  properly on GR. Moreover, not only it is not renormalizable, but there are  problems with the choice of variables to be quantized and the choice of the Hilbert space to be used. Although we dare not to say anything against metric spacetimes, to sum over all possible field configurations of the metric seems to be wrong, as this would imply summing Euclidean and Minkowski like contributions to the transition amplitudes on equal terms. Additionally, we might also consider the difficulties of  quantizing  non polynomial field theories, and more specifically square roots of the metric that appears in the Hamiltonian in an ADM formulation of GR, such as the square root of the metric's determinant or the Ricci scalar.
-
-In order to bypass some of these issues, several approaches have been designed that use the connection as a fundamental field. For instance, in the context of Cartan formulations of gravity, letting the metric background become flat we can rewrite Einstein-Hilbert's Lagrangian as a function of the torsion field. This approach is known as Teleparallel Gravity and is equivalent to GR in spite of taking torsion as the fundamental gravitational field~(see Ref.~\cite{Teleparallel,Baez:2012bn} and references within).
-
-Furthermore, another alternative description of GR developed initially by Ashtekar uses the spin connection as the fundamental field and the frame field turns out to be its canonically conjugated momentum. In the context of Loop Quantum Gravity (LQG), using Ashtekar connection, a successful quantization program has been achieved~\cite{Ashtekar:2004eh,thiemann2007loop}. Originally, this approach towards quantum gravity addressed the concerns of the quantization of non polynomial functions of the gravitational field but later on, it turned out that diffeomorphisms symmetry would not show up when the quantum operators were not of the correct density weight, which forces one to reintroduce the squared root~\cite{Thiemann:1996aw}.  Some  strengths of this quantization program lies within a theorem by H. Sahlmann \emph{et al.} in Ref.~\cite{Lewandowski:2005jk} that states the only diffeomorphisms invariant Hilbert space that supports the Heisenberg algebra, for the connection and its associated momentum, is the one of Loop Quantum Gravity. In spite of its success, LQG has not advanced enough to conclude that its low energy effective description is GR. Currently, there is no clue about the LQG effective description at other scales,  nor its continuum spacetime limit either. Therefore, we cannot conclude that the search for a fundamental theory of gravitational interactions has ended. On the contrary, there are increasingly many alternatives to the usual metric description of Gravity and they all must be tested against experiments and observations.
-
-In this article we study a power counting renormalizable,  diffeomorphism invariant model  consisting  solely of an affine (linear) connection  (with torsion). We expect  this model may  overcome  the uniqueness theorem about diffeomorphism invariant theories of connections, since we  have no fundamental metric field to quantize. The earliest model that argues  a description of gravitational interaction in terms of connections as fundamental fields  was presented by Eddington~\cite{Eddington1923math}, for an spacetime with positive cosmological constant. He proposed the square root of the determinant of the Ricci tensor as the gravitational Lagrangian. His aim was not to solve the problems of quantum gravity,  others have emphasized the character of GR as a gauge theory in order to address the issues of quantization and regularization, as in LQG. Yet others like N. Poplawski~\cite{Poplawski:2012bw} and K. Krasnov~\cite{Krasnov:2011pp} have advanced the road towards a pure connection gravity theory.
-
-The aim of this work is to describe certain aspects of the gravitational interaction in four dimensions. To this end we have studied a  symmetric tensor density which acts like an ``inverse metric'' can be obtained by identifying (see Ref.~\cite{Poplawski:2012bw})
-\begin{equation}\label{metric}
-  \sqrt{g} g^{\mu\nu} = \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma]
+For establishing the non-relativistic limit, we analysed the geodesic deviation of inertial observers. Therefore, we considered only solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
+\begin{equation} 
+  \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0.
 \end{equation}
-where $g$ is the inverse of the determinant of $g^{\mu\nu}$.
+A non trivial solution is found by setting $F = G = 0$ and $E \neq 0$, together with all coupling constants to zero but $B_3 \neq 0$, $B_4 = -\tfrac{3}{2} B_3$, $C_1\neq 0$ and $E_2= 6 B_3$.
 
-The article is organized as follows:  In Sec.~\ref{sec:4} we study the four-dimensional model, constructed under the same precepts than before. Additionally, we found solutions to the equations of motion assuming static and homogeneous background, and show that in the non-relativistic limit of the theory the gravitational potential is Newtonian. Finally, in Sec.~\ref{sec:dis} we briefly discuss the reaching consequences of the constructed model.
+Moreover, we included perturbative inhomogeneous sources to the connection field equations, by considering a matter action. Although the inclusion of matter in a non metric spacetime is a non standard procedure, we use the ``induced metric density'', defined by 
+\begin{equation}
+  \label{metric}
+  \bar{g}^{\mu\nu} \equiv \sqrt{g} \, g^{\mu\nu} = \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma],
+\end{equation}
+as proposed in Refs.~\cite{Eddington1923math,*schrodinger1950space,Poplawski:2012bw}. Presuming that the matter action depends on $\bar{g}^{\mu\nu}$, a static point particle at the origin of the reference frame contributes to the equations of motion for the gravitational field
+\begin{dmath}
+  \label{mattervariation}
+  \delta {S}_{\text{mat}} =  C_1 \Big(- \frac{1}{2} ({\delta\Gamma}^{0}{}_{m n})  T {\delta}^{m n} - \frac{1}{2}  ({\delta T}^{0 0 m})  \imath {p}_{m} + \frac{1}{2}  ({\delta T}^{m 0 n})  E {\delta}_{m n} \Big)\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial \bar{g}^{00}}.
+\end{dmath}
+
+Then, we preformed the scalar mode perturbative expansion, and the scalar decomposition given by
+\begin{equation}
+  a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
+\end{equation}
+\mbox{}
+\begin{dmath}
+  t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
+  +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
+  + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
+  +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
+\end{dmath}
+and
+\begin{dmath}
+  \gamma^\lambda_{\mu\nu} \to
+  \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
+  + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
+  + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
+  + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
+  + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
+  + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
+\end{dmath}
+where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom.
+
+
+%% \paragraph{Introduction.---}
+%% In a critique to Newtonian mechanics, Mach proposed that inertial forces should have a dynamical rather than a kinematical origin. Consider for a second the scenario where there were no stars to be seen and no reference with respect to which an astronaut on empty space, could say that he is rotating. Which reference frame should we take to be inertial for the astronaut?  Thus, the question arises, Should inertial forces  be in correspondence with the presence of matter elsewhere in the universe? For a deeper discussion on the subject of Mach's principle see Ref.~\cite{Lichtenegger:2004re} and references therein.  We wish to call the attention of the reader to the fact that any locally Minkowskian metric in the kinematics of the description of spacetime will introduce a notion of inertial forces at a microscopic level~\cite{Sciama:1964wt}. With this in mind, we will explore the dynamical origin of inertial forces, studying the appearance of a spacetime metric from a renormalizable model to describe the dynamics of the affine connection of a manifold with torsion. In this model, we use the most general action that might be power counting renormalizable that includes only the sixty-four components gauge connection associated with diffeomorphisms invariance.
+
+%% During the last years there have been an increasing amount of alternative theories of gravity being tested. Yet, General Relativity (GR) has proven to be the most successful theory of gravity.  Still,  it is not as successful as we may wish~\cite{Kiefer:2013jqa}. Part of the problem is that the standard quantization procedure cannot be applied  properly on GR. Moreover, not only it is not renormalizable, but there are  problems with the choice of variables to be quantized and the choice of the Hilbert space to be used. Although we dare not to say anything against metric spacetimes, to sum over all possible field configurations of the metric seems to be wrong, as this would imply summing Euclidean and Minkowski like contributions to the transition amplitudes on equal terms. Additionally, we might also consider the difficulties of  quantizing  non polynomial field theories, and more specifically square roots of the metric that appears in the Hamiltonian in an ADM formulation of GR, such as the square root of the metric's determinant or the Ricci scalar.
+
+%% In order to bypass some of these issues, several approaches have been designed that use the connection as a fundamental field. For instance, in the context of Cartan formulations of gravity, letting the metric background become flat we can rewrite Einstein-Hilbert's Lagrangian as a function of the torsion field. This approach is known as Teleparallel Gravity and is equivalent to GR in spite of taking torsion as the fundamental gravitational field~(see Ref.~\cite{Teleparallel,Baez:2012bn} and references within).
+
+%% Furthermore, another alternative description of GR developed initially by Ashtekar uses the spin connection as the fundamental field and the frame field turns out to be its canonically conjugated momentum. In the context of Loop Quantum Gravity (LQG), using Ashtekar connection, a successful quantization program has been achieved~\cite{Ashtekar:2004eh,thiemann2007loop}. Originally, this approach towards quantum gravity addressed the concerns of the quantization of non polynomial functions of the gravitational field but later on, it turned out that diffeomorphisms symmetry would not show up when the quantum operators were not of the correct density weight, which forces one to reintroduce the squared root~\cite{Thiemann:1996aw}.  Some  strengths of this quantization program lies within a theorem by H. Sahlmann \emph{et al.} in Ref.~\cite{Lewandowski:2005jk} that states the only diffeomorphisms invariant Hilbert space that supports the Heisenberg algebra, for the connection and its associated momentum, is the one of Loop Quantum Gravity. In spite of its success, LQG has not advanced enough to conclude that its low energy effective description is GR. Currently, there is no clue about the LQG effective description at other scales,  nor its continuum spacetime limit either. Therefore, we cannot conclude that the search for a fundamental theory of gravitational interactions has ended. On the contrary, there are increasingly many alternatives to the usual metric description of Gravity and they all must be tested against experiments and observations.
+
+%% In this article we study a power counting renormalizable,  diffeomorphism invariant model  consisting  solely of an affine (linear) connection  (with torsion). We expect  this model may  overcome  the uniqueness theorem about diffeomorphism invariant theories of connections, since we  have no fundamental metric field to quantize. The earliest model that argues  a description of gravitational interaction in terms of connections as fundamental fields  was presented by Eddington~\cite{Eddington1923math}, for an spacetime with positive cosmological constant. He proposed the square root of the determinant of the Ricci tensor as the gravitational Lagrangian. His aim was not to solve the problems of quantum gravity,  others have emphasized the character of GR as a gauge theory in order to address the issues of quantization and regularization, as in LQG. Yet others like N. Poplawski~\cite{Poplawski:2012bw} and K. Krasnov~\cite{Krasnov:2011pp} have advanced the road towards a pure connection gravity theory.
+
+%% The aim of this work is to describe certain aspects of the gravitational interaction in four dimensions. To this end we have studied a  symmetric tensor density which acts like an ``inverse metric'' can be obtained by identifying (see Ref.~\cite{Poplawski:2012bw})
+%% \begin{equation}\label{metric}
+%%   \sqrt{g} g^{\mu\nu} = \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma]
+%% \end{equation}
+%% where $g$ is the inverse of the determinant of $g^{\mu\nu}$.
+
+%% The article is organized as follows:  In Sec.~\ref{sec:4} we study the four-dimensional model, constructed under the same precepts than before. Additionally, we found solutions to the equations of motion assuming static and homogeneous background, and show that in the non-relativistic limit of the theory the gravitational potential is Newtonian. Finally, in Sec.~\ref{sec:dis} we briefly discuss the reaching consequences of the constructed model.
 
 
 
@@ -289,7 +332,7 @@ The article is organized as follows:  In Sec.~\ref{sec:4} we study the four-dime
 %% Thus, an interesting sector of the theory corresponds to the space of non-degenerated $T^{\mu\nu}$. 
 
 
-\paragraph{\label{sec:4}Four-dimensional metricless (and torsionful) action.---}
+%% \paragraph{\label{sec:4}Four-dimensional metricless (and torsionful) action.---}
 %% Following the precepts  already stated, we start  by defining an irreducible representation decomposition for the full connection field 
 %% \begin{equation}
 %%   \Gamma^\mu{}_{\rho\sigma} = \hat{\Gamma}^\mu{}_{\rho\sigma} + T^\mu{}_{\rho\sigma} = \hat{\Gamma}^\mu{}_{\rho\sigma} + \epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}+A_{[\rho}\delta^\mu_{\nu]},
@@ -341,27 +384,27 @@ The article is organized as follows:  In Sec.~\ref{sec:4} we study the four-dime
 %%   \end{dmath}
 %%   where the $A_i$ series of terms contribute solely to the boundary conditions, and the terms $B_2$, $B_4$ and $C_2$ contain a traceless contribution of the curvature.
 %% \end{widetext}
-In this case, the induced  ``inverse metric density'' [see Eq.~\eqref{metric}] is 
-\begin{dmath}
-  \label{4dMetric}
-  \bar{g}^{\mu\nu} \equiv \sqrt{-g}g^{\mu\nu} = B_1 T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma} + B_3 T^{(\mu,\nu)\lambda}A_\lambda + C_1 \hat{\nabla}_\lambda T^{(\mu,\nu)\lambda}.
-\end{dmath}
+%% In this case, the induced  ``inverse metric density'' [see Eq.~\eqref{metric}] is 
+%% \begin{dmath}
+%%   \label{4dMetric}
+%%   \bar{g}^{\mu\nu} \equiv \sqrt{-g}g^{\mu\nu} = B_1 T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma} + B_3 T^{(\mu,\nu)\lambda}A_\lambda + C_1 \hat{\nabla}_\lambda T^{(\mu,\nu)\lambda}.
+%% \end{dmath}
 
 
-\subparagraph{Symmetric solution to the equations of motion.}
-In four dimensions there is no obvious equivalence of Eq.~\eqref{4dfull} with GR, specially due to the lack of a fundamental metric field in the given model. However, both models are explicitly invariant under diffeomorphisms, and even if their structures and number of degrees of freedom differ, the action in Eq.~\eqref{4dfull} provides a context where parallel transport of particle's velocities on a purely torsional background is nontrivial.
+%% \subparagraph{Symmetric solution to the equations of motion.}
+%% In four dimensions there is no obvious equivalence of Eq.~\eqref{4dfull} with GR, specially due to the lack of a fundamental metric field in the given model. However, both models are explicitly invariant under diffeomorphisms, and even if their structures and number of degrees of freedom differ, the action in Eq.~\eqref{4dfull} provides a context where parallel transport of particle's velocities on a purely torsional background is nontrivial.
 
-Here, we wish to stablish the model's non-relativistic (Newtonian) limit for the ``geodesic" deviation of ``inertial" observers at rest with respect to a static, isotropic, homogeneous and spatially flat background within the context provided by Eq.~\eqref{4dfull}. In order to properly analyse the model, we  propose the following decomposition of the fields
-\begin{align}
-  A_\mu &= \delta_\mu^0 A + a_\mu,\\
-  T^{\mu,\nu\rho} &= \delta^{\mu}_m\delta^{\nu\rho}_{m0}T + t^{\mu,\nu\rho},\\
-  \shortintertext{and}
-  \hat{\Gamma}^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu},
-\end{align}
-where $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$.
+%% Here, we wish to stablish the model's non-relativistic (Newtonian) limit for the ``geodesic" deviation of ``inertial" observers at rest with respect to a static, isotropic, homogeneous and spatially flat background within the context provided by Eq.~\eqref{4dfull}. In order to properly analyse the model, we  propose the following decomposition of the fields
+%% \begin{align}
+%%   A_\mu &= \delta_\mu^0 A + a_\mu,\\
+%%   T^{\mu,\nu\rho} &= \delta^{\mu}_m\delta^{\nu\rho}_{m0}T + t^{\mu,\nu\rho},\\
+%%   \shortintertext{and}
+%%   \hat{\Gamma}^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu},
+%% \end{align}
+%% where $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$.
 
 
-In order to make perturbation theory we will expand around a static, isotropic and homogeneous solution of the equations of motion, because these are characteristic of the observable universe.
+%% In order to make perturbation theory we will expand around a static, isotropic and homogeneous solution of the equations of motion, because these are characteristic of the observable universe.
 
 %% The induced metric in Eq.~\eqref{4dMetric}  on the background is
 %% \begin{dmath}
@@ -386,45 +429,45 @@ In order to make perturbation theory we will expand around a static, isotropic a
 %%     + \bigg( 3\Big( - 2\, D_6 A + ( \frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) F + ( B_3 - \frac{4}{3}\, B_4 - \frac{1}{2}\, E_2) G \Big) E - 24\, L_3 T T \bigg) T \delta{A}_{0}=0,
 %%   \end{dmath}
 %% \end{widetext}
-and we are most interested in solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
-\begin{equation} 
-  \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0,
-\end{equation}
-which we can achieve by setting $F=G=0$ and $E \neq 0$ since $(\dot{x}^i)^2$ is already second order in the velocities. Thus, looking again at the equations of motion we can find a non trivial solution if we set all coupling constants to zero but $B_3 \neq 0$, $B_4 = -\tfrac{3}{2} B_3$, $C_1\neq 0$ and $E_2= 6 B_3$. 
+%% and we are most interested in solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
+%% \begin{equation} 
+%%   \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0,
+%% \end{equation}
+%% which we can achieve by setting $F=G=0$ and $E \neq 0$ since $(\dot{x}^i)^2$ is already second order in the velocities. Thus, looking again at the equations of motion we can find a non trivial solution if we set all coupling constants to zero but $B_3 \neq 0$, $B_4 = -\tfrac{3}{2} B_3$, $C_1\neq 0$ and $E_2= 6 B_3$. 
 
-Additionally, we can incorporate perturbative inhomogeneous sources to the connection field equations and check on how these fluctuations affect motion. For this, we consider a matter's action, whose dependence on the affine connection can be almost arbitrary. However, we will presume that it will depend only on the barred metric in Eq.~\eqref{4dMetric}
-$$ S_{\text{Matter}} = {S}_{\text{Matter}}[\bar{g}^{\mu\nu}].$$
-Thus, a non-moving matter point particle at the origin of the reference frame will contribute to the equations of motion for the gravitational field through the component $\bar{g}^{00}$ following the symmetries of the matter source 
-\begin{dmath}
-  \label{mattervariation}
-  \delta {S}_{\text{Matter}} =  C_1 \Big(- \frac{1}{2} ({\delta\Gamma}^{0}{}_{m n})  T {\delta}^{m n} - \frac{1}{2}  ({\delta T}^{0 0 m})  \imath {p}_{m} + \frac{1}{2}  ({\delta T}^{m 0 n})  E {\delta}_{m n} \Big)\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial \bar{g}^{00}}.
-\end{dmath}
+%% Additionally, we can incorporate perturbative inhomogeneous sources to the connection field equations and check on how these fluctuations affect motion. For this, we consider a matter's action, whose dependence on the affine connection can be almost arbitrary. However, we will presume that it will depend only on the barred metric in Eq.~\eqref{4dMetric}
+%% $$ S_{\text{Matter}} = {S}_{\text{Matter}}[\bar{g}^{\mu\nu}].$$
+%% Thus, a non-moving matter point particle at the origin of the reference frame will contribute to the equations of motion for the gravitational field through the component $\bar{g}^{00}$ following the symmetries of the matter source 
+%% \begin{dmath}
+%%   \label{mattervariation}
+%%   \delta {S}_{\text{Matter}} =  C_1 \Big(- \frac{1}{2} ({\delta\Gamma}^{0}{}_{m n})  T {\delta}^{m n} - \frac{1}{2}  ({\delta T}^{0 0 m})  \imath {p}_{m} + \frac{1}{2}  ({\delta T}^{m 0 n})  E {\delta}_{m n} \Big)\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial \bar{g}^{00}}.
+%% \end{dmath}
 
 
-\subparagraph{Scalar modes  and Newtonian limit.}
-In order to obtain the non-relativistic limit, \emph{i.e.}, the Newtonian potential, one performs the scalar mode perturbative expansion. One proceeds by substituting the connection and torsion components by their scalar perturbation decomposition,
-\begin{equation}
-  a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
-\end{equation}
-\mbox{}
-\begin{dmath}
-  t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
-  +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
-  + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
-  +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
-\end{dmath}
-and
+%% \subparagraph{Scalar modes  and Newtonian limit.}
+%% In order to obtain the non-relativistic limit, \emph{i.e.}, the Newtonian potential, one performs the scalar mode perturbative expansion. One proceeds by substituting the connection and torsion components by their scalar perturbation decomposition,
+%% \begin{equation}
+%%   a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
+%% \end{equation}
+%% \mbox{}
+%% \begin{dmath}
+%%   t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
+%%   +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
+%%   + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
+%%   +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
+%% \end{dmath}
+%% and
 
-\begin{dmath}
-  \gamma^\lambda_{\mu\nu} \to
-  \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
-  + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
-  + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
-  + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
-  + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
-  + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
-\end{dmath}
-where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom. Vector and tensor perturbations are left for further investigations of the structure of the model.
+%% \begin{dmath}
+%%   \gamma^\lambda_{\mu\nu} \to
+%%   \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
+%%   + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
+%%   + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
+%%   + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
+%%   + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
+%%   + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
+%% \end{dmath}
+%% where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom. Vector and tensor perturbations are left for further investigations of the structure of the model.
 
 The first order perturbative expansion of the equations of motion around the already described background in momentum space with $p_0=0$ is given by
 \begin{widetext}
@@ -447,14 +490,10 @@ The first order perturbative expansion of the equations of motion around the alr
     + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E E v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p}.
   \end{dmath}
 \end{widetext}
-which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation}
-%% \begin{dmath}
-%%   \label{mattervariation}
-%% \delta{\mathcal L}_{\text{Matter}} =  \Big(- \frac{1}{2} {dg}^{0} _{m n} C1 T {\delta}^{m n} - \frac{1}{2}  {dt}^{0 0 m} C1 i {p}_{m} + \frac{1}{2}  {dt}^{m 0 n} C1 E {\delta}_{m n}\Big)\frac{\partial{\mathcal L}_{\text{Matter}}}{\partial \bar{g}^{00}}
-%% \end{dmath}
-and set $\delta S_{\text{total}}=0$.
+which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}}=0$.
 
-Solutions to this set of equations are in general a highly difficult problem that concerns $20$ equations of motion and $20$ scalar fields to be fixed by the equations. Yet, knowledge of the value of some of these scalars does not necessarily help to determine how geodesics are affected. For this, we only need $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$ as these provide the first order contributions to the equations
+%% Solutions to this set of equations are in general a highly difficult problem that concerns $20$ equations of motion and $20$ scalar fields to be fixed by the equations. Yet, knowledge of the value of some of these scalars does not necessarily help to determine how geodesics are affected. For this, we only
+The only terms affecting the behaviour of the geodesic are $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$, as these provide the first order contributions to the equations
 \begin{equation}
   \label{geodesic1stOrder}
   \ddot{x}^i + \gamma^i{}_{00}(\dot{x}^0)^2 = 0,
@@ -462,11 +501,10 @@ Solutions to this set of equations are in general a highly difficult problem tha
   \ddot{x}^0 + \gamma^0{}_{00}(\dot{x}^0)^2 = 0.
 \end{equation}
 From Eq.~\eqref{geodesic1stOrder} we can conclude that we need only know $\gamma^i{}_{00} = \partial^i v_L$, which we obtain in Fourier space to be
-
 \begin{equation}
-  v_L=\frac{1}{2}\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial\bar{g}^{00}}\frac{1}{p^2}.
+  v_L=\frac{1}{2}\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial\bar{g}^{00}}\frac{1}{p^2},
 \end{equation}
-In position space, 
+which in position space, 
 \begin{equation}
   v_L = \frac{1}{8\pi} \frac{ \partial\mathcal{L}_{\text{Matter}} }{ \partial \bar{g}^{00} } \frac{1}{|\vec{x}|}
 \end{equation}
@@ -480,19 +518,19 @@ is the usual Newtonian potential for a massive far off source.
 %% Regarding to the equivalence of Einstein's theory of gravity to the action in Eq.~\eqref{4dfull},  no definite statement is made because \out{the number of local degrees of freedom disagree and} we have not been able to make out such correspondence. However, one of the major issues one could think of, is that even if there is an equivalence, the description of matter fields with half integer spin would be missing in a theory with no metric. The aim of this section is to describe the inclusion of Dirac spinor without a local Lorentz symmetry.
 
 
-\paragraph{\label{sec:dis}Discussion.---}
-In this paper we have proposed novel model of gravitational interactions with full diffeomorphisms invariance as the main guiding principle, whose fundamental field is an affine connection and no metric field is assumed (nor needed). Surprisingly, in four dimensions, it upholds the correct Newtonian limit, supporting the suspicions that it may describe some aspects of gravitational physics that have not been exposed yet. Still, the model is alien for anyone accustomed to metric spacetimes or their extensions, specially since no local Lorentz structure is present. We also argue that in the absence of fundamental inertial structure, it becomes a natural playground to test the full reaches of Mach's Principle.
+%% \paragraph{\label{sec:dis}Discussion.---}
+%% In this paper we have proposed novel model of gravitational interactions with full diffeomorphisms invariance as the main guiding principle, whose fundamental field is an affine connection and no metric field is assumed (nor needed). Surprisingly, in four dimensions, it upholds the correct Newtonian limit, supporting the suspicions that it may describe some aspects of gravitational physics that have not been exposed yet. Still, the model is alien for anyone accustomed to metric spacetimes or their extensions, specially since no local Lorentz structure is present. We also argue that in the absence of fundamental inertial structure, it becomes a natural playground to test the full reaches of Mach's Principle.
+%% 
+%% Additionally, within the model, all coupling constants turn out to be dimensionless, a property that has been related to scale invariance and conformally invariant theories (see Refs.~\cite{Buchholz:1976hz,Maldacena:2011mk}). In fact, renormalization is intimately related to the scaling properties of a model and it may be worth to study the quantization and renormalizability of this  model. In doing so, we believe the lack of metric may allow the model to bypass the uniqueness of the diffeomorphisms invariant Hilbert space stated in Ref.~\cite{Lewandowski:2005jk}.
 
-Additionally, within the model, all coupling constants turn out to be dimensionless, a property that has been related to scale invariance and conformally invariant theories (see Refs.~\cite{Buchholz:1976hz,Maldacena:2011mk}). In fact, renormalization is intimately related to the scaling properties of a model and it may be worth to study the quantization and renormalizability of this  model. In doing so, we believe the lack of metric may allow the model to bypass the uniqueness of the diffeomorphisms invariant Hilbert space stated in Ref.~\cite{Lewandowski:2005jk}.
+%% Sticking to the classical theory, the analysis of the cosmological implications is needed. In cosmology there are important aspects with unsatisfactory explanations, such as those related to the matter content of the Universe (in particular the dark energy sector), or the large scale structure formation~\footnote{There is a controversy between the experimental results obtained by BICEP2~\cite{Ade:2014xna} and Planck~\cite{Adam:2014bub} in the respect of their interpretation associated with inflation.}. Additionally, other formal aspects of the model remain unknown, such as the proper number of propagating degrees of freedom, and whether or not a duality exists between our model and one of the well known metric models (say for example Ho\v{r}ava-Lifshitz gravity~\cite{Horava:2009uw,*Sotiriou:2010wn}).
 
-Sticking to the classical theory, the analysis of the cosmological implications is needed. In cosmology there are important aspects with unsatisfactory explanations, such as those related to the matter content of the Universe (in particular the dark energy sector), or the large scale structure formation~\footnote{There is a controversy between the experimental results obtained by BICEP2~\cite{Ade:2014xna} and Planck~\cite{Adam:2014bub} in the respect of their interpretation associated with inflation.}. Additionally, other formal aspects of the model remain unknown, such as the proper number of propagating degrees of freedom, and whether or not a duality exists between our model and one of the well known metric models (say for example Ho\v{r}ava-Lifshitz gravity~\cite{Horava:2009uw,*Sotiriou:2010wn}).
-
-We also believe that almost every aspect related to coupling gravity to matter fields can be extrapolated to couplings with the affine connection without making reference to a fundamental metric or a local Lorentz Symmetry. This could be  done rewriting the Affine connection in terms of a local $GL(4)$ connection
-$\omega_{\mu}{}^a{}_b$, relating the two of them through use of a frame field $e_\mu^a$ and its inverse $e^\mu_a$
-\begin{equation}
-  \omega_{\mu}{}^a{}_b = e_\lambda^a e_b^\nu \Gamma^{\lambda}{}_{\mu\nu} -  e_b^\nu\partial_{\mu}e_\nu^a,
-\end{equation} where $a$ and $b$ are indices in the defining representation of the local group $GL(4)$.
- In particular, \mbox{$GL(4) = \mathbb{R}_+ \times SL(4)$} and using \mbox{$SL(4) \simeq SO(3,3)$,} we can define spinorial representations for the Diffeomorphisms group, eventually we will be able to define an action for $SO(3,3)$ spinors in four dimensions.
+%% We also believe that almost every aspect related to coupling gravity to matter fields can be extrapolated to couplings with the affine connection without making reference to a fundamental metric or a local Lorentz Symmetry. This could be  done rewriting the Affine connection in terms of a local $GL(4)$ connection
+%% $\omega_{\mu}{}^a{}_b$, relating the two of them through use of a frame field $e_\mu^a$ and its inverse $e^\mu_a$
+%% \begin{equation}
+%%   \omega_{\mu}{}^a{}_b = e_\lambda^a e_b^\nu \Gamma^{\lambda}{}_{\mu\nu} -  e_b^\nu\partial_{\mu}e_\nu^a,
+%% \end{equation} where $a$ and $b$ are indices in the defining representation of the local group $GL(4)$.
+%%  In particular, \mbox{$GL(4) = \mathbb{R}_+ \times SL(4)$} and using \mbox{$SL(4) \simeq SO(3,3)$,} we can define spinorial representations for the Diffeomorphisms group, eventually we will be able to define an action for $SO(3,3)$ spinors in four dimensions.
 
 
 \begin{acknowledgments}
