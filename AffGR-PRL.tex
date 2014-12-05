@@ -1,4 +1,4 @@
-\documentclass[twocolumn,aps,showpacs,showkeys,prl,superscriptaddress]{revtex4-1}
+\documentclass[aps,prl,twocolumn,superscriptaddress,showpacs,showkeys]{revtex4-1}
 
 \usepackage{amsmath,amsthm,latexsym,amssymb,amsfonts,epsfig}
 \usepackage{xcolor}
@@ -59,16 +59,16 @@
 
 \author{Aureliano \surname{Skirzewski}}
 \email{askirz@gmail.com}
-\affiliation{Centro de F\'\i sica Fundamental,  Universidad de los Andes, 5101 M\'erida, Venezuela.}
+\affiliation{\CFF}%Centro de F\'\i sica Fundamental,  Universidad de los Andes, 5101 M\'erida, Venezuela.}
 
 \author{Nelson \surname{Pantoja}}
 \email{pantoja@ula.ve}
-\affiliation{Centro de F\'\i sica Fundamental,  Universidad de los Andes, 5101 M\'erida, Venezuela.}
+\affiliation{\CFF}%Centro de F\'\i sica Fundamental,  Universidad de los Andes, 5101 M\'erida, Venezuela.}
 
 \author{Oscar \surname{Castillo-Felisola}}
 \email{o.castillo.felisola@gmail.com}
-\affiliation{Centro Cient\'\i fico Tecnol\'ogico de Valpara\'\i so, Chile.}
-\affiliation{Departamento de F\'\i sica, Universidad T\'{e}cnica Federico Santa Mar\'\i a, Casilla 110-V, Valpara\'\i so, Chile.}
+\affiliation{\CCTVal}%Centro Cient\'\i fico Tecnol\'ogico de Valpara\'\i so, Chile.}
+\affiliation{\UTFSM}%Departamento de F\'\i sica, Universidad T\'{e}cnica Federico Santa Mar\'\i a, Casilla 110-V, Valpara\'\i so, Chile.}
 
 %--------- Abstract
 \begin{abstract}
@@ -142,7 +142,7 @@ There is no obvious equivalence of the action in Eq.~\eqref{4dfull} with General
 \end{equation}
 \begin{widetext}
   The first order perturbations of the action yields
-  \begin{dmath}
+  \begin{dmath*}
     \label{EOM0thOrder}
     \delta S =
     \bigg( \Big( ( B_3 + \tfrac{8}{3}\, B_4 + \tfrac{1}{2}\, E_2) A + (4\, C_1 - \tfrac{16}{3}\, C_2) F + ( - 2\, C_1 + \tfrac{8}{3}\, C_2) G \Big) E + 8\, ( - D_1 + 2\, D_2 + D_3) T^2 \bigg) T \delta{\Gamma}^{m}\,_{0 m}
@@ -150,7 +150,7 @@ There is no obvious equivalence of the action in Eq.~\eqref{4dfull} with General
     + \bigg( \Big(- (\tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) A F + ( - B_3+ \tfrac{4}{3}\, B_4 + \tfrac{1}{2}\, E_2) A G + ( - C_1 + \tfrac{4}{3}\, C_2) F^2 + (C_1 - \tfrac{4}{3}\, C_2) F G + D_6 A^2 \Big) E + \Big( 12\, ( D_1 - 2\, D_2 - D_3) F + 24\, L_3 A \Big) T^2 \bigg)\delta{T}_{m}\,^{0 m}
     + \bigg( ( 3\, B_3 - 4\, B_4 - \tfrac{3}{2}\, E_2) A + ( - 3\, C_1 + 4\, C_2) F \bigg) E T \delta{\Gamma}^{0}\,_{0 0}
     + \bigg( 3\Big( - 2\, D_6 A + ( \tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) F + ( B_3 - \tfrac{4}{3}\, B_4 - \tfrac{1}{2}\, E_2) G \Big) E - 24\, L_3 T^2 \bigg) T \delta{A}_{0}=0.
-  \end{dmath}
+  \end{dmath*}
 \end{widetext}
 For establishing the non-relativistic limit, we analysed the geodesic deviation of inertial observers. Therefore, we considered only solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
 \begin{equation} 
@@ -506,9 +506,26 @@ From Eq.~\eqref{geodesic1stOrder} we can conclude that we need only know $\gamma
 \end{equation}
 which in position space, 
 \begin{equation}
+  \label{NewtonPot}
   v_L = \frac{1}{8\pi} \frac{ \partial\mathcal{L}_{\text{Matter}} }{ \partial \bar{g}^{00} } \frac{1}{|\vec{x}|}
 \end{equation}
-is the usual Newtonian potential for a massive far off source.
+is the usual Newtonian potential for a massive source.
+
+Although we have obtained the Newtonian gravitational potential in Eq~\eqref{NewtonPot}, it is well known that post-Newtonian gravity is necessary to explain gravitational phenomena like Mercury's perihelion and the deviation of light by a gravitational source. Therefore, we should go beyond the Newtonian limit in order for saying that our model is (at least) comparable with GR.
+
+A comparison between our affine model and GR could require the imposition of vanishing torsion. Interestingly, the coupled system of equations of motion from Eq.~\eqref{4dfull} is consistently ``truncated'' under the requirement of vanishing torsion, and the only non-trivial equation of motion is the one for the $T^{\lambda,\mu\nu}$ field, which yield
+\begin{equation}
+  \kappa_1 \nab{[\rho} R_{\mu]\lambda}{}^{\lambda}{}_{\nu} + \kappa_2 \nab{\nu} R_{\mu\rho}{}^\lambda{}_\lambda = 0.
+\end{equation}
+However, if we consider the connection to be the Levi-Civita one, the second term vanishes and the gravitational equations are
+\begin{equation}
+  \nab{[\rho} R_{\mu]\nu} = 0.
+  \label{SimpleEOM}
+\end{equation}
+
+A possibility of solving Eq.~\eqref{SimpleEOM} is considering Einstein spaces, since $R_{\mu\nu} \propto g_{\mu\nu}$. Therefore, every vacuum solution to the Einstein's equations solves the (torsionless) equation of motion of our affine model of gravity.
+
+
 
 
 %% \section{Matter fields}
