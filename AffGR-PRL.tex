@@ -2,8 +2,8 @@
 
 \usepackage{amsmath,amsthm,latexsym,amssymb,amsfonts,epsfig}
 \usepackage{xcolor}
-\usepackage{ulem}
-%\usepackage{authblk}
+%% \usepackage{ulem}
+%% \usepackage{authblk}
 \usepackage[%
   colorlinks=true,
   urlcolor=blue,
@@ -523,7 +523,10 @@ However, if we consider the connection to be the Levi-Civita one, the second ter
   \label{SimpleEOM}
 \end{equation}
 
-To our knowledge, there is not known integrability condition of Eq.~\eqref{SimpleEOM}. Nonetheless, a particular integrability condition is known for Riemannian manifolds $(\Mi,g)$ with covariantly constant Ricci curvature -- aka {parallel Ricci curvature} --, $\nab{\rho} R_{\mu\nu} = 0$. The parallel Ricci curvature is a generalization is a well known generalization of the Einstein condition (see Ref.~\cite{Besse}), which assures that although the manifold $(\Mi,g)$ is not generally Einstein, the metric has to be locally a product of Einstein metrics. A corollary is that all Einstein manifolds satisfy the parallel Ricci condition, and therefore every vacuum solution to the Einstein's equations solves the (torsionless) equation of motion of our affine model of gravity.
+%% To our knowledge, there is not known integrability condition of Eq.~\eqref{SimpleEOM}.
+A particular integrability condition is known for Riemannian manifolds $(\Mi,g)$ with covariantly constant Ricci curvature -- aka {parallel Ricci curvature} --, $\nab{\rho} R_{\mu\nu} = 0$. The parallel Ricci curvature is a generalization is a well known generalization of the Einstein condition (see Ref.~\cite{Besse,MO-Bryant}), which assures that although the manifold $(\Mi,g)$ is not generally Einstein, the metric has to be locally a product of Einstein metrics. Interestingly, a corollary is that all Einstein manifolds satisfy the parallel Ricci condition, and therefore every vacuum solution to the Einstein's equations solves the (torsionless) equation of motion of our affine model of gravity. Consequently, the fact that the non-relativistic limit of the gravitational potential in Eq.~\eqref{NewtonPot} yields a Newtonian potential seems clearer, and we can argue that even the post-Newtonian corrections coming from GR are present in the chosen scenario of our model.
+
+Additionally, the condition in Eq.~\eqref{SimpleEOM} is equivalent to (see Ref.~\cite{Besse}): (i) the Ricci tensor is a Codazzi tensor, (ii) the manifolds $(\Mi,g)$ has harmonic (Riemannian) curvature, and (iii) in the four-dimensional case the manifold $(\Mi,g)$ hs haronic Weyl tensor and constant scalar curvature.
 
 %% Another solution of Eq.~\eqref{SimpleEOM} is of the type $\nab{\rho} R_{\mu\nu} = 0$, known as parallel Ricci curvature, which implies that the metric has to be locally a product of Einstein metrics. Additionally, this generalization of the Einstein condition implies that the curvature tensor is harmonic~\cite{Besse}.
 
@@ -553,7 +556,7 @@ Until now the most general diffeomorphism invariant and power counting renormali
 
 
 \begin{acknowledgments}
-  We thank to A. Melfo for her helpful discussions and inspiring comments, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper. Additionally, we thank the developers of the mathematical software \textsc{Sage}~\cite{sage}, used to achieve several manipulations. This work was partially supported by CONICYT (Chile) under grant No. 79140040.
+  We thank to A. Melfo and R. L. Bryant for her helpful discussions and inspiring comments, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper. Additionally, we thank the developers of the mathematical software \textsc{Sage}~\cite{sage} and \textsc{SageManifolds}~\cite{sagemanifolds,*Gourgoulhon:2014ywa}, used to achieve several manipulations. This work was partially supported by CONICYT (Chile) under grant No. 79140040.
 \end{acknowledgments}
 
 
