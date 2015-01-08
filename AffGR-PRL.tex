@@ -140,18 +140,19 @@ There is no obvious equivalence of the action in Eq.~\eqref{4dfull} with General
     \hat{\Gamma}^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu}.
   \end{split}
 \end{equation}
-\begin{widetext}
-  The first order perturbations of the action yields
-  \begin{dmath*}
-    \label{EOM0thOrder}
-    \delta S =
-    \bigg( \Big( ( B_3 + \tfrac{8}{3}\, B_4 + \tfrac{1}{2}\, E_2) A + (4\, C_1 - \tfrac{16}{3}\, C_2) F + ( - 2\, C_1 + \tfrac{8}{3}\, C_2) G \Big) E + 8\, ( - D_1 + 2\, D_2 + D_3) T^2 \bigg) T \delta{\Gamma}^{m}\,_{0 m}
-    + \bigg( ( \tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) A F + ( B_3 - \tfrac{4}{3}\, B_4 - \tfrac{1}{2}\, E_2) A G + (C_1 - \tfrac{4}{3}\, C_2) F^2 + ( - C_1 + \tfrac{4}{3}\, C_2) F G - D_6 A^2 \bigg) T \delta{\Gamma}^{0 m}\,_{m}
-    + \bigg( \Big(- (\tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) A F + ( - B_3+ \tfrac{4}{3}\, B_4 + \tfrac{1}{2}\, E_2) A G + ( - C_1 + \tfrac{4}{3}\, C_2) F^2 + (C_1 - \tfrac{4}{3}\, C_2) F G + D_6 A^2 \Big) E + \Big( 12\, ( D_1 - 2\, D_2 - D_3) F + 24\, L_3 A \Big) T^2 \bigg)\delta{T}_{m}\,^{0 m}
-    + \bigg( ( 3\, B_3 - 4\, B_4 - \tfrac{3}{2}\, E_2) A + ( - 3\, C_1 + 4\, C_2) F \bigg) E T \delta{\Gamma}^{0}\,_{0 0}
-    + \bigg( 3\Big( - 2\, D_6 A + ( \tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) F + ( B_3 - \tfrac{4}{3}\, B_4 - \tfrac{1}{2}\, E_2) G \Big) E - 24\, L_3 T^2 \bigg) T \delta{A}_{0}=0.
-  \end{dmath*}
-\end{widetext}
+%% \begin{widetext}
+%%   The first order perturbations of the action yields
+%%   \begin{dmath*}
+%%     \label{EOM0thOrder}
+%%     \delta S =
+%%     \bigg( \Big( ( B_3 + \tfrac{8}{3}\, B_4 + \tfrac{1}{2}\, E_2) A + (4\, C_1 - \tfrac{16}{3}\, C_2) F + ( - 2\, C_1 + \tfrac{8}{3}\, C_2) G \Big) E + 8\, ( - D_1 + 2\, D_2 + D_3) T^2 \bigg) T \delta{\Gamma}^{m}\,_{0 m}
+%%     + \bigg( ( \tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) A F + ( B_3 - \tfrac{4}{3}\, B_4 - \tfrac{1}{2}\, E_2) A G + (C_1 - \tfrac{4}{3}\, C_2) F^2 + ( - C_1 + \tfrac{4}{3}\, C_2) F G - D_6 A^2 \bigg) T \delta{\Gamma}^{0 m}\,_{m}
+%%     + \bigg( \Big(- (\tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) A F + ( - B_3+ \tfrac{4}{3}\, B_4 + \tfrac{1}{2}\, E_2) A G + ( - C_1 + \tfrac{4}{3}\, C_2) F^2 + (C_1 - \tfrac{4}{3}\, C_2) F G + D_6 A^2 \Big) E + \Big( 12\, ( D_1 - 2\, D_2 - D_3) F + 24\, L_3 A \Big) T^2 \bigg)\delta{T}_{m}\,^{0 m}
+%%     + \bigg( ( 3\, B_3 - 4\, B_4 - \tfrac{3}{2}\, E_2) A + ( - 3\, C_1 + 4\, C_2) F \bigg) E T \delta{\Gamma}^{0}\,_{0 0}
+%%     + \bigg( 3\Big( - 2\, D_6 A + ( \tfrac{1}{2}\, B_3 + \tfrac{4}{3}\, B_4 + \tfrac{1}{4}\, E_2) F + ( B_3 - \tfrac{4}{3}\, B_4 - \tfrac{1}{2}\, E_2) G \Big) E - 24\, L_3 T^2 \bigg) T \delta{A}_{0}=0.
+%%   \end{dmath*}
+%% \end{widetext}
+
 For establishing the non-relativistic limit, we analysed the geodesic deviation of inertial observers. Therefore, we considered only solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
 \begin{equation} 
   \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0.
@@ -172,13 +173,15 @@ as proposed in Refs.~\cite{Eddington1923math,*schrodinger1950space,Poplawski:201
 Then, we preformed the scalar mode perturbative expansion, and the scalar decomposition given by
 \begin{equation}
   a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
+  \label{amu}
 \end{equation}
 \mbox{}
 \begin{dmath}
   t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
   +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
-  + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
   +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
+  + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
+  \label{tmunurho}
 \end{dmath}
 and
 \begin{dmath}
@@ -189,6 +192,7 @@ and
   + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
   + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
   + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
+  \label{gmnl}
 \end{dmath}
 where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom.
 
@@ -477,7 +481,7 @@ The first order perturbative expansion of the equations of motion around the alr
     + \bigg( - E p^2 d_2 + \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - \frac{1}{2} T p^2 w_L - 6 E T y_1 + 2 E T p^2 y_L + \frac{3}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^2 p^2 z_L \bigg) C_1 {\,\delta\Gamma}^{0}{}_{0 0} 
     + \bigg(6 B_3 a - \frac{1}{2} C_1 u + 2 C_1 E v_L + \frac{1}{2} C_1 y_1 - \frac{3}{2} C_1 p^2 y_L \bigg) T \imath {p}^{m} {\,\delta\Gamma}^{0}{}_{0 m} 
     + C_1 T p^2 v_L {\,\delta}^{m n} {\,\delta\Gamma}^{0}{}_{m n} 
-    + \Big( - p^2 c_L + 2 E E d_2 + 4 E t - 2 E p^2 t_L + 2 E T w_L + 3 T x - T p^2 x_L - 10 E T z_2 + 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0} 
+    + \Big( - p^2 c_L + 2 E^2 d_2 + 4 E t - 2 E p^2 t_L + 2 E T w_L + 3 T x - T p^2 x_L - 10 E T z_2 + 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0} 
     + \bigg( E p^2 d_2 +  \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - 2 E T u - \frac{1}{2} T p^2 w_L + 8 E T y_1 - 2 E T p^2 y_L + \frac{1}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^4  z_L \bigg) C_1 {\,\delta}^{m}{}_{n} {\,\delta\Gamma}^{n}{}_{0 m} 
     + \Big( - 4 E d_2  - t +  p^2 t_L + 2 T w_L - 2 E T y_L - 2 T z_1 + T p^2 z_L \Big)  C_1 {p}_{n} {p}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
     - 6  E T y_2 C_1 \imath {p}^{p} {\epsilon}_{n p}{}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
@@ -487,10 +491,11 @@ The first order perturbative expansion of the equations of motion around the alr
     + v_L C_1 p^2 \imath {p}_{m} {\,\delta T}^{0 0 m} 
     - v_L C_1 E p^2 {\,\delta}_{m n} {\,\delta T}^{m 0 n} 
     + \bigg( - 6  B_3 a - \frac{1}{2}  C_1 u - C_1 E v_L - \frac{1}{2}  C_1 y_1 - \frac{1}{2}  C_1 p^2 y_L \bigg) {p}_{m} {p}_{n} {\,\delta T}^{m 0 n} 
-    + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E E v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p}.
+    + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E^2 v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p},
   \end{dmath}
+  which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}}=0$.
 \end{widetext}
-which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}}=0$.
+
 
 %% Solutions to this set of equations are in general a highly difficult problem that concerns $20$ equations of motion and $20$ scalar fields to be fixed by the equations. Yet, knowledge of the value of some of these scalars does not necessarily help to determine how geodesics are affected. For this, we only
 The only terms affecting the behaviour of the geodesic are $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$, as these provide the first order contributions to the equations
@@ -526,7 +531,7 @@ However, if we consider the connection to be the Levi-Civita one, the second ter
 %% To our knowledge, there is not known integrability condition of Eq.~\eqref{SimpleEOM}.
 A particular integrability condition is known for Riemannian manifolds $(\Mi,g)$ with covariantly constant Ricci curvature -- aka {parallel Ricci curvature} --, $\nab{\rho} R_{\mu\nu} = 0$. The parallel Ricci curvature is a generalization is a well known generalization of the Einstein condition (see Ref.~\cite{Besse,MO-Bryant}), which assures that although the manifold $(\Mi,g)$ is not generally Einstein, the metric has to be locally a product of Einstein metrics. Interestingly, a corollary is that all Einstein manifolds satisfy the parallel Ricci condition, and therefore every vacuum solution to the Einstein's equations solves the (torsionless) equation of motion of our affine model of gravity. Consequently, the fact that the non-relativistic limit of the gravitational potential in Eq.~\eqref{NewtonPot} yields a Newtonian potential seems clearer, and we can argue that even the post-Newtonian corrections coming from GR are present in the chosen scenario of our model.
 
-Additionally, the condition in Eq.~\eqref{SimpleEOM} is equivalent to (see Ref.~\cite{Besse}): (i) the Ricci tensor is a Codazzi tensor, (ii) the manifolds $(\Mi,g)$ has harmonic (Riemannian) curvature, and (iii) in the four-dimensional case the manifold $(\Mi,g)$ hs haronic Weyl tensor and constant scalar curvature.
+Additionally, the condition in Eq.~\eqref{SimpleEOM} is equivalent to (see Ref.~\cite{Besse}): (i) the Ricci tensor is a Codazzi tensor, (ii) the manifolds $(\Mi,g)$ has harmonic (Riemannian) curvature, and (iii) in the four-dimensional case the manifold $(\Mi,g)$ has haronic Weyl tensor and constant scalar curvature.
 
 %% Another solution of Eq.~\eqref{SimpleEOM} is of the type $\nab{\rho} R_{\mu\nu} = 0$, known as parallel Ricci curvature, which implies that the metric has to be locally a product of Einstein metrics. Additionally, this generalization of the Einstein condition implies that the curvature tensor is harmonic~\cite{Besse}.
 
@@ -556,7 +561,9 @@ Until now the most general diffeomorphism invariant and power counting renormali
 
 
 \begin{acknowledgments}
-  We thank to A. Melfo and R. L. Bryant for her helpful discussions and inspiring comments, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper. Additionally, we thank the developers of the mathematical software \textsc{Sage}~\cite{sage} and \textsc{SageManifolds}~\cite{sagemanifolds,*Gourgoulhon:2014ywa}, used to achieve several manipulations. This work was partially supported by CONICYT (Chile) under grant No. 79140040.
+  We thank to A. Melfo and R. L. Bryant for her helpful discussions and inspiring comments, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper.
+  %% Additionally, we thank the developers of the mathematical software \textsc{Sage}~\cite{sage} and \textsc{SageManifolds}~\cite{sagemanifolds,*Gourgoulhon:2014ywa}, used to achieve several manipulations.
+  This work was partially supported by CONICYT (Chile) under grant No. 79140040.
 \end{acknowledgments}
 
 
