@@ -99,81 +99,75 @@ where $\hat{\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices. In th
     +\Lambda_4T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Bigg].
   \end{dmath}
 \end{widetext}
-There is no obvious equivalence of the action in Eq.~\eqref{4dfull} with General Relativity (GR), particularly due to the lack of a source metric field. Nonetheless, we performed the analysis of scalar perturbations around a static homogeneous and isotropic background, following the irreducible decomposition of the fields
-\begin{equation}
-  \begin{split}
-    A_\mu &= \delta_\mu^0 A + a_\mu,\\
-    T^{\mu,\nu\rho} &= \delta^{\mu}_m\delta^{\nu\rho}_{m0}T + t^{\mu,\nu\rho},\\
-    \hat{\Gamma}^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu}.
-  \end{split}
-\end{equation}
+There is no obvious equivalence of the action in Eq.~\eqref{4dfull} with General Relativity (GR), particularly due to the lack of a source metric field.
 
-%%%%%%%%% NON-RELATIVISTIC LIMIT %%%%%%%%%
-For establishing the non-relativistic limit, we analysed the geodesic deviation of inertial observers. Therefore, we considered only solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
-\begin{equation} 
-  \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0.
-\end{equation}
-A non trivial solution is found by setting $F = G = 0$ and $E \neq 0$, together with all coupling constants to zero but $B_3 \neq 0$, $B_4 = -\tfrac{3}{2} B_3$, $C_1\neq 0$ and $E_2= 6 B_3$.
+Nonetheless, in Ref.~\cite{Skirzewski:2014eta} we performed the analysis of scalar perturbations around a static homogeneous and isotropic background, and established the non-relativistic limit by analysing the geodesic deviation of inertial observers.
+%% Therefore, we considered only solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
+%% \begin{equation} 
+%%   \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0.
+%% \end{equation}
+%% A non trivial solution is found by setting $F = G = 0$ and $E \neq 0$, together with all coupling constants to zero but $B_3 \neq 0$, $B_4 = -\tfrac{3}{2} B_3$, $C_1\neq 0$ and $E_2= 6 B_3$.
 
-Moreover, we included perturbative inhomogeneous sources to the connection field equations, by considering a matter action. Although the inclusion of matter in a non metric spacetime is a non standard procedure, we use the ``induced metric density'', defined by 
+Moreover, we included perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. Although the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we used the ``induced metric density'' defined by (see Refs.~\cite{Eddington1923math,*schrodinger1950space,Poplawski:2012bw})
 \begin{equation}
   \label{metric}
   \bar{g}^{\mu\nu} \equiv \sqrt{g} \, g^{\mu\nu} = \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma],
 \end{equation}
-as proposed in Refs.~\cite{Eddington1923math,*schrodinger1950space,Poplawski:2012bw}. Presuming that the matter action depends on $\bar{g}^{\mu\nu}$, a static point particle at the origin of the reference frame contributes to the equations of motion for the gravitational field
-\begin{dmath}
-  \label{mattervariation}
-  \delta {S}_{\text{mat}} =  C_1 \Big(- \frac{1}{2} ({\delta\Gamma}^{0}{}_{m n})  T {\delta}^{m n} - \frac{1}{2}  ({\delta T}^{0 0 m})  \imath {p}_{m} + \frac{1}{2}  ({\delta T}^{m 0 n})  E {\delta}_{m n} \Big)\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial \bar{g}^{00}}.
-\end{dmath}
+by presuming that the matter action depends on $\bar{g}^{\mu\nu}$.
+%% , a static point particle at the origin of the reference frame contributes to the equations of motion for the gravitational field
+%% \begin{dmath}
+%%   \label{mattervariation}
+%%   \delta {S}_{\text{mat}} =  C_1 \Big(- \frac{1}{2} ({\delta\Gamma}^{0}{}_{m n})  T {\delta}^{m n} - \frac{1}{2}  ({\delta T}^{0 0 m})  \imath {p}_{m} + \frac{1}{2}  ({\delta T}^{m 0 n})  E {\delta}_{m n} \Big)\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial \bar{g}^{00}}.
+%% \end{dmath}
 
-Then, we preformed the scalar mode perturbative expansion, and the scalar decomposition given by
-\begin{equation}
-  a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
-  \label{amu}
-\end{equation}
-\mbox{}
-\begin{dmath}
-  t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
-  +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
-  +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
-  + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
-  \label{tmunurho}
-\end{dmath}
-and
-\begin{dmath}
-  \gamma^\lambda_{\mu\nu} \to
-  \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
-  + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
-  + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
-  + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
-  + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
-  + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
-  \label{gmnl}
-\end{dmath}
-where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom.
+%% Then, we preformed the scalar mode perturbative expansion, and the scalar decomposition given by
+%% \begin{equation}
+%%   a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
+%%   \label{amu}
+%% \end{equation}
+%% \mbox{}
+%% \begin{dmath}
+%%   t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
+%%   +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
+%%   +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
+%%   + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
+%%   \label{tmunurho}
+%% \end{dmath}
+%% and
+%% \begin{dmath}
+%%   \gamma^\lambda_{\mu\nu} \to
+%%   \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
+%%   + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
+%%   + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
+%%   + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
+%%   + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
+%%   + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
+%%   \label{gmnl}
+%% \end{dmath}
+%% where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom.
 
-The first order perturbative expansion of the equations of motion around the already described background in momentum space with $p_0=0$ is given by
-\begin{widetext}
-  \begin{dmath}
-    \delta S =
-    \Big( - 2 E d_2 + t - p^2 t_L + T w_L + 3 T z_1 + 2 T z_2 - T p^2 z_L \Big) 6 B_3 p^2 {\,\delta A}_{0} 
-    + \bigg( - E p^2 d_2 + \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - \frac{1}{2} T p^2 w_L - 6 E T y_1 + 2 E T p^2 y_L + \frac{3}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^2 p^2 z_L \bigg) C_1 {\,\delta\Gamma}^{0}{}_{0 0} 
-    + \bigg(6 B_3 a - \frac{1}{2} C_1 u + 2 C_1 E v_L + \frac{1}{2} C_1 y_1 - \frac{3}{2} C_1 p^2 y_L \bigg) T \imath {p}^{m} {\,\delta\Gamma}^{0}{}_{0 m} 
-    + C_1 T p^2 v_L {\,\delta}^{m n} {\,\delta\Gamma}^{0}{}_{m n} 
-    + \Big( - p^2 c_L + 2 E^2 d_2 + 4 E t - 2 E p^2 t_L + 2 E T w_L + 3 T x - T p^2 x_L - 10 E T z_2 + 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0} 
-    + \bigg( E p^2 d_2 +  \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - 2 E T u - \frac{1}{2} T p^2 w_L + 8 E T y_1 - 2 E T p^2 y_L + \frac{1}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^4  z_L \bigg) C_1 {\,\delta}^{m}{}_{n} {\,\delta\Gamma}^{n}{}_{0 m} 
-    + \Big( - 4 E d_2  - t +  p^2 t_L + 2 T w_L - 2 E T y_L - 2 T z_1 + T p^2 z_L \Big)  C_1 {p}_{n} {p}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
-    - 6  E T y_2 C_1 \imath {p}^{p} {\epsilon}_{n p}{}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
-    + \bigg(6 B_3 T a + C_1 p^2 d_2 + \frac{1}{2} C_1 T u + C_1 E T v_L - \frac{1}{2} C_1 T y_1 + \frac{1}{2} C_1 T p^2 y_L \bigg) \imath {p}_{m} {\,\delta}^{n p} {\,\delta\Gamma}^{m}{}_{n p} 
-    + \Big( - 3 E v_L + y_1 - p^2 y_L\Big) C_1 T \imath {p}^{n} {\,\delta}_{m}{}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
-    + \Big( - d_2 + T y_L \Big) C_1 \imath {p}_{m} {p}^{n} {p}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
-    + v_L C_1 p^2 \imath {p}_{m} {\,\delta T}^{0 0 m} 
-    - v_L C_1 E p^2 {\,\delta}_{m n} {\,\delta T}^{m 0 n} 
-    + \bigg( - 6  B_3 a - \frac{1}{2}  C_1 u - C_1 E v_L - \frac{1}{2}  C_1 y_1 - \frac{1}{2}  C_1 p^2 y_L \bigg) {p}_{m} {p}_{n} {\,\delta T}^{m 0 n} 
-    + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E^2 v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p},
-  \end{dmath}
-  which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}}=0$.
-\end{widetext}
+%% The first order perturbative expansion of the equations of motion around the already described background in momentum space with $p_0=0$ is given by
+%% \begin{widetext}
+%%   \begin{dmath}
+%%     \delta S =
+%%     \Big( - 2 E d_2 + t - p^2 t_L + T w_L + 3 T z_1 + 2 T z_2 - T p^2 z_L \Big) 6 B_3 p^2 {\,\delta A}_{0} 
+%%     + \bigg( - E p^2 d_2 + \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - \frac{1}{2} T p^2 w_L - 6 E T y_1 + 2 E T p^2 y_L + \frac{3}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^2 p^2 z_L \bigg) C_1 {\,\delta\Gamma}^{0}{}_{0 0} 
+%%     + \bigg(6 B_3 a - \frac{1}{2} C_1 u + 2 C_1 E v_L + \frac{1}{2} C_1 y_1 - \frac{3}{2} C_1 p^2 y_L \bigg) T \imath {p}^{m} {\,\delta\Gamma}^{0}{}_{0 m} 
+%%     + C_1 T p^2 v_L {\,\delta}^{m n} {\,\delta\Gamma}^{0}{}_{m n} 
+%%     + \Big( - p^2 c_L + 2 E^2 d_2 + 4 E t - 2 E p^2 t_L + 2 E T w_L + 3 T x - T p^2 x_L - 10 E T z_2 + 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0} 
+%%     + \bigg( E p^2 d_2 +  \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - 2 E T u - \frac{1}{2} T p^2 w_L + 8 E T y_1 - 2 E T p^2 y_L + \frac{1}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^4  z_L \bigg) C_1 {\,\delta}^{m}{}_{n} {\,\delta\Gamma}^{n}{}_{0 m} 
+%%     + \Big( - 4 E d_2  - t +  p^2 t_L + 2 T w_L - 2 E T y_L - 2 T z_1 + T p^2 z_L \Big)  C_1 {p}_{n} {p}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
+%%     - 6  E T y_2 C_1 \imath {p}^{p} {\epsilon}_{n p}{}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
+%%     + \bigg(6 B_3 T a + C_1 p^2 d_2 + \frac{1}{2} C_1 T u + C_1 E T v_L - \frac{1}{2} C_1 T y_1 + \frac{1}{2} C_1 T p^2 y_L \bigg) \imath {p}_{m} {\,\delta}^{n p} {\,\delta\Gamma}^{m}{}_{n p} 
+%%     + \Big( - 3 E v_L + y_1 - p^2 y_L\Big) C_1 T \imath {p}^{n} {\,\delta}_{m}{}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
+%%     + \Big( - d_2 + T y_L \Big) C_1 \imath {p}_{m} {p}^{n} {p}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
+%%     + v_L C_1 p^2 \imath {p}_{m} {\,\delta T}^{0 0 m} 
+%%     - v_L C_1 E p^2 {\,\delta}_{m n} {\,\delta T}^{m 0 n} 
+%%     + \bigg( - 6  B_3 a - \frac{1}{2}  C_1 u - C_1 E v_L - \frac{1}{2}  C_1 y_1 - \frac{1}{2}  C_1 p^2 y_L \bigg) {p}_{m} {p}_{n} {\,\delta T}^{m 0 n} 
+%%     + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E^2 v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p},
+%%   \end{dmath}
+%%   which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}}=0$.
+%% \end{widetext}
 
 The only terms affecting the behaviour of the geodesic are $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$, as these provide the first order contributions to the equations
 \begin{equation}
@@ -182,16 +176,16 @@ The only terms affecting the behaviour of the geodesic are $\gamma^i{}_{00}$ and
   \quad \text{and} \quad
   \ddot{x}^0 + \gamma^0{}_{00}(\dot{x}^0)^2 = 0.
 \end{equation}
-From Eq.~\eqref{geodesic1stOrder} we can conclude that we need only know $\gamma^i{}_{00} = \partial^i v_L$, which we obtain in Fourier space to be
+From Eq.~\eqref{geodesic1stOrder} and the linearized action on scalar perturbation, we concluded that one only needs to know $\gamma^i{}_{00} = \partial^i v_L$, which is found to be in Fourier space
 \begin{equation}
   v_L=\frac{1}{2}\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial\bar{g}^{00}}\frac{1}{p^2},
 \end{equation}
-which in position space, 
+or in position space, 
 \begin{equation}
   \label{NewtonPot}
-  v_L = \frac{1}{8\pi} \frac{ \partial\mathcal{L}_{\text{Matter}} }{ \partial \bar{g}^{00} } \frac{1}{|\vec{x}|}
+  v_L = \frac{1}{8\pi} \frac{ \partial\mathcal{L}_{\text{Matter}} }{ \partial \bar{g}^{00} } \frac{1}{|\vec{x}|},
 \end{equation}
-is the usual Newtonian potential for a massive source.
+which is the usual Newtonian potential for a massive source.
 
 %%%%%%%%% COMPARISON GR %%%%%%%%%
 Although we have obtained the Newtonian gravitational potential in Eq.~\eqref{NewtonPot}, it is well known that post-Newtonian gravity is necessary to explain gravitational phenomena like Mercury's perihelion and the deviation of light by a gravitational source. Therefore, we should go beyond the Newtonian limit in order for saying that our model is (at least) comparable with GR.
@@ -218,7 +212,7 @@ Until now the most general diffeomorphism invariant and power counting renormali
 %%%%%%%%% ACKNOWLEGMENTS %%%%%%%%%
 \begin{acknowledgments}
   We thank to A. Melfo and R. L. Bryant for her helpful discussions and inspiring comments, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper.
-  This work was partially supported by CONICYT (Chile) under grant No. 79140040.
+  This work was partially supported by CONICYT (Chile) under project No. 79140040.
 \end{acknowledgments}
 
 
