@@ -22,13 +22,13 @@
 
 \hypersetup{%
   pdftitle={Einstein Gravity from an Affine Model},
-  pdfauthor={Aureliano Skirzewski,}{Nelson Pantoja,}{Oscar Castillo-Felisola},
+  pdfauthor={Aureliano Skirzewski,}{Oscar Castillo-Felisola},
   pdfkeywords={Affine Gravity,} {Torsion,} {Generalised Gravity.},
   pdflang={English}
 }
 
 
-
+%%\usepackage[british]{babel}
 %------------------
 %--------- Document
 %------------------
@@ -48,7 +48,7 @@
 
 %--------- Abstract
 \begin{abstract}
-  We show that Einstein's equations in vacuum (with or without cosmological constant) are a possible solution to the equations of motion of a recently formulated affine model of gravity, when the connection is the one of Levi-Civita.
+  We show that general Einstein manifolds (with or without cosmological constant) are a possible solution to the equations of motion of a recently formulated affine model of gravity, when the connection is the one of Levi-Civita. Moreover, we find an equivalence between the minimally coupled massless scalar field in General Relativity with a ``minimal'' coupled scalar field in this affine model.
 \end{abstract}
 
 \pacs{02.40.Ma,04.50.Kd,04.90.+e}
@@ -212,10 +212,39 @@ Until now the most general diffeomorphism invariant and power-counting renormali
 Thus, we have consider the action provided by the ``kinematical term''
 \begin{dmath}
   \label{ScalarAction}
-  S_\phi = -\frac{1}{2} \int \dn{4}{x} \Big( C_1\, \nabla_\lambda T^{\mu,\nu\lambda}  \partial_\mu\phi\partial_\nu\phi + B_3\, A_\lambda T^{\mu,\nu\lambda} \partial_\mu\phi\partial_\nu\phi + B_1\, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma}\partial_\mu\phi\partial_\nu\phi \Big),
+  S_\phi = - \alpha \int \dn{4}{x} \Big( C_1\, \nabla_\lambda T^{\mu,\nu\lambda}  + B_3\, A_\lambda T^{\mu,\nu\lambda} + B_1\, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma} \Big) \partial_\mu\phi\partial_\nu\phi,
 \end{dmath}
+which possesses a nontrivial contribution to the equations of motion once the torsion is set to zero.
 
+The equation of motion for the Curtright field when the scalar field is turned on is
+\begin{equation*}
+  \nabla_{[\sigma} R_{\rho]\mu}{}^{\mu}{}_\nu - \frac{C_2}{C_1} \nabla_\nu  R_{\rho\sigma}{}^{\mu}{}_\mu - \alpha \nabla_{[\sigma} \Big( \partial_{\rho]}\phi \partial_\nu\phi \Big) = 0,
+\end{equation*}
+which simplifies to 
+\begin{equation}
+  \nabla_{[\sigma} R_{\rho]\nu} - \alpha \nabla_{[\sigma} \Big( \partial_{\rho]}\phi \partial_\nu\phi \Big) = 0,
+  \label{SimpleEOMwS}
+\end{equation}
+for the case of considering the Levi-Civita connection. In that case, we find a particular solution of Eq.~\eqref{SimpleEOMwS},
+\begin{equation*}
+  R_{\mu\nu} - \alpha \pa{\mu} \phi \pa{\nu} \phi = \Lambda g_{\mu\nu},
+\end{equation*}
+that can be written in the more conventional form
+\begin{equation}
+  R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R + \Lambda g_{\mu\nu} = \alpha \Big( \pa{\mu} \phi \pa{\nu} \phi - \frac{1}{2} g_{\mu\nu} \big( \partial\phi \big)^2 \Big).
+\end{equation}
+Additionally, the Bianchi identity, \mbox{$\nabla^\mu \left( R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R \right) = 0$,} imposes that
+\begin{equation}
+  \nabla^\mu \pa{\mu} \phi = 0.
+\end{equation}
+This condition is, in the sense argued in Ref.~\cite{Bekenstein:2014uwa}, the equation of motion for the scalar field. Notice that, the Euler--Lagrange equation of motion for the scalar field yields no information after taking the vanishing torsion ``truncation''.
 
+It is well-known that this system of equations can be the obtained effectively from the Einstein--Hilbert action coupled minimally to a massless scalar field
+\begin{equation}
+  S_{\text{eff}} = \int \dn{4}{x} \sqrt{g} \Big( R + 2 \Lambda - \frac{1}{2} g^{\mu\nu} \pa{\mu}\phi \pa{\nu} \phi \Big).
+\end{equation}
+
+Summarising, we have shown that the  \emph{purely affine gravity} constructed in Ref.~\cite{} possesses a well-defined torsionless limit, which generalizes the equations of motion  from GR. Moreover, our gravitational model coupled to a scalar field through the \emph{Eddington's metric} --- in the vanishing torsion consideration ---, is equivalent to GR minimally coupled to a massless scalar field.
 
 %%%%%%%%% ACKNOWLEGMENTS %%%%%%%%%
 \begin{acknowledgments}
