@@ -28,7 +28,6 @@
 }
 
 
-%%\usepackage[british]{babel}
 %------------------
 %--------- Document
 %------------------
@@ -46,7 +45,7 @@
 \affiliation{\CCTVal.}
 \affiliation{\UTFSM.}
 
-%--------- Abstract
+%% --------- Abstract
 \begin{abstract}
   We show that general Einstein manifolds (with or without cosmological constant) are a possible solution to the equations of motion of a recently formulated affine model of gravity, when the connection is the one of Levi-Civita. Moreover, we find an equivalence between the minimally coupled massless scalar field in General Relativity with a ``minimal'' coupled scalar field in this affine model.
 \end{abstract}
@@ -58,13 +57,13 @@
 \maketitle
 
 %%%%%%%%% THE MODEL %%%%%%%%%
-In a previous paper~\cite{Skirzewski:2014eta}, we presented a purely affine gravitational model in four dimensions constructed entirely on the bases of full diffeomorphism invariance, and restricting ourselves to consider only power-counting renormalizable. We showed that its non-relativistic limit around a homogeneous and isotropic spacetime yields to a Newtonian gravity. We also highlighted the possibility of using standard methods to quantize the model, due to its polynomial construction (unlike previous proposals~\cite{Eddington1923math,schrodinger1950space}), and also the likelihood of evading the uniqueness of diffeomorphism invariant states~\cite{Lewandowski:2005jk}.
+In a previous paper~\cite{Skirzewski:2014eta}, we presented a purely affine gravitational model in four dimensions constructed entirely on the basis of full diffeomorphism invariance, and restricting ourselves to consider only power-counting renormalizable. We showed that its non-relativistic limit around a homogeneous and isotropic spacetime yields a Newtonian gravity. We also highlighted the possibility of using standard methods to quantize the model, due to its polynomial construction (unlike previous proposals~\cite{Eddington1923math,schrodinger1950space}), and also the likelihood of avoiding the uniqueness of diffeomorphism-invariant states~\cite{Lewandowski:2005jk}.
 
 The four-dimensional action is written in terms of the curvature and torsion of an affine connection, $\Gamma^\mu{}_{\rho\sigma}$, which accepts a decomposition on irreducible representations as
 \begin{equation}
   \hat{\Gamma}^\mu{}_{\rho\sigma} = {\Gamma}^\mu{}_{\rho\sigma} + T^\mu{}_{\rho\sigma} = {\Gamma}^\mu{}_{\rho\sigma} + \epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}+A_{[\rho}\delta^\mu_{\nu]},
 \end{equation}
-where ${\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices, the $A_\mu$ is a vector field that gives trace to the torsion, and  $T^{\mu,\lambda\kappa}$ is a Curtright field~\cite{Curtright:1980yk}. Since no metric is present  the epsilon symbols are not related but instead we demand that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
+where ${\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices, the $A_\mu$ is a vector field, the trace of torsion, and  $T^{\mu,\lambda\kappa}$ is a Curtright field~\cite{Curtright:1980yk}. Since no metric is present  the epsilon symbols are not related but instead we demand that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
 \begin{widetext}
   Using the above decomposition, the most general (presumably renormalizable) action preserving diffeomorphisms is~\footnote{We have dropped the contribution to a boundary term, the complete action is written in Ref.~\cite{Skirzewski:2014eta}.}
   \begin{dmath}
@@ -94,91 +93,18 @@ where ${\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices, the $A_\m
       +F_4\,T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Bigg].
   \end{dmath}
 \end{widetext}
-There is no obvious equivalence of the action in Eq.~\eqref{4dfull} with General Relativity (GR), particularly due to the lack of a source metric field.
+There is no obvious equivalence between the action in Eq.~\eqref{4dfull} and General Relativity (GR), particularly due to the lack of a source metric field.
 
-Nonetheless, in Ref.~\cite{Skirzewski:2014eta} we performed the analysis of scalar perturbations around a static homogeneous and isotropic background, and established the non-relativistic limit by analysing the geodesic deviation of inertial observers.
-%% Therefore, we considered only solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
-%% \begin{equation} 
-%%   \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0.
-%% \end{equation}
-%% A non trivial solution is found by setting $F = G = 0$ and $E \neq 0$, together with all coupling constants to zero but $B_3 \neq 0$, $B_4 = -\tfrac{3}{2} B_3$, $C_1\neq 0$ and $E_2= 6 B_3$.
+Nonetheless, in Ref.~\cite{Skirzewski:2014eta} we analysed the scalar perturbations around a static homogeneous and isotropic background. In the non-relativistic limit, the geodesic deviation of inertial observed is also discussed.
 
-Moreover, we included perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. Although the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we used the ``Eddington's metric density'' defined by (see Refs.~\cite{Eddington1923math,schrodinger1950space,Poplawski:2012bw})
+Additionally, we included perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. Although the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we used ``Eddington's metric density'' \hl{JZ,AA: satisfy metric conditions? e.g. non-deg.} defined by (see Refs.~\cite{Eddington1923math,schrodinger1950space,Poplawski:2012bw}) \hl{JZ: def. $R_{(\mu\nu)}$}
 \begin{equation}
   \label{metric}
   \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma] \equiv \sqrt{\mathfrak{g}} \, \mathfrak{g}^{\mu\nu} = \bar{g}^{\mu\nu} ,
 \end{equation}
-by presuming that the matter action depends on $\bar{g}^{\mu\nu}$.
-%% , a static point particle at the origin of the reference frame contributes to the equations of motion for the gravitational field
-%% \begin{dmath}
-%%   \label{mattervariation}
-%%   \delta {S}_{\text{mat}} =  C_1 \Big(- \frac{1}{2} ({\delta\Gamma}^{0}{}_{m n})  T {\delta}^{m n} - \frac{1}{2}  ({\delta T}^{0 0 m})  \imath {p}_{m} + \frac{1}{2}  ({\delta T}^{m 0 n})  E {\delta}_{m n} \Big)\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial \bar{g}^{00}}.
-%% \end{dmath}
-
-%% Then, we preformed the scalar mode perturbative expansion, and the scalar decomposition given by
-%% \begin{equation}
-%%   a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
-%%   \label{amu}
-%% \end{equation}
-%% \mbox{}
-%% \begin{dmath}
-%%   t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
-%%   +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
-%%   +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
-%%   + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
-%%   \label{tmunurho}
-%% \end{dmath}
-%% and
-%% \begin{dmath}
-%%   \gamma^\lambda_{\mu\nu} \to
-%%   \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
-%%   + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
-%%   + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
-%%   + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
-%%   + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
-%%   + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
-%%   \label{gmnl}
-%% \end{dmath}
-%% where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom.
-
-%% The first order perturbative expansion of the equations of motion around the already described background in momentum space with $p_0=0$ is given by
-%% \begin{widetext}
-%%   \begin{dmath}
-%%     \delta S =
-%%     \Big( - 2 E d_2 + t - p^2 t_L + T w_L + 3 T z_1 + 2 T z_2 - T p^2 z_L \Big) 6 B_3 p^2 {\,\delta A}_{0} 
-%%     + \bigg( - E p^2 d_2 + \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - \frac{1}{2} T p^2 w_L - 6 E T y_1 + 2 E T p^2 y_L + \frac{3}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^2 p^2 z_L \bigg) C_1 {\,\delta\Gamma}^{0}{}_{0 0} 
-%%     + \bigg(6 B_3 a - \frac{1}{2} C_1 u + 2 C_1 E v_L + \frac{1}{2} C_1 y_1 - \frac{3}{2} C_1 p^2 y_L \bigg) T \imath {p}^{m} {\,\delta\Gamma}^{0}{}_{0 m} 
-%%     + C_1 T p^2 v_L {\,\delta}^{m n} {\,\delta\Gamma}^{0}{}_{m n} 
-%%     + \Big( - p^2 c_L + 2 E^2 d_2 + 4 E t - 2 E p^2 t_L + 2 E T w_L + 3 T x - T p^2 x_L - 10 E T z_2 + 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0} 
-%%     + \bigg( E p^2 d_2 +  \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - 2 E T u - \frac{1}{2} T p^2 w_L + 8 E T y_1 - 2 E T p^2 y_L + \frac{1}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^4  z_L \bigg) C_1 {\,\delta}^{m}{}_{n} {\,\delta\Gamma}^{n}{}_{0 m} 
-%%     + \Big( - 4 E d_2  - t +  p^2 t_L + 2 T w_L - 2 E T y_L - 2 T z_1 + T p^2 z_L \Big)  C_1 {p}_{n} {p}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
-%%     - 6  E T y_2 C_1 \imath {p}^{p} {\epsilon}_{n p}{}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
-%%     + \bigg(6 B_3 T a + C_1 p^2 d_2 + \frac{1}{2} C_1 T u + C_1 E T v_L - \frac{1}{2} C_1 T y_1 + \frac{1}{2} C_1 T p^2 y_L \bigg) \imath {p}_{m} {\,\delta}^{n p} {\,\delta\Gamma}^{m}{}_{n p} 
-%%     + \Big( - 3 E v_L + y_1 - p^2 y_L\Big) C_1 T \imath {p}^{n} {\,\delta}_{m}{}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
-%%     + \Big( - d_2 + T y_L \Big) C_1 \imath {p}_{m} {p}^{n} {p}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
-%%     + v_L C_1 p^2 \imath {p}_{m} {\,\delta T}^{0 0 m} 
-%%     - v_L C_1 E p^2 {\,\delta}_{m n} {\,\delta T}^{m 0 n} 
-%%     + \bigg( - 6  B_3 a - \frac{1}{2}  C_1 u - C_1 E v_L - \frac{1}{2}  C_1 y_1 - \frac{1}{2}  C_1 p^2 y_L \bigg) {p}_{m} {p}_{n} {\,\delta T}^{m 0 n} 
-%%     + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E^2 v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p},
-%%   \end{dmath}
-%%   which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}}=0$.
-%% \end{widetext}
-
-
-%% The only terms affecting the behaviour of the geodesic are $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$, as these provide the first order contributions to the equations
-%% \begin{equation}
-%%   \label{geodesic1stOrder}
-%%   \ddot{x}^i + \gamma^i{}_{00}(\dot{x}^0)^2 = 0,
-%%   \quad \text{and} \quad
-%%   \ddot{x}^0 + \gamma^0{}_{00}(\dot{x}^0)^2 = 0.
-%% \end{equation}
+by assuming a matter action that depends on $\bar{g}^{\mu\nu}$.
 
 From the geodesic equations and the linearized action on scalar perturbation, we concluded that the effective potential
-%% one only needs to know $\gamma^i{}_{00} = \partial^i v_L$, which is found to be in Fourier space
-%% \begin{equation}
-%%   v_L=\frac{1}{2}\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial\bar{g}^{00}}\frac{1}{p^2},
-%% \end{equation}
-%% or in position space, 
 \begin{equation}
   \label{NewtonPot}
   v_L = \frac{1}{8\pi} \frac{ \partial\mathcal{L}_{\text{Matter}} }{ \partial \bar{g}^{00} } \frac{1}{|\vec{x}|},
@@ -186,37 +112,37 @@ From the geodesic equations and the linearized action on scalar perturbation, we
 is the usual Newtonian potential for a massive source.
 
 %%%%%%%%% COMPARISON GR %%%%%%%%%
-Although we obtained the Newtonian gravitational potential in Eq.~\eqref{NewtonPot}, it is well known that post-Newtonian gravity is necessary to explain gravitational phenomena like Mercury's perihelion and the deviation of light by a gravitational source. Therefore, we should go beyond the Newtonian limit in order for saying that our model is (at least) comparable with GR.
+Although we obtained the Newtonian gravitational potential~\eqref{NewtonPot}, the post-Newtonian approximation is necessary to explain gravitational phenomena like Mercury's perihelion and the deviation of light by a gravitational source. Therefore, we should go beyond the Newtonian limit in order to compare our model with GR.
 
-A comparison between our affine model and GR requires the imposition of vanishing torsion. Interestingly, the coupled system of equations of motion from Eq.~\eqref{4dfull} is consistently ``truncated'' under such requirement, and the only nontrivial equation of motion is the one for the $T^{\lambda,\mu\nu}$ field, which yield
+\hl{A comparison between our affine model and GR requires the imposition of vanishing torsion (JZ: Why?).} Interestingly, the field equations from~\eqref{4dfull} can be consistently ``truncated'' under such a requirement, and the only nontrivial equation is that for $T^{\lambda,\mu\nu}$,
 \begin{equation*}
   \kappa_1 \nab{[\rho} R_{\mu]\lambda}{}^{\lambda}{}_{\nu} + \kappa_2 \nab{\nu} R_{\mu\rho}{}^\lambda{}_\lambda = 0.
 \end{equation*}
-If we consider the case in which the connection is compatible with a metric, the second term vanishes and the gravitational equations are
+If the connection is compatible with a metric, the second term vanishes and the gravitational equations are
 \begin{equation}
   \nab{[\rho} R_{\mu]\nu} = 0.
   \label{SimpleEOM}
 \end{equation}
 
-The above equation is a generalization of a condition known in Riemannian geometry as covariantly constant Ricci curvature --- aka parallel Ricci curvature ---, \mbox{$\nab{\rho} R_{\mu\nu} = 0$.} The parallel Ricci curvature is a generalization is a well known generalization of the Einstein condition (see Ref.~\cite{Besse,MO-Bryant}), which assures that although the manifold $(\Mi,g)$ is not generally Einstein, the metric has to be locally a product of Einstein metrics.
+The above equation is a generalization of a condition known in Riemannian geometry as covariantly constant Ricci curvature --- aka parallel Ricci curvature ---, \mbox{$\nab{\rho} R_{\mu\nu} = 0$.} The parallel Ricci curvature is a generalization of the Einstein condition (see Ref.~\cite{Besse,MO-Bryant}) which assures that although the manifold $(\Mi,g)$ is not generally Einstein, the metric has to be locally a product of Einstein metrics.
 
-Interestingly, a corollary is that all Einstein manifolds, \mbox{$R_{\mu\nu} \propto g_{\mu\nu}$,} satisfy the parallel Ricci condition, and therefore every vacuum solution to the Einstein's equations solves the (torsionless) equation of motion of our affine model of gravity. Consequently, the fact that the non-relativistic limit of the gravitational potential in Eq.~\eqref{NewtonPot} yields a Newtonian potential seems clearer, and we can argue that even the post-Newtonian corrections coming from GR are present in the chosen scenario of our model.
+Interestingly, a corollary is that all Einstein manifolds, \mbox{$R_{\mu\nu} \propto g_{\mu\nu}$,} satisfy the parallel Ricci condition, and therefore every vacuum solution to the Einstein's equations solves the (torsion-free) equations of our model. Consequently, the fact that the non-relativistic limit of the gravitational potential in Eq.~\eqref{NewtonPot} yields a Newtonian potential seems clearer, and we can argue that even the post-Newtonian corrections coming from GR are present in the chosen scenario of our model.
 
-Additionally, the condition in Eq.~\eqref{SimpleEOM} is equivalent to (see Ref.~\cite{Besse}): (i) the Ricci tensor is a Codazzi tensor~\footnote{A Codazzi tensor is a symmetric $(0,2)$-type tensor, $T$, satisfying the condition \mbox{$D_X T(Y,Z) = D_Y T(X,Z)$.}}, (ii) the manifolds $(\Mi,g)$ has harmonic (Riemannian) curvature, and (iii) in the four-dimensional case the manifold $(\Mi,g)$ has harmonic Weyl tensor and constant scalar curvature.
+Additionally, the condition in Eq.~\eqref{SimpleEOM} is equivalent to the following statements (see Ref.~\cite{Besse}): (i) the Ricci tensor is a Codazzi tensor~\footnote{A Codazzi tensor is a symmetric $(0,2)$-type tensor, $T$, satisfying the condition \mbox{$D_X T(Y,Z) = D_Y T(X,Z)$.}}, (ii) the manifolds $(\Mi,g)$ has harmonic (Riemannian) curvature, and (iii) in the four-dimensional case the manifold $(\Mi,g)$ has harmonic Weyl tensor and constant scalar curvature.
 
 %%%%%%%%% MATTER %%%%%%%%%
-Until now the most general diffeomorphism invariant and power-counting renormalizable for an affine connection has been built. The theory does not require a spacetime metric, but instead we can find the Eddington's inverse metric density, $\bar{g}^{\mu\nu}$, arising as the functional variation of the action with respect to the symmetric part of the Ricci tensor. Following our precept, the matter content --- we consider just scalar matter --- should couple to $\bar{g}^{\mu\nu}$, which for Eq.~\eqref{4dfull} is
+Until now, the most general diffeomorphism-invariant and power-counting renormalizable theory for an affine connection has been built. The theory does not require a spacetime metric, but instead we can find the Eddington's inverse metric density, $\bar{g}^{\mu\nu}$, arising as the functional variation of the action with respect to the symmetric part of the Ricci tensor. Following our precept, the matter content --- we consider just scalar matter --- should couple to $\bar{g}^{\mu\nu}$, which for Eq.~\eqref{4dfull} is
 \begin{dmath}
   \bar{g}^{\mu\nu} = B_1\, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma} + B_3\, A_\lambda T^{\mu,\nu\lambda} + C_1\, \nabla_\lambda T^{\mu,\nu\lambda}.
 \end{dmath}
-Thus, we have consider the action provided by the ``kinematical term''
+Thus, we have considered the action provided by the ``kinetic term''
 \begin{dmath}
   \label{ScalarAction}
   S_\phi = - \alpha \int \dn{4}{x} \Big( C_1\, \nabla_\lambda T^{\mu,\nu\lambda}  + B_3\, A_\lambda T^{\mu,\nu\lambda} + B_1\, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma} \Big) \partial_\mu\phi\partial_\nu\phi,
 \end{dmath}
-which possesses a nontrivial contribution to the equations of motion once the torsion is set to zero.
+which makes a nontrivial contribution to the field equations once the torsion is set to zero.
 
-The equation of motion for the Curtright field when the scalar field is turned on is
+The equation for the Curtright field when the scalar field is turned on is
 \begin{equation*}
   \nabla_{[\sigma} R_{\rho]\mu}{}^{\mu}{}_\nu - \frac{C_2}{C_1} \nabla_\nu  R_{\rho\sigma}{}^{\mu}{}_\mu - \alpha \nabla_{[\sigma} \Big( \partial_{\rho]}\phi \partial_\nu\phi \Big) = 0,
 \end{equation*}
@@ -225,7 +151,7 @@ which simplifies to
   \nabla_{[\sigma} R_{\rho]\nu} - \alpha \nabla_{[\sigma} \Big( \partial_{\rho]}\phi \partial_\nu\phi \Big) = 0,
   \label{SimpleEOMwS}
 \end{equation}
-for the case of considering the Levi-Civita connection. In that case, we find a particular solution of Eq.~\eqref{SimpleEOMwS},
+when the connection is the Levi-Civita one. In that case, we find a particular solution of Eq.~\eqref{SimpleEOMwS}, \hl{JZ: What if non-LC connection?}
 \begin{equation*}
   R_{\mu\nu} - \alpha \pa{\mu} \phi \pa{\nu} \phi = \Lambda g_{\mu\nu},
 \end{equation*}
@@ -233,10 +159,12 @@ that can be written in the more conventional form
 \begin{equation}
   R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R + \Lambda g_{\mu\nu} = \alpha \Big( \pa{\mu} \phi \pa{\nu} \phi - \frac{1}{2} g_{\mu\nu} \big( \partial\phi \big)^2 \Big).
 \end{equation}
-Additionally, the Bianchi identity, \mbox{$\nabla^\mu \left( R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R \right) = 0$,} imposes that
+Additionally, the second Bianchi identity imposes
+%% \mbox{$\nabla^\mu \left( R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R \right) = 0$,}
 \begin{equation}
   \nabla^\mu \pa{\mu} \phi = 0.
 \end{equation}
+\hl{JZ: Esto muestra que la teoria contiene a R.G. com ocaso particular, pero tiene probablemente mucho mas. Que es lo extra?}
 This condition is, in the sense argued in Ref.~\cite{Bekenstein:2014uwa}, the equation of motion for the scalar field. Notice that, the Euler--Lagrange equation of motion for the scalar field yields no information after taking the vanishing torsion ``truncation''.
 
 It is well-known that this system of equations can be the obtained effectively from the Einstein--Hilbert action coupled minimally to a massless scalar field
@@ -244,14 +172,13 @@ It is well-known that this system of equations can be the obtained effectively f
   S_{\text{eff}} = \int \dn{4}{x} \sqrt{g} \Big( R + 2 \Lambda - \frac{1}{2} g^{\mu\nu} \pa{\mu}\phi \pa{\nu} \phi \Big).
 \end{equation}
 
-Summarising, we have shown that the  \emph{purely affine gravity} constructed in Ref.~\cite{Skirzewski:2014eta} possesses a well-defined torsionless limit, which generalizes the equations of motion  from GR. Moreover, our gravitational model coupled to a scalar field through the \emph{Eddington's metric} --- in the vanishing torsion consideration ---, is equivalent to GR minimally coupled to a massless scalar field.
+Summarising, we have shown that the  \emph{purely affine gravity} constructed in Ref.~\cite{Skirzewski:2014eta} possesses a well-defined torsionless limit, which generalizes the equations of motion  from GR. Moreover, our gravitational model coupled to a scalar field through the \emph{Eddington's metric} --- in the vanishing torsion consideration ---, is equivalent to GR minimally coupled to a massless scalar field. \hl{JZ: Ok, so?}
 
 %%%%%%%%% ACKNOWLEGMENTS %%%%%%%%%
 \begin{acknowledgments}
-  We thank to A. Melfo and R. L. Bryant for her helpful discussions and inspiring comments, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper.
+  We thank to A. Melfo and R. L. Bryant for their helpful discussions and inspiring comments, to J. Zanelli for his suggestions on the physical insides of the problem and careful but critical review of the manuscript, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper.
   This work was partially supported by CONICYT (Chile) under project No. 79140040.
 \end{acknowledgments}
-
 
 %%%%%%%%% BIBLIOGRAPHY %%%%%%%%%
 \bibliographystyle{apsrev4-1}
