@@ -95,11 +95,10 @@ where ${\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices, the $A_\m
 \end{widetext}
 Although there is no obvious equivalence between the action in Eq.~\eqref{4dfull} and General Relativity (GR), particularly due to the lack of a source metric field, we analysed in Ref.~\cite{Skirzewski:2014eta} the scalar perturbations around a static homogeneous and isotropic background, and in the non-relativistic (low-momentum) limit, the geodesic deviation of inertial observers is also discussed.
 
-Additionally, we included perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. Albeit the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we used ``Eddington's metric density''%% \hl{JZ,AA: satisfy metric conditions? e.g. non-deg.}
-defined as the variation of the action with respect to the symmetric part of the Ricci tensor~(see Refs.~\cite{Eddington1923math,schrodinger1950space,Poplawski:2012bw}), i.e.,%% \hl{JZ: def. $R_{(\mu\nu)}$}
+Additionally, we included perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. Albeit the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we used ``Eddington's metric density''~\footnote{Despite the suggestive name, this is a $\binom{2}{0}$-tensor density which does not necessarily satisfy the metric conditions. However, for the simple case of the Einstein--Hilbert action, it is in fact the inverse metric density.} defined as the variation of the action with respect to the symmetric part of the Ricci tensor~(see Refs.~\cite{Eddington1923math,schrodinger1950space,Poplawski:2012bw}), i.e.,%% \hl{JZ: def. $R_{(\mu\nu)}$}
 \begin{equation}
   \label{metric}
-  \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma] \equiv \sqrt{\mathfrak{g}} \, \mathfrak{g}^{\mu\nu} = \bar{g}^{\mu\nu} ,
+  \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma] \equiv \sqrt{\mathsf{g}} \, \mathsf{g}^{\mu\nu} = \bar{g}^{\mu\nu} ,
 \end{equation}
 by assuming a matter action that depends on $\bar{g}^{\mu\nu}$.
 
@@ -116,9 +115,9 @@ Although we obtained the Newtonian gravitational potential~\eqref{NewtonPot}, th
 %%\hl{A comparison between our affine model and GR requires the imposition of vanishing torsion (JZ: Why?).}
 Even though a comparison between our affine model and GR does not require the imposition of vanishing torsion, at this stage we shall focus on a sector of the theory in which the connection is metric and torsion-free. Interestingly, the field equations from Eq.~\eqref{4dfull} can be consistently ``truncated'' under such requirements, and the only nontrivial equation is the one for the Curtright, $T^{\lambda,\mu\nu}$,
 \begin{equation*}
-  \kappa_1 \nab{[\rho} R_{\mu]\lambda}{}^{\lambda}{}_{\nu} + \kappa_2 \nab{\nu} R_{\mu\rho}{}^\lambda{}_\lambda = 0.
+  \nab{[\rho} R_{\mu]\lambda}{}^{\lambda}{}_{\nu} + \kappa \nab{\nu} R_{\mu\rho}{}^\lambda{}_\lambda = 0,
 \end{equation*}
-In the considered sector the connection is compatible with a metric, therefore, the second term vanishes and the gravitational equations are
+with $\kappa$ constant related with the couplings of the model. In the considered sector the connection is compatible with a metric, therefore, the second term vanishes and the gravitational equations are
 \begin{equation}
   \nab{[\rho} R_{\mu]\nu} = 0.
   \label{SimpleEOM}
@@ -138,14 +137,16 @@ where $\Rif{}{} \in \Omega^2(\Mi, T^*\Mi \otimes T\Mi)$ is the curvature two-for
 %%\hl{Are we sure of this??? It does not sound true.}
 
 %%%%%%%%% MATTER %%%%%%%%%
-Until now, the most general diffeomorphism-invariant and power-counting renormalizable (gravitational) theory for an affine connection has been built, and we have showed that in a certain sector it is equivalent to GR. In what follows, we show an attempt of including scalar matter into the model. The theory does not require a spacetime metric, but instead we can use the Eddington's inverse metric density ($\bar{g}^{\mu\nu}$), arising as the functional variation of the action with respect to the symmetric part of the Ricci tensor, to build Lagrangian densities for the matter content. Following our precept, the matter content --- scalar matter --- should couple to $\bar{g}^{\mu\nu}$, which for Eq.~\eqref{4dfull} is
+Until now, the most general diffeomorphism-invariant and power-counting renormalizable (gravitational) theory for an affine connection has been built, and we have showed that in a certain sector it is equivalent to GR. In what follows, we show an attempt of including scalar matter into the model. The theory does not require a spacetime metric, but instead we consider the most general $\binom{2}{0}$-tensor density, $\mathfrak{g}^{\mu\nu}$,  built with the available fields, an use it to build Lagrangian densities for the matter content. Following our precept, the matter content --- scalar matter --- should couple to $\mathfrak{g}^{\mu\nu}$, given by %% which for Eq.~\eqref{4dfull} is
 \begin{dmath}
-  \bar{g}^{\mu\nu} = B_1\, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma} + B_3\, A_\lambda T^{\mu,\nu\lambda} + C_1\, \nabla_\lambda T^{\mu,\nu\lambda}.
+  \mathfrak{g}^{\mu\nu} = \alpha \, \nabla_\lambda T^{\mu,\nu\lambda} + \beta \, A_\lambda T^{\mu,\nu\lambda} + \gamma \, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma},
 \end{dmath}
+with $\alpha$, $\beta$ and $\gamma$ arbitrary coefficients.
+
 We consider the action provided by the ``kinetic term''
 \begin{dmath}
   \label{ScalarAction}
-  S_\phi = - \alpha \int \dn{4}{x} \Big( C_1\, \nabla_\lambda T^{\mu,\nu\lambda}  + B_3\, A_\lambda T^{\mu,\nu\lambda} + B_1\, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma} \Big) \partial_\mu\phi\partial_\nu\phi,
+  S_\phi = -  \int \dn{4}{x} \Big( \alpha \, \nabla_\lambda T^{\mu,\nu\lambda}  + \beta \, A_\lambda T^{\mu,\nu\lambda} + \gamma \, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma} \Big) \partial_\mu\phi\partial_\nu\phi,
 \end{dmath}
 which makes a nontrivial contribution to the field equations once we restrict to the sector of interest, where the torsion is set to zero and the connection is metric.
 
@@ -163,7 +164,7 @@ In that case, we find a particular solution of Eq.~\eqref{SimpleEOMwS},%% \hl{JZ
 \begin{equation*}
   R_{\mu\nu} - \alpha \pa{\mu} \phi \pa{\nu} \phi = \Lambda g_{\mu\nu},
 \end{equation*}
-that can be written in the more conventional form
+that can be written in the more conventional form~\footnote{Notice that $\alpha$ is the gravitational coupling constant, which in Einstein--Hilbert gravity is $G_N$.}
 \begin{equation}
   R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R + \Lambda g_{\mu\nu} = \alpha \Big( \pa{\mu} \phi \pa{\nu} \phi - \frac{1}{2} g_{\mu\nu} \big( \partial\phi \big)^2 \Big).
 \end{equation}
@@ -176,15 +177,16 @@ This condition is, in the sense argued in Ref.~\cite{Bekenstein:2014uwa}, the eq
 
 It is well-known that this system of equations can be obtained effectively from the Einstein--Hilbert action coupled minimally to a massless scalar field
 \begin{equation}
-  S_{\text{eff}} = \int \dn{4}{x} \sqrt{g} \Big( R + 2 \Lambda - \frac{1}{2} g^{\mu\nu} \pa{\mu}\phi \pa{\nu} \phi \Big).
+  S_{\text{eff}} = \frac{1}{\alpha} \int \dn{4}{x} \sqrt{g} \left( R + 2 \Lambda - \frac{\alpha}{2} g^{\mu\nu} \pa{\mu}\phi \pa{\nu} \phi \right).
 \end{equation}
 
 Summarising, we have shown that the  \emph{purely affine gravity} constructed in Ref.~\cite{Skirzewski:2014eta} possesses a well-defined torsionless limit, which generalizes the equations of motion  from GR. Consequently, all gravitational effects described by standard General Relativity is contained in our model, even though the torsion field is kept to zero. Regarding this aspect, we would like to emphasise that there is enough liberty to start considering new cosmological effects coming from both nonvanishing torsion and non-metric connections with vanishing torsion.
-Moreover, our gravitational model coupled to a scalar field through the \emph{Eddington's metric} --- in the vanishing torsion consideration ---, is equivalent to GR minimally coupled to a massless scalar field. In a forthcoming paper, we will consider more general matter content, and some properties of the field equations which differ from the ones of GR.%%\hl{JZ: Ok, so?}
+Moreover, our gravitational model coupled to a scalar field through the \emph{density tensor} $\mathfrak{g}^{\mu\nu}$ --- in the vanishing torsion consideration ---, generalises GR minimally coupled to a massless scalar field. In a forthcoming paper, we will consider more general matter content, and some properties of the field equations which differ from the ones of GR.%%\hl{JZ: Ok, so?}
 
 %%%%%%%%% ACKNOWLEGMENTS %%%%%%%%%
 \begin{acknowledgments}
-  We thank to A. Melfo and R. L. Bryant for their helpful discussions and inspiring comments, to J. Zanelli for his suggestions on the physical insight into the problem and careful but critical review of the manuscript, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper.
+  We thank to A. Melfo and R. L. Bryant for their helpful discussions and inspiring comments, to J. Zanelli for his suggestions on the physical insight into the problem and careful but critical review of the manuscript.
+  %%, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper.
   This work was partially supported by CONICYT (Chile) under project No. 79140040.
 \end{acknowledgments}
 
