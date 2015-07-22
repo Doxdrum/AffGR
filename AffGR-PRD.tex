@@ -268,7 +268,7 @@
 
 \newcommand{\dif}{{\mathrm{d}}}
 \newcommand{\difn}[1]{{\mathrm{d}}^{#1}}
-\newcommand{\dn}[2]{{\mathrm{d}}^{#1}\!{#2}\;}
+\newcommand{\dn}[2]{{\mathrm{d}}^{#1}{#2}\;}
 \newcommand{\dbarn}[2]{\dbar{#1}{#2}\;}
 \newcommand*{\de}[1]{\mathop{\mathrm{d}#1}\nolimits}% differential, facultative argoment between square parentheses
 \newcommand*{\desec}[1][]{\mathop{\mathrm{d^2}#1}\nolimits}% second differential, facultative argoment between square parentheses
@@ -341,17 +341,17 @@ in a previous paper~\cite{Skirzewski:2014eta}, we presented a polynomial (purely
 Interestingly, by construction, the polynomial affine gravity proposed in Ref.~\cite{Skirzewski:2014eta} has no explicit terms leading to three-point graviton vertices, since all graviton self-interaction is mediated by the torsion. This characteristic might allow to bypass the general postulates supporting the no-go theorems stated in Refs.~\cite{McGady:2013sga,Camanho:2014apa}, where it is proved that generic three-point graviton interactions are highly constrained by causality and analyticity of the $S$-matrix, and the only \emph{acceptable} structure of the three-point graviton vertices is the one coming from General Relativity.
 %%Additionally, it is well known that the three-point graviton vertices lead to non-renormalizability of a theory ---in a model independent way---~\cite{McGady:2013sga,Camanho:2014apa}. However, in the considered framework all graviton self-interaction is mediated by the torsion, which might allow to bypass the general postulates supporting the theorem.
 
-The aim of this work is to show that in the vanishing torsion sector, the field equations of the polynomial affine gravity are a generalization of the Einstein's equations in vacuum. In addition, we show that ---in the same sector--- under the assumption of the existence of a unique non-degenerated, covariantly constant $\binom{0}{2}$-tensor, $g$ (which could be thought as a metric), the system of a scalar field coupled with the polynomial affine gravity accepts the minimally coupled Einstein--Klein--Gordon as a solution.
+The aim of this work is to show that in the vanishing torsion sector, the field equations of the polynomial affine gravity are a generalization of the Einstein's equations.% in vacuum. In addition, we show that ---in the same sector--- under the assumption of the existence of a unique non-degenerated, covariantly constant $\binom{0}{2}$-tensor, $g$ (which could be thought as a metric), the system of a scalar field coupled with the polynomial affine gravity accepts the minimally coupled Einstein--Klein--Gordon as a solution.
 
 The paper is organized as follows. In Sec.~\ref{model}, we present briefly the polynomial affine gravity model, and summarize the results obtained in Ref.~\cite{Skirzewski:2014eta} concerning the Newtonian limit of the model. In Sec.~\ref{rlimit}, we restrict ourselves to the sector of the theory with vanishing torsion, and find the field equations; which surprisingly are a known generalization of the Einstein's field equation. Then, in Sec.~\ref{matter} we show that under certain considerations the coupling of the gravitational model with a scalar field represents a generalization of the minimally coupled system Einstein--Klein--Gordon. Finally, in Sec.~\ref{conclusions} we summarize and discuss the possible implications of the results.
 
 \section{\label{model}Polynomial affine gravity}
 
-The four-dimensional action is written in terms of the curvature and torsion of an affine connection, $\hat{\Gamma}^\mu{}_{\rho\sigma}$, which accepts a decomposition on irreducible components as
+First of all, we highlight that the model constructed below has as fundamental field an affine connection, and no metric fields is needed for neither contract nor lowering or raising indices. Moreover, in order to guarantee the correct transformation of the Lagrangian density, the geometrical objects used to write down the action will be the curvature and torsion of an affine connection, $\hat{\Gamma}^\mu{}_{\rho\sigma}$, which accepts a decomposition on irreducible components as
 \begin{equation}
   \hat{\Gamma}^\mu{}_{\rho\sigma} = {\Gamma}^\mu{}_{\rho\sigma} + T^\mu{}_{\rho\sigma} = {\Gamma}^\mu{}_{\rho\sigma} + \epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}+A_{[\rho}\delta^\mu_{\nu]},
 \end{equation}
-where ${\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices, $A_\mu$ is a vector field corresponding to the trace of torsion, and  $T^{\mu,\lambda\kappa}$ is a Curtright field~\cite{Curtright:1980yk}, satisfying $T^{\kappa,\mu\nu } = - T^{\kappa,\nu\mu }$ and $\epsilon_{\lambda\kappa\mu\nu}T^{\kappa,\mu\nu }=0$. Since no metric is present  the epsilon symbols are not related but instead we demand that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
+where ${\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices, $A_\mu$ is a vector field corresponding to the trace of torsion, and  $T^{\mu,\lambda\kappa}$ is a Curtright field~\cite{Curtright:1980yk}, satisfying $T^{\kappa,\mu\nu } = - T^{\kappa,\nu\mu }$ and $\epsilon_{\lambda\kappa\mu\nu}T^{\kappa,\mu\nu }=0$. Since no metric is present  the epsilon symbols are not related by raising (lowering) their indices, but instead we demand that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
 \begin{widetext}
 Using the above decomposition, the most general (power-counting renormalizable) action preserving diffeomorphisms is~\footnote{We have dropped all terms which can be related to those in Eq.~\eqref{4dfull} through a boundary term.}
   \begin{dmath}
@@ -381,9 +381,54 @@ Using the above decomposition, the most general (power-counting renormalizable) 
       +F_4\,T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Bigg].
   \end{dmath}
 \end{widetext}
-Although there is no obvious equivalence between the action in Eq.~\eqref{4dfull} and General Relativity, particularly due to the lack of a source metric field, we analyzed in Ref.~\cite{Skirzewski:2014eta} the scalar perturbations around a static homogeneous and isotropic background. In the non-relativistic (low-momentum) limit, the geodesic deviation of inertial observers is also discussed.
+Although there is no obvious equivalence between the action in Eq.~\eqref{4dfull} and General Relativity, particularly due to the lack of a source metric field, we analyzed in Ref.~\cite{Skirzewski:2014eta} the scalar perturbations and studied perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. In the rest of this section we summarize the procedure which leads to the Newtonian limit of the model.
 
-Additionally, we studied perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. Albeit the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we used ``Eddington's metric density''~\footnote{Despite the suggestive name, this is a $\binom{2}{0}$-tensor density which does not necessarily satisfy the metric conditions. However, for the simple case of the Einstein--Hilbert action, it is in fact the inverse metric density.}, defined as the variation of the action with respect to the symmetric part of the Ricci tensor~(see Refs.~\cite{Eddington1923math,schrodinger1950space,Poplawski:2012bw}), i.e.,%% \hl{JZ: def. $R_{(\mu\nu)}$}
+First, we considered a static, homogeneous, and isotropic expansion of fields,
+\begin{align}
+  A_\mu &= \delta_\mu^0 A + a_\mu,\\
+  T^{\mu,\nu\rho} &= \delta^{\mu}_m\delta^{\nu\rho}_{m0}T + t^{\mu,\nu\rho},\\
+  %\shortintertext{and}
+  \Gamma^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu},
+  \label{GammaExp}
+\end{align}
+with $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$. Next, by analysing the first order perturbations of the actions, we found a choice of the coupling constants which allow nontrivial solutions of these field equations, together with the non-relativistic limit of the geodesic equation. Then, we substitute the field components by their their scalar perturbation decomposition,
+\begin{equation}
+  a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
+\end{equation}
+\begin{equation}
+  \begin{split}
+    t^{\mu,\nu\rho} &\to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
+    +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
+    \\
+    & \quad + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
+    \\
+    & \quad +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
+  \end{split}
+\end{equation}
+and
+\begin{equation}
+  \begin{split}
+    \gamma^\lambda_{\mu\nu}
+    &\to
+    \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
+    + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
+    + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
+    \\
+    & \quad + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
+    \\
+    & \quad + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
+    \\
+    & \quad + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2
+    \\
+    & \qquad +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
+  \end{split}
+\end{equation}
+where the ``L'' sub-index identifies the longitudinal degrees of freedom.
+
+%% In the non-relativistic (low-momentum) limit, the geodesic deviation of inertial observers is also discussed.
+
+%% Additionally, we studied perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action.
+Albeit the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we used ``Eddington's metric density''~\footnote{Despite the suggestive name, this is a $\binom{2}{0}$-tensor density which does not necessarily satisfy the metric conditions. However, for the simple case of the Einstein--Hilbert action, it is in fact the inverse metric density.}, defined as the variation of the action with respect to the symmetric part of the Ricci tensor~(see Refs.~\cite{Eddington1923math,schrodinger1950space,Poplawski:2012bw}), i.e.,%% \hl{JZ: def. $R_{(\mu\nu)}$}
 \begin{equation}
   \label{metric}
   \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma] \equiv \sqrt{\mathsf{g}} \, \mathsf{g}^{\mu\nu} = \bar{g}^{\mu\nu} ,
