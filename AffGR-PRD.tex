@@ -448,7 +448,7 @@ is the usual Newtonian force induced by a massive source.
 Despite we obtained the correct Newtonian gravitational potential in the non-relativistic limit, see Eq.~\eqref{NewtonPot}, the post-Newtonian approximation is necessary to explain gravitational phenomena like Mercury's perihelion and the deviation of light by a gravitational source. Therefore, we should go beyond the Newtonian limit in order to compare our model with GR.
 
 %%\hl{A comparison between our affine model and GR requires the imposition of vanishing torsion (JZ: Why?).}
-Even though a comparison between our affine model and GR does not require the imposition of vanishing torsion, for the sake of simplicity, at this stage we shall focus on a sector of the theory in which the connection is compatible with a metric, and torsion-free. Notice that the vanishing torsion limit ---equivalent to taking $T^{\lambda,\mu\nu} \to 0$ and $A_\mu \to 0$--- cannot be taken at the action level, and should be taken in the field equations. Interestingly, the field equations from Eq.~\eqref{4dfull} can be consistently \emph{truncated} under such requirements, because only the terms of the action linear in these fields will be relevant, i.e.,
+Even though a comparison between our affine model and GR does not require the imposition of vanishing torsion, for the sake of simplicity, at this stage we shall focus on a sector of the theory in which the connection is compatible with a metric, and torsion-free. Notice that the vanishing torsion limit ---equivalent to take $T^{\lambda,\mu\nu} \to 0$ and $A_\mu \to 0$--- cannot be taken at the action level, and should be taken in the field equations. Interestingly, the field equations from Eq.~\eqref{4dfull} can be consistently \emph{truncated} under such requirements, because only the terms of the action linear in these fields will be relevant, i.e.,
 \begin{equation*}
   %\label{eff-action}
   S_{\text{eff}} = \int\dn{4}{x} \Big( C_1\, R_{\mu\rho}{}^{\mu}{}_\nu \nabla_\sigma T^{\nu,\rho\sigma} + C_2 \, R_{\mu\nu}{}^{\rho}{}_\rho \nabla_\sigma T^{\sigma,\mu\nu} \Big),
@@ -467,8 +467,16 @@ Equation~\eqref{SimpleEOM} is a generalization of a condition known in Riemannia
 
 %% A corollary is that all Einstein manifolds, \mbox{$R_{\mu\nu} \propto g_{\mu\nu}$,} satisfy the parallel Ricci condition, and therefore every vacuum solution to the Einstein's equations solves the (torsion-free) field equations of our model. Consequently, the fact that the non-relativistic limit of the gravitational potential in Eq.~\eqref{NewtonPot} yields a Newtonian potential seems clearer, and we can argue that even the post-Newtonian corrections coming from GR are present in the chosen scenario of our model.
 
-Additionally, for a Riemannian manifold $(\Mi,g)$ the condition in Eq.~\eqref{SimpleEOM} is equivalent to the following statements (see Ref.~\cite{Derdzinski:1985,Besse}): (i) the Ricci tensor is a Codazzi tensor~\footnote{A Codazzi tensor is a symmetric $(0,2)$-type tensor, $T$, satisfying the condition \mbox{$D_X T(Y,Z) = D_Y T(X,Z)$~\cite{Derdzinski01071983}.}}, (ii) the manifold has harmonic curvature~\cite{bourguignon1981varietes}, i.e. \mbox{$\nabla^\mu R_{\mu\nu}{}^\lambda{}_\rho = 0$,} and (iii) in the four-dimensional case the manifold has harmonic Weyl tensor~\cite{Berger:1969} and constant scalar curvature.
+%%Additionally, for a Riemannian manifold $(\Mi,g)$ the condition in Eq.~\eqref{SimpleEOM} is equivalent to the following statements (see Ref.~\cite{Derdzinski:1985,Besse}): (i) the Ricci tensor is a Codazzi tensor~\footnote{A Codazzi tensor is a symmetric $(0,2)$-type tensor, $T$, satisfying the condition \mbox{$D_X T(Y,Z) = D_Y T(X,Z)$~\cite{Derdzinski01071983}.}}, (ii) the manifold has harmonic curvature~\cite{bourguignon1981varietes}, i.e. \mbox{$\nabla^\mu R_{\mu\nu}{}^\lambda{}_\rho = 0$,} and (iii) in the four-dimensional case the manifold has harmonic Weyl tensor~\cite{Berger:1969} and constant scalar curvature.
 
+For a Riemannian manifold $(\Mi,g)$ the Eq.~\eqref{SimpleEOM} is related through the first Bianchi identity to the harmonic curvature condition~\cite{bourguignon1981varietes},
+\begin{equation}
+  \label{harm-curv}
+  \nabla_\lambda R_{\mu\nu}{}^\lambda{}_\rho = 0,
+\end{equation}
+and it can be shown that a manifold with harmonic curvature is equivalent (in four dimensions) to a manifold with harmonic Weyl tensor~\cite{Berger:1969} and constant scalar curvature, or in other words the Ricci tensor is a Codazzi tensor~\footnote{A Codazzi tensor is a symmetric $(0,2)$-type tensor, $T$, satisfying the condition \mbox{$D_X T(Y,Z) = D_Y T(X,Z)$~\cite{Derdzinski01071983}.}}. For prove of these equivalences, see Refs.~\cite{Derdzinski:1985,Besse}.
+
+Equations.~\eqref{SimpleEOM} and~\eqref{harm-curv} are geometrically equivalent to the 
 Interestingly, the Eq.~\eqref{SimpleEOM} can be obtained from an effective gravitational Yang--Mills functional action~\cite{stephenson1958quadratic,kilmister1961use,Yang1974},
 \begin{equation}
   S_{\textsc{ym}} = \int \Tr \left( \Rif{}{} \we \st \Rif{}{} \right),
