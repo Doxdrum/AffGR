@@ -85,7 +85,10 @@
     { \IfValueTF{#2}{ \boldsymbol{\mathcal{F}}_{(#2)} }{ \boldsymbol{\mathcal{F}} } }
     { \IfValueTF{#2}{            {\mathcal{F}}_{(#2)} }{            {\mathcal{F}} } } }
 %% \newcommand{\Ff}{{\mathbf{F}}}
-\DeclareDocumentCommand{\Ff}{ o }{ \IfValueTF{#1}{ F_{(#1)} }{ F } }
+%% \DeclareDocumentCommand{\Ff}{ o }{ \IfValueTF{#1}{ F_{(#1)} }{ F } }
+\DeclareDocumentCommand{\Ff}{ s o }{ \IfBooleanTF{#1}
+    { \IfValueTF{#2}{ \boldsymbol{F}_{(#2)} }{ \boldsymbol{F} } }
+    { \IfValueTF{#2}{            {F}_{(#2)} }{            {F} } } }
 \newcommand{\FF}[1]{{\mathbf{F}}_{(#1)}}
 \newcommand{\hFF}[1]{{\mathbf{\hat{F}}}_{(#1)}}
 \newcommand{\fy}{\centernot}
@@ -474,14 +477,28 @@ The Eq.~\eqref{SimpleEOM} is related through the second Bianchi identity to the 
   \label{harm-curv}
   \nabla_\lambda R_{\mu\nu}{}^\lambda{}_\rho = 0,
 \end{equation}
-and it can be shown that a manifold with harmonic curvature is equivalent (in four dimensions) to a manifold with harmonic Weyl tensor~\cite{Berger:1969} and constant scalar curvature, or in other words the Ricci tensor is a Codazzi tensor~\footnote{A Codazzi tensor is a symmetric $(0,2)$-type tensor, $T$, satisfying the condition \mbox{$D_X T(Y,Z) = D_Y T(X,Z)$~\cite{Derdzinski01071983}.}}. For prove of these equivalences, see Refs.~\cite{Derdzinski:1985,Besse}.
+and it can be shown that a manifold with harmonic curvature is equivalent (in four dimensions) to a manifold with harmonic Weyl tensor and constant scalar curvature~\cite{Berger:1969}, or in other words the Ricci tensor is a Codazzi tensor~\footnote{A Codazzi tensor is a symmetric $(0,2)$-type tensor, $T$, satisfying the condition \mbox{$D_X T(Y,Z) = D_Y T(X,Z)$~\cite{Derdzinski01071983}.}}. For prove of these equivalences, see Refs.~\cite{Derdzinski:1985,Besse}.
 
-Equations.~\eqref{SimpleEOM} and~\eqref{harm-curv} are geometrically equivalent to the 
-Interestingly, the Eq.~\eqref{SimpleEOM} can be obtained from an effective gravitational Yang--Mills functional action~\cite{stephenson1958quadratic,kilmister1961use,Yang1974},
+%% Equations~\eqref{SimpleEOM} and~\eqref{harm-curv} are geometrically equivalent to the 
+Notice that Eqs.~\eqref{SimpleEOM} and~\eqref{harm-curv} accept a geometrical interpretation equivalent to that of the field equations of a pure Yang--Mills theory, which in the language of differential forms are
+\begin{align}
+  \df \Ff*[2] &= 0, & \df \st \Ff*[2] &= 0,
+\end{align}
+where $\Ff*[2]$ is the field strength 2-form (the curvature 2-form of the connection in the principal bundle), and the operator $\st$ denotes the Hodge star. Now, these Yang--Mills field equations are obtained from the well-known action functional
 \begin{equation}
-  S_{\textsc{ym}} = \int \Tr \left( \Rif{}{} \we \st \Rif{}{} \right),
+  S_{\textsc{ym}} = \int \Tr \Big( \Ff*[2] \st \Ff*[2] \Big).
 \end{equation}
-where $\Rif{}{} \in \Omega^2(\Mi, T^*\Mi \otimes T\Mi)$ is the curvature two-form, the operator $\st$ denotes the Hodge star, and the trace is taken on the bundle indices (see Ref.~\cite{bourguignon1982yang}). Albeit this effective theory has been widely studied, it has been considered as a model for a metric field instead of a theory for the connection. Therefore, within the formalism of Palatini, besides Eq.~\eqref{SimpleEOM} an extra field equation appears (for the vielbein field), which strongly constraints the solutions of the gravitational Yang--Mills~\footnote{We thank J.~Zanelli for sharing his personal communications with C.~N.~Yang, and clarify this aspect of the effective model.}. Intriguingly, this effective theory is not renormalizable ---according to the arguments in Refs.~\cite{McGady:2013sga,Camanho:2014apa}---, although it has been discussed in Ref.~\cite{Chen:2010at} that at least the ghost problem can be avoided through the arguments exposed in Refs.~\cite{Kleinert:1987eb,Bender:2007wu,Bender:2008vh,Mannheim:2009zj}.
+
+Interestingly, the Eq.~\eqref{SimpleEOM} ---equivalently Eq.~\eqref{harm-curv}--- can be obtained from an effective gravitational Yang--Mills functional action~\cite{stephenson1958quadratic,kilmister1961use,Yang1974}, %constructed as the trace of the 
+\begin{equation}
+  \label{SKY}
+  S_{\textsc{ym}} = \int \Tr \left( \Rif{}{} \st \Rif{}{} \right) = \int \left( \Rif{a}{b} \st \Rif{b}{a} \right),
+\end{equation}
+where $\Rif{}{} \in \Omega^2(\Mi, T^*\Mi \otimes T\Mi)$ is the curvature two-form, the operator $\st$ denotes the Hodge star, and the trace is taken on the bundle indices (see Ref.~\cite{bourguignon1982yang}).
+
+The gravitational model described by the action in Eq.~\eqref{SKY} is called Stephenson--Kilmister--Yang (or SKY for short). However, the standard interpretation of this model requires a metric tensor. Therefore, a quick analysis of the field equations \`a la Palatini shows that the field equation
+
+Albeit this effective theory has been widely studied, it has been considered as a model for a metric field instead of a theory for the connection. Therefore, within the formalism of Palatini, besides Eq.~\eqref{SimpleEOM} an extra field equation appears (for the vielbein field), which strongly constraints the solutions of the gravitational Yang--Mills~\footnote{We thank J.~Zanelli for sharing his personal communications with C.~N.~Yang, and clarify this aspect of the effective model.}. Intriguingly, this effective theory is not renormalizable ---according to the arguments in Refs.~\cite{McGady:2013sga,Camanho:2014apa}---, although it has been discussed in Ref.~\cite{Chen:2010at} that at least the ghost problem can be avoided through the arguments exposed in Refs.~\cite{Kleinert:1987eb,Bender:2007wu,Bender:2008vh,Mannheim:2009zj}.
 
 
 %%%%%%%%% MATTER %%%%%%%%%
