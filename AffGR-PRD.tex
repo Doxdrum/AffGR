@@ -483,12 +483,13 @@ and it can be shown that a manifold with harmonic curvature is equivalent (in fo
 %% Equations~\eqref{SimpleEOM} and~\eqref{harm-curv} are geometrically equivalent to the 
 Notice that Eqs.~\eqref{SimpleEOM} and~\eqref{harm-curv} accept a geometrical interpretation equivalent to that of the field equations of a pure Yang--Mills theory, which in the language of differential forms are
 \begin{align}
-  \df \Ff*[2] &= 0, & \df \st \Ff*[2] &= 0,
+  \cdf \Ff*[2] &= 0, & \cdf \st \Ff*[2] &= 0,
 \end{align}
-where $\Ff*[2]$ is the field strength 2-form (the curvature 2-form of the connection in the principal bundle), and the operator $\st$ denotes the Hodge star. Now, these Yang--Mills field equations are obtained from the well-known action functional
+where $\Ff*[2] = \cdf \Af*[1]$ is the field strength 2-form (the curvature 2-form of the connection in the principal bundle, see for example Ref.~\cite{bourguignon1982yang,Nakahara}), and the operator $\st$ denotes the Hodge star. Now, these Yang--Mills field equations are obtained from the variation of the action functional
 \begin{equation}
-  S_{\textsc{ym}} = \int \Tr \Big( \Ff*[2] \st \Ff*[2] \Big).
+  S_{\textsc{ym}} = \int \Tr \Big( \Ff*[2] \st \Ff*[2] \Big),
 \end{equation}
+and the Jacobi identity for the covariant derivative.
 
 Interestingly, the Eq.~\eqref{SimpleEOM} ---equivalently Eq.~\eqref{harm-curv}--- can be obtained from an effective gravitational Yang--Mills functional action~\cite{stephenson1958quadratic,kilmister1961use,Yang1974}, %constructed as the trace of the 
 \begin{equation}
@@ -497,9 +498,9 @@ Interestingly, the Eq.~\eqref{SimpleEOM} ---equivalently Eq.~\eqref{harm-curv}--
 \end{equation}
 where $\Rif{}{} \in \Omega^2(\Mi, T^*\Mi \otimes T\Mi)$ is the curvature two-form, the operator $\st$ denotes the Hodge star, and the trace is taken on the bundle indices (see Ref.~\cite{bourguignon1982yang}).
 
-The gravitational model described by the action in Eq.~\eqref{SKY} is called Stephenson--Kilmister--Yang (or SKY for short). However, the standard interpretation of this model requires a metric tensor. Therefore, a quick analysis of the field equations \`a la Palatini shows that the field equation
+The gravitational model described by the action in Eq.~\eqref{SKY} is called Stephenson--Kilmister--Yang (or SKY for short). However, the standard interpretation of this model requires a metric tensor. A quick analysis of the field equations \`a la Palatini shows that Eqs.~\eqref{SimpleEOM} and~\eqref{harm-curv} are obtained only from the variation with respect to the connection. Albeit this effective theory has been widely studied, the extra field equation (for the metric field) strongly constraints the solutions of the gravitational Yang--Mills~\footnote{We thank J.~Zanelli for sharing his personal communications with C.~N.~Yang, and clarify this aspect of the effective model.}. However, that complication does not affect our affine interpretation of the theory, where the metric is absent.
 
-Albeit this effective theory has been widely studied, it has been considered as a model for a metric field instead of a theory for the connection. Therefore, within the formalism of Palatini, besides Eq.~\eqref{SimpleEOM} an extra field equation appears (for the vielbein field), which strongly constraints the solutions of the gravitational Yang--Mills~\footnote{We thank J.~Zanelli for sharing his personal communications with C.~N.~Yang, and clarify this aspect of the effective model.}. Intriguingly, this effective theory is not renormalizable ---according to the arguments in Refs.~\cite{McGady:2013sga,Camanho:2014apa}---, although it has been discussed in Ref.~\cite{Chen:2010at} that at least the ghost problem can be avoided through the arguments exposed in Refs.~\cite{Kleinert:1987eb,Bender:2007wu,Bender:2008vh,Mannheim:2009zj}.
+Intriguingly, the effective theory is not renormalizable ---according to the arguments in Refs.~\cite{McGady:2013sga,Camanho:2014apa}---, although it has been discussed in Ref.~\cite{Chen:2010at} that at least the ghost problem can be avoided through the arguments exposed in Refs.~\cite{Kleinert:1987eb,Bender:2007wu,Bender:2008vh,Mannheim:2009zj}.
 
 
 %%%%%%%%% MATTER %%%%%%%%%
