@@ -1,0 +1,175 @@
+\section{\label{DA}Dimensional analysis for building the polynomial affine gravity}
+
+We built the model using six ingredients, a Curtright ($T^{\mu,\nu\lambda}$), a vector ($A_\mu$), the covariant derivative ($\nab{\mu}$), both Levi-Civita tensors ($\epsilon_{\mu\nu\lambda\rho}$ and $\epsilon^{\mu\nu\lambda\rho}$), and the Riemannian curvature ($R_{\mu\nu}{}^\lambda{}_\rho$).
+
+Our interest is in general to build tensor densities. Therefore, we need to account for the number of \emph{free} indices, and weight density of these quantities. Denote by $N(\Phi)$  the operator which count the number (and position) of indices of the field $\Phi$, being positive (negative) for upper (lower) indices. Thus, we have that
+\begin{equation*}
+  \begin{aligned}
+    N( T^{\mu,\nu\lambda} ) &= 3 & N( A_\mu ) &= -1 & N(  \nab{\mu} ) &= -1 \\
+    N( \epsilon_{\mu\nu\lambda\rho} ) &= -4 & N( \epsilon^{\mu\nu\lambda\rho} ) &= 4 & N( R_{\mu\nu}{}^\lambda{}_\rho ) &= -2.
+  \end{aligned}
+\end{equation*}
+Then, for a general expression of the form
+\begin{equation*}
+  T^a A^b \nabla^c {\epsilon_{\dots}}^d {\epsilon^{\dots}}^e R^f,
+\end{equation*}
+the indices counting yield
+\begin{equation}
+  N( T^a A^b \nabla^c {\epsilon_{\dots}}^d {\epsilon^{\dots}}^e R^f ) = n,
+\end{equation}
+with
+\begin{equation}
+  n = 3a -b -c -4d + 4e -2f.
+  \label{ni}
+\end{equation}
+
+In the same spirit, we define an operator which counts the weight density,
+\begin{equation*}
+  \begin{aligned}
+    W( T^{\mu,\nu\lambda} ) &= 1 & W( A_\mu ) &= 0 & W(  \nab{\mu} ) &= 0 \\
+    W( \epsilon_{\mu\nu\lambda\rho} ) &= -1 & W( \epsilon^{\mu\nu\lambda\rho} ) &= 1 & W( R_{\mu\nu}{}^\lambda{}_\rho ) &= 0.
+  \end{aligned}
+\end{equation*}
+Thus, the weight ($w$) of the general expression above is given by
+\begin{equation}
+  w = a - d + e.
+  \label{wd}
+\end{equation}
+
+\subsection{Inverse metric density}
+
+Now, we illustrate the usefulness of the \emph{dimensional analysis} by building the most general symmetric $\binom{2}{0}$-tensor density, which we call the \emph{inverse metric density}. This particular case fixes $n = 2$ and $w = 1$.
+
+One solution of Eq.~\eqref{wd} is $a=1$ with $d=e$, which implies that Eq.~\eqref{ni} is restricted to
+\begin{equation*}
+  3 - b - c - 2f = 2.
+\end{equation*}
+It follows that $f=0$, while still there is room to choose either $b=1$ or $c=1$. Notice that, albeit there is an ambiguity in the value of $d$ and $e$, the fact that all other factors are fixed, and the properties of epsilon contractions implies that all terms are equivalent to choose $d=e=0$. Therefore, the only possible terms built with this choice are
+\begin{equation}
+  T^{\mu,\nu\lambda} A_\lambda \text{ and } \nabla_\lambda T^{\mu,\nu\lambda}.
+\end{equation}
+No other contraction of indices is allowed due to the symmetry.
+
+Similarly, if one solves Eq.~\eqref{wd} by choosing $e=1$, and $d=a=0$, Eq.~\eqref{ni} yields
+\begin{equation*}
+  4 - b - c - 2f = 2,
+\end{equation*}
+which can be solved by $f=1$, $b=2$, $c=2$, or $b=c=1$. However, by construction the last three choices do not yield symmetric tensors, and the first one vanishes due to the first Bianchi identity.
+
+A third option is to solve Eq.~\eqref{wd} with $a=2$, $d=1$ and $e=0$. In this case, Eq.~\eqref{ni} is an identity. Thus, the only term originated this way is 
+\begin{equation}
+  \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma}.
+\end{equation}
+
+Finally, one can check that any other choice to solve Eq.~\eqref{wd} make impossible to solve Eq.~\eqref{ni}. Ergo, there is no other term in a symmetric $\binom{2}{0}$-tensor density built up with these fields. Explicitly, this general tensor density is written in Eq.~\eqref{geng}.
+
+\subsection{Lagrangian density}
+
+
+\begin{table}[t]
+  \caption{Possible selection of terms in the Lagrangian density}
+  \label{tab:a1}
+  \begin{tabular}{|p{\linewidth/3}p{\linewidth/3}p{\linewidth/3}|}
+    \hline
+    \multicolumn{3}{|c|}{$a=1$} \\
+    \hline
+    $b$ & $c$ & $f$ \\
+    \hline
+    3 & 0 & 0 \\
+    2 & 1 & 0 \\
+    1 & 2 & 0 \\
+    0 & 3 & 0 \\
+    1 & 0 & 1 \\
+    0 & 1 & 1 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+  \caption{Possible selection of terms in the Lagrangian density}
+  \label{tab:e1} 
+  \begin{tabular}{|p{\linewidth/3}p{\linewidth/3}p{\linewidth/3}|}
+    \hline
+    \multicolumn{3}{|c|}{$e=1$} \\
+    \hline
+    $b$ & $c$ & $f$ \\
+    \hline
+    0 & 0 & 2 \\
+    2 & 0 & 1 \\
+    1 & 1 & 1 \\
+    0 & 2 & 1 \\
+    0 & 4 & 0 \\
+    1 & 3 & 0 \\
+    2 & 2 & 0 \\
+    3 & 1 & 0 \\
+    4 & 0 & 0 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+  \caption{Possible selection of terms in the Lagrangian density}
+  \label{tab:a2}  
+  \begin{tabular}{|p{\linewidth/3}p{\linewidth/3}p{\linewidth/3}|}
+    \hline
+    \multicolumn{3}{|c|}{$a=2$, $d=1$} \\
+    \hline
+    $b$ & $c$ & $f$ \\
+    \hline
+    0 & 0 & 1 \\
+    2 & 0 & 0 \\
+    1 & 1 & 0 \\
+    0 & 2 & 0 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+  \caption{Possible selection of terms in the Lagrangian density}
+  \label{tab:a3}
+  \begin{tabular}{|p{\linewidth/3}p{\linewidth/3}p{\linewidth/3}|}
+    \hline
+    \multicolumn{3}{|c|}{$a=3$, $d=2$} \\
+    \hline
+    $b$ & $c$ & $f$ \\
+    \hline
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+  \caption{Possible selection of terms in the Lagrangian density}
+  \label{tab:a4}
+  \begin{tabular}{|p{\linewidth/3}p{\linewidth/3}p{\linewidth/3}|}
+    \hline
+    \multicolumn{3}{|c|}{$a=4$, $d=3$} \\
+    \hline
+    $b$ & $c$ & $f$ \\
+    \hline
+    0 & 0 & 0 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+The work of building up the most general scalar density with our ingredients is as simple as before, but the analysis is much longer. Thus, we will show the procedure with lesser details than before.
+
+First, we are interested in a scalar density, which sets $n = 0$ and $w = 1$ in Eqs.~\eqref{ni} and~\eqref{wd}, i.e.,
+\begin{align}
+  3a -b -c - 4d +4e - 2f &= 0, \\
+  a - d + e &= 1.
+\end{align}
+
+A possible solution of Eq~\eqref{wd} is $a=1$ and $d=e$, and such choice allows to consider the possibilities, see Table~\ref{tab:a1}, but only three of them are independent (and nonvanishing). These generate the terms of Eq.~\eqref{4dfull} whose coefficients were called $B_3$, $B_4$, $B_5$, $C_1$, $C_2$, $D_6$ and $D_7$.
+
+If one choose $e=1$ for solving Eq.~\eqref{wd}, see Table~\ref{tab:e1}, all possible solutions for Eq.~\eqref{ni} are either vanishing or yield topological terms.
+%%The action in Eq.~\eqref{4dfull} was written up to topological and boundary terms, thus 
+
+The case with $a=2$ and $d=1$ gives four possibilities to solve Eq.~\eqref{ni}, see  Table~\ref{tab:a2}, and these choices give the terms the Lagrangian density whose coefficients are $B_1$, $B_2$, $D_4$, $D_5$, $E_1$, $E_2$ and $F_4$.
+
+For $a=3$ and $d=2$ there are only two possible solutions of Eq.~\eqref{ni}, see  Table~\ref{tab:a3}, and these yield the terms of the action with coefficients $D_1$, $D_2$, $D_3$ and $F_3$. And also, the choice $a=4$ and $d=3$ solves the equations, see  Table~\ref{tab:a4}, and yield the terms in the action with coefficients $F_1$ and $F_2$.
+
+Notice that for values $a \ge 5$, it is not possible to solve both Eqs.~\eqref{ni} and~\eqref{wd} simultaneously. Therefore, we conclude that Eq.~\eqref{4dfull} is the most general action built up with these fields.
+

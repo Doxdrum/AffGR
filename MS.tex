@@ -1,0 +1,132 @@
+\section{Known metric solutions to the parallel Ricci equations}
+
+In this Appendix, we will present a brief compendium of known (Riemannian) metric solutions of Eq.~\eqref{SimpleEOM} in four dimensions. None of these workis original ---except the analysis presented as example in Sec.~\ref{Ex:sch}, and can be found in Refs.~\cite{gray1978einstein,derdzinski1980classification,derdzinski1982compact,Derdzinski:1985,Besse}. Additionally, in Ref.~\cite{cahen2000symplectic} \hl{What is this...}
+
+\paragraph{Einstein spaces.---} The simplest example of a manifold with parallel Ricci is a Riemannian Einstein manifols. This example was explained on the main text.
+
+\paragraph{Riemannian products.---} The Riemamian product of manifolds with harmonic curvature.
+
+\paragraph{Conformally flat manifolds.---} These are solutions in four dimensions if their scalar curvature is constant.
+
+
+\paragraph{Warped products.---} Compact warped products of the form \mbox{$(S^1 \times \bar{M}, \de{t}^2 + f(t) \de{s}^2(\bar{g}) )$,} where $(\bar{M}, \bar{g})$ is an Einstein manifold with positive scalar curvature, $\bar{R} > 0$, and $f$ is a positive function on $S^1$ satisfying the differential equation
+\begin{equation}
+  \ddot{f} - \frac{1}{3} \bar{R} = c f,
+\end{equation}
+for a negative constant $c$.
+
+{Twisted} warped products of the form $(\R \times \bar{M} ) / \Z$ have parallel Ricci, if the $\Z$-action on the product metric involves an isometry of $\bar{g}$.
+
+Compact warped products of the form \mbox{$(M_1 \times M_2, f^{2} \cdot (g_1 \times g_2) )$,} where $M_1$ are two dimensional, $M_1$ has constant Gau\ss{}ian curvature, $K_1 < 0$, and $M_2$ is an Einstein manifold with scalar curvature $R_2 = - 2 K_1$ 
+\hl{Working here}
+%%\paragraph{}
+
+
+
+
+\subsection{Explicit example: Schwarzschild metric, and Birkhoff theorem\label{Ex:sch}}
+
+As a disclaimer, we clarify that the example below is a pseudo-Riemannian manifold.
+
+%%\subsubsection{Schwarzschild metric}
+
+As pointed out, all vacuum solutions of Einstein's equations ---with and without cosmological constant--- satisfy the parallel Ricci condition trivially~\cite{bourguignon1981varietes}. Nonetheless, an important result in General Relativity is the stability of the Schwarzschild metric, known as the Birkhoff theorem~\cite{Jebsen1921,Birkhoff1923,Alexandrow1923,Eisland1925}, which implies that the gravitational collapse of a spherically symmetric astrophysical object cannot emit gravitational radiation.
+
+In this section it will be shown that a static and spherically symmetric metric, which solves the field equations~\eqref{SimpleEOM} is necessarily the $\Lambda$--Schwarzschild metric.
+
+Consider first the simplest metric ansatz, whose line element is
+\begin{equation}
+  \de{s}^2 = - f(t,r) \de{t}^2 + \frac{ \de{r}^2 }{ f(t,r) } + r^2 \de{\Omega}^2.
+  \label{simpleSchw}
+\end{equation}
+\begin{widetext}
+  The nontrivial field equation for the ansatz~\eqref{simpleSchw} are
+  \begin{dmath}
+    \nabla_{[1} R_{0]0} = \frac{1}{2 \, r^{2} f^{3}} \Bigg( r^{2} f^{4} \frac{\partial^3}{\partial r^{3}}f + 2 \, r f^{4} \frac{\partial^2}{\partial r^{2}}f + r^{2} f^{2} \frac{\partial^3}{\partial t^{2}\partial r^{}}f - 4 \, r^{2} f \frac{\partial}{\partial t^{}}f \frac{\partial^2}{\partial t^{}\partial r^{}}f - 2 \, f^{4} \frac{\partial}{\partial r^{}}f + 2 \, {\left(3 \, r^{2} \frac{\partial}{\partial r^{}}f - 2 \, r f\right)} \frac{\partial}{\partial t^{}}f^{2} - 2 \, {\left(r^{2} f \frac{\partial}{\partial r^{}}f - r f^{2}\right)} \frac{\partial^2}{\partial t^{2}}f \Bigg) ,
+    \label{e100}
+  \end{dmath}
+  \begin{dmath}
+    \nabla_{[1} R_{0]1} = \frac{1}{2 \, r^{2} f^{5}} \Bigg( r^{2} f^{4} \frac{\partial^3}{\partial t^{}\partial r^{2}}f + 2 \, f^{4} \frac{\partial}{\partial t^{}}f + 6 \, r^{2} \frac{\partial}{\partial t^{}}f^{3} - 6 \, r^{2} f \frac{\partial}{\partial t^{}}f \frac{\partial^2}{\partial t^{2}}f + r^{2} f^{2} \frac{\partial^3}{\partial t^{3}}f \Bigg) .
+    \label{e101}
+  \end{dmath}
+  \begin{dmath}
+    \nabla_{[2} R_{0]2} = r \frac{\partial^2}{\partial t^{}\partial r^{}}f,
+    \label{e202}
+  \end{dmath}
+  \begin{dmath}
+    \nabla_{[2} R_{1]2} = \frac{1}{2 \, r f^{3}} \Bigg(r^{2} f^{3} \frac{\partial^2}{\partial r^{2}}f - 2 \, f^{4} + 2 \, r^{2} \frac{\partial}{\partial t^{}}f^{2} - r^{2} f \frac{\partial^2}{\partial t^{2}}f + 2 \, f^{3} \Bigg),
+    \label{e212}
+  \end{dmath}
+  \begin{dmath}
+    \nabla_{[3} R_{0]3} = r \sin\left({\theta}\right)^{2} \frac{\partial^2}{\partial t^{}\partial r^{}}f,
+    \label{e303}
+  \end{dmath}
+  and
+  \begin{dmath}
+    \nabla_{[3} R_{1]3} = \frac{1}{2 \, r f^{3}} \Bigg(r^{2} f^{3} \frac{\partial^2}{\partial r^{2}}f - 2 \, f^{4} + 2 \, r^{2} \frac{\partial}{\partial t^{}}f^{2} - r^{2} f \frac{\partial^2}{\partial t^{2}}f + 2 \, f^{3}\Bigg) \sin\left({\theta}\right)^{2}.
+    \label{e313}
+  \end{dmath}
+\end{widetext}
+Even though four out of the six nontrivial field equations are independent, the system can be solve uniquely. First, Eq.~\eqref{e202} yields $f = T(t) + R(r)$. Then, one notices that Eq.~\eqref{e101} contains a term depending solely on $t$, which implies that $\dot{T}$ vanishes, i.e., $T$ is a constant. From here, Eq.~\eqref{e212} gets simpler enough to be solved and yields, \mbox{$R(r) = 1 - T + \frac{\alpha}{r} + \beta r^2$} or equivalently
+\begin{equation}
+  f(r) = 1 + \frac{\alpha}{r} + \beta r^2,
+  \label{simplef}
+\end{equation}
+with $\alpha$ and $\beta$ integration constants. Finally, it can be checked that albeit Eq.~\eqref{e100} was not used, it is satisfied by Eq.~\eqref{simplef}.
+
+The above shows that the simplest time-dependent generalization of Schwarzschild metric is not a solution for the field equations of the considered affine model. Unless, the spacetime metric is static and exactly that for a Schwarzschild exterior solution, with or without cosmological constant.
+
+However, if one tries a metric ansatz with two different factors, say
+\begin{equation}
+  \de{s}^2 = - A(t,r) \de{t}^2 + \frac{ \de{r}^2 }{ B(t,r) } + r^2 \de{\Omega}^2,
+  \label{ABmetric}
+\end{equation}
+the field equations are so complicated, that although hints on the solubility were found ---and yield to Eq.~\eqref{simplef} for both $A$ and $B$---, the uniqueness of the solution is far for been proved. The field equations for the metric~\eqref{ABmetric} are %%shown in Appendix~\ref{app:eqAB}.
+\begin{widetext}
+  %%  \section{\label{app:eqAB}Field equations for Schwarzschild metric with two factors}
+  \begin{dmath}
+    \nabla_{[1} R_{0]0} = \frac{1}{4 \, r^{2} B^{3} A^{2}} \Bigg( 2 \, r^{2} B^{4} \frac{\partial}{\partial r^{}}A^{3} + 2 \, r^{2} B^{4} A^{2} \frac{\partial^3}{\partial r^{3}}A + 2 \, r^{2} B^{2} A^{2} \frac{\partial^3}{\partial t^{2}\partial r^{}}B - 6 \, r^{2} B A^{2} \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{}\partial r^{}}B - r^{2} B^{2} A \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{}\partial r^{}}A + 6 \, {\left(r^{2} A^{2} \frac{\partial}{\partial r^{}}B - r B A^{2}\right)} \frac{\partial}{\partial t^{}}B^{2} - 2 \, {\left(r^{2} B^{3} A \frac{\partial}{\partial r^{}}B + r B^{4} A\right)} \frac{\partial}{\partial r^{}}A^{2} - 2 \, {\left(r^{2} B A^{2} \frac{\partial}{\partial r^{}}B - 2 \, r B^{2} A^{2}\right)} \frac{\partial^2}{\partial t^{2}}B - {\left(r^{2} B^{2} A \frac{\partial^2}{\partial t^{}\partial r^{}}B - 2 \, r^{2} B^{2} \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial r^{}}A - {\left(r^{2} B A \frac{\partial}{\partial r^{}}B - 2 \, r B^{2} A\right)} \frac{\partial}{\partial t^{}}B\right)} \frac{\partial}{\partial t^{}}A + {\left(r^{2} B^{3} A^{2} \frac{\partial^2}{\partial r^{2}}B + 2 \, r B^{3} A^{2} \frac{\partial}{\partial r^{}}B - 4 \, B^{4} A^{2} + 3 \, r^{2} B A \frac{\partial}{\partial t^{}}B^{2} - 2 \, r^{2} B^{2} A \frac{\partial^2}{\partial t^{2}}B\right)} \frac{\partial}{\partial r^{}}A + {\left(3 \, r^{2} B^{3} A^{2} \frac{\partial}{\partial r^{}}B - 4 \, r^{2} B^{4} A \frac{\partial}{\partial r^{}}A + 4 \, r B^{4} A^{2}\right)} \frac{\partial^2}{\partial r^{2}}A \Bigg),
+    \label{eq100}
+  \end{dmath}
+
+  \begin{dmath}
+    \nabla_{[1} R_{0]1} = \frac{1}{4 \, r^{2} B^{4} A^{3}} \Bigg( 2 \, r^{2} B^{4} A^{2} \frac{\partial^3}{\partial t^{}\partial r^{2}}A + r^{2} B^{3} A^{2} \frac{\partial^2}{\partial t^{}\partial r^{}}B \frac{\partial}{\partial r^{}}A - r^{2} B^{3} A \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial r^{}}A^{2} + 2 \, r^{2} B^{3} A^{2} \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial r^{2}}A + 4 \, B^{3} A^{3} \frac{\partial}{\partial t^{}}B + 6 \, r^{2} A^{2} \frac{\partial}{\partial t^{}}B^{3} - 8 \, r^{2} B A^{2} \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{2}}B + 2 \, r^{2} B^{2} A^{2} \frac{\partial^3}{\partial t^{3}}B + 2 \, r^{2} B^{2} \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial t^{}}A^{2} - r^{2} B^{2} A \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{2}}A - {\left(r^{2} B^{3} A \frac{\partial}{\partial r^{}}B \frac{\partial}{\partial r^{}}A - 2 \, r^{2} B^{4} \frac{\partial}{\partial r^{}}A^{2} + 2 \, r^{2} B^{4} A \frac{\partial^2}{\partial r^{2}}A - 4 \, r^{2} B A \frac{\partial}{\partial t^{}}B^{2} + 3 \, r^{2} B^{2} A \frac{\partial^2}{\partial t^{2}}B\right)} \frac{\partial}{\partial t^{}}A + {\left(r^{2} B^{3} A^{2} \frac{\partial}{\partial r^{}}B - 2 \, r^{2} B^{4} A \frac{\partial}{\partial r^{}}A\right)} \frac{\partial^2}{\partial t^{}\partial r^{}}A \Bigg),
+    \label{eq101}
+  \end{dmath}
+
+  \begin{dmath}
+    \nabla_{[2} R_{0]2} = \frac{1}{2 \, A^{2}} \Bigg( r A^{2} \frac{\partial^2}{\partial t^{}\partial r^{}}B + r B A \frac{\partial^2}{\partial t^{}\partial r^{}}A + r A \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial r^{}}A - r B \frac{\partial}{\partial t^{}}A \frac{\partial}{\partial r^{}}A \Bigg),
+    \label{eq202}
+  \end{dmath}
+
+  \begin{dmath}
+    \nabla_{[2} R_{1]2} = \frac{1}{4 \, r B^{2} A^{2}} \Bigg( 2 \, r^{2} B^{2} A^{2} \frac{\partial^2}{\partial r^{2}}B + r^{2} B^{2} A \frac{\partial}{\partial r^{}}B \frac{\partial}{\partial r^{}}A - r^{2} B^{3} \frac{\partial}{\partial r^{}}A^{2} + 3 \, r^{2} A \frac{\partial}{\partial t^{}}B^{2} - 2 \, r^{2} B A \frac{\partial^2}{\partial t^{2}}B + r^{2} B \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial t^{}}A - 4 \, {\left(B^{3} - B^{2}\right)} A^{2} \Bigg),
+    \label{eq212}
+  \end{dmath}
+
+  \begin{align*}
+    \nabla_{[3} R_{0]3} &= \nabla_{[2} R_{0]2} \sin\left({\theta}\right)^{2}, &
+    \nabla_{[3} R_{1]3} &= \nabla_{[2} R_{1]2} \sin\left({\theta}\right)^{2},
+  \end{align*}
+which are very complex, and ---to our knowledge--- are not possible to solve in general.
+\end{widetext}
+
+Hence, further analysis requires a new strategy. Instead of considering a metric, a connection ansatz is proposed based in the structure of a spherically symmetric metric of the form,
+\begin{equation}
+  \de{s}^2 = g_{ab}(x) \, \de{x}^a\de{x}^b + e^{2\rho(x)} \, g_{AB}(\vph)  \de{\vph}^A\de{\vph}^B,
+  \label{sphere-gen}
+\end{equation}
+where $x^m$ represent the temporal an radial directions, while $\vph^M$ represent angular coordinates. Notice that the four-dimensional indices have been partitioned as \mbox{$\mu = (a,A)$,} then the general form of the connection is~\footnote{For the metric of Eq.~\eqref{sphere-gen}, the factors are \mbox{$M^a(x) = - e^{2\rho(x)} g^{am}\partial_m \rho$} and \mbox{$N_c = \partial_c \rho$.}}
+\begin{dmath}
+  \Ga^\lambda{}_{\mu\nu} = \delta^\lambda_a \delta^b_\mu \delta^c_\nu \ga^a{}_{bc} + \delta^\lambda_A \delta^B_\mu \delta^C_\nu \ga^A{}_{BC} + \delta^\lambda_a \delta^B_\mu \delta^C_\nu g_{BC} M^a(x) + 2 \delta^\lambda_A \delta^A_{(\mu} \delta^c_{\nu)} N_{c}(x),
+  \label{connSchw}
+\end{dmath}
+where $\ga^a{}_{bc}$ and $\ga^A{}_{BC}$ are the Levi-Civita connection for the metrics $g_{ab}$ and $g_{AB}$ respectively.
+
+From the connection ansatz~\eqref{connSchw} the Ricci tensor is calculated,
+\begin{dmath}
+  R_{\mu\nu}
+  = \delta_\mu^m \delta_\nu^n \( R_{mn} - 2 \nab{m} N_n - 2 N_m N_n \)
+  + \delta_\mu^M \delta_\nu^N \( R_{MN} + g_{MN} \nab{a} M^a \)
+  + ( \delta_\mu^M \delta_\nu^n + \delta_\mu^n \delta_\nu^M ) \gamma^A{}_{AM} N_n
+\end{dmath}
