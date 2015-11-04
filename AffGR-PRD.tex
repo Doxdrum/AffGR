@@ -29,6 +29,9 @@
 %\usepackage{feynmf}
 \usepackage{siunitx}
 \usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 %% \usepackage{ulem}
 %\usepackage{tikz}
 \usepackage{braket}
@@ -548,6 +551,7 @@ It is well-known that this system of equations can be obtained effectively from 
 \begin{equation}
   S_{\text{eff}} = \frac{1}{\alpha} \int \dn{4}{x} \sqrt{g} \left( R + 2 \Lambda - \frac{\alpha}{2} g^{\mu\nu} \pa{\mu}\phi \pa{\nu} \phi \right).
 \end{equation}
+We have show, so far, that our model of polynomial purely affine gravity is compatible with General Relativity in the sector of vanishing torsion, and in addition the compatibility can be extended to include the interaction with a free scalar field. The analysis of this coupled system could be enhanced to include a potential for the scalar field, 
 
 
 %%%%%%%%% Propagators %%%%%%%%%
