@@ -134,10 +134,22 @@ where $x^m$ represent the temporal an radial directions, while $\vph^M$ represen
 \end{dmath}
 where $\ga^a{}_{bc}$ and $\ga^A{}_{BC}$ are the Levi-Civita connection for the metrics $g_{ab}$ and $g_{AB}$ respectively.
 
-From the connection ansatz~\eqref{connSchw} the Ricci tensor is calculated,
+From the connection ansatz~\eqref{connSchw} the Ricci tensor is
 \begin{dmath}
   R_{\mu\nu}
   = \delta_\mu^m \delta_\nu^n \( R_{mn} - 2 \nab{m} N_n - 2 N_m N_n \)
-  + \delta_\mu^M \delta_\nu^N \( R_{MN} + g_{MN} \nab{a} M^a \)
-  + ( \delta_\mu^M \delta_\nu^n + \delta_\mu^n \delta_\nu^M ) \gamma^A{}_{AM} N_n
+  + \delta_\mu^M \delta_\nu^N \( R_{MN} + g_{MN} \nab{a} M^a \),
+  %% + ( \delta_\mu^M \delta_\nu^n + \delta_\mu^n \delta_\nu^M ) \gamma^A{}_{AM} N_n
+\end{dmath}
+and the equations of motion are
+\begin{widetext}
+  \begin{dmath}
+    \nabla_{[\lambda} R_{\mu]\nu}
+    = \delta_\lambda^l \delta_\mu^m \delta_\nu^n  \bigg( \frac{1}{2} g_{n[m} \partial_{l]} R_x + 2 R_x  g_{n[m} N_{l]}(x) - 2 \nabla_{[l} \Big( N_{m]} N_n \Big) \bigg)
+    + \delta_\lambda^{[l} \delta_\mu^{M]} \delta_\nu^N \, g_{MN} \bigg( \nab{l} \nab{a} M^a + \frac{R_x}{2} g_{la} M^a - 2 N_l - 2 \nab{a} \Big( M^a N_l \Big) - 2 M^a N_a N_l \bigg).
+  \end{dmath}
+\end{widetext}
+We have used that $g_{AB}(\varphi)$ is the metric of a two-sphere, and its curvature tensors are well known. In addition, since the metric $g_{ab}(x)$ is two-dimensional too, its curvature tensors are related with the metric by the relation
+\begin{dmath}
+  R_{ab}{}^c{}_d = \frac{R_x}{2} \Big( \delta^c_a g_{bd} - \delta^c_b g_{ad} \Big).
 \end{dmath}
