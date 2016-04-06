@@ -127,12 +127,13 @@ Hence, further analysis requires a new strategy. Instead of considering a metric
   \de{s}^2 = g_{ab}(x) \, \de{x}^a\de{x}^b + e^{2\rho(x)} \, g_{AB}(\vph)  \de{\vph}^A\de{\vph}^B,
   \label{sphere-gen}
 \end{equation}
-where $x^m$ represent the temporal an radial directions, while $\vph^M$ represent angular coordinates. Notice that the four-dimensional indices have been partitioned as \mbox{$\mu = (a,A)$,} then the general form of the connection is~\footnote{For the metric of Eq.~\eqref{sphere-gen}, the factors are \mbox{$M^a(x) = - e^{2\rho(x)} g^{am}\partial_m \rho$} and \mbox{$N_c = \partial_c \rho$.}}
+where $x^m$ represent the temporal an radial directions, while $\vph^M$ represent angular coordinates. Notice that the four-dimensional indices have been partitioned as \mbox{$\mu = (a,A)$,} then the general form of the connection is
+%~\footnote{For the metric of Eq.~\eqref{sphere-gen}, the factors are \mbox{$M^a(x) = - e^{2\rho(x)} g^{am}\partial_m \rho$} and \mbox{$N_c = \partial_c \rho$.}}
 \begin{dmath}
-  \Ga^\lambda{}_{\mu\nu} = \delta^\lambda_a \delta^b_\mu \delta^c_\nu \ga^a{}_{bc} + \delta^\lambda_A \delta^B_\mu \delta^C_\nu \ga^A{}_{BC} + \delta^\lambda_a \delta^B_\mu \delta^C_\nu g_{BC} M^a(x) + 2 \delta^\lambda_A \delta^A_{(\mu} \delta^c_{\nu)} N_{c}(x),
+  \Ga^\lambda{}_{\mu\nu} = \delta^\lambda_a \delta^b_\mu \delta^c_\nu \ga^a{}_{bc} + \delta^\lambda_A \delta^B_\mu \delta^C_\nu \ga^A{}_{BC} + \delta^\lambda_a \delta^B_\mu \delta^C_\nu g_{BC} M^a(x) +  \delta^\lambda_A \delta^A_{(\mu} \delta^c_{\nu)} N_{c}(x),
   \label{connSchw}
 \end{dmath}
-where $\ga^a{}_{bc}$ and $\ga^A{}_{BC}$ are the Levi-Civita connection for the metrics $g_{ab}$ and $g_{AB}$ respectively.
+where $\ga^a{}_{bc}$ and $\ga^A{}_{BC}$ are the Levi-Civita connection for the metrics $g_{ab}$ and $g_{AB}$ respectively, and the factors are \mbox{$M^a(x) = - \tfrac{1}{2}  g^{am}\partial_m e^{2\rho(x)}$} and \mbox{$N_c = 2 \partial_c \rho$}.
 
 From the connection ansatz~\eqref{connSchw} the Ricci tensor is
 \begin{dmath}
@@ -145,11 +146,49 @@ and the equations of motion are
 \begin{widetext}
   \begin{dmath}
     \nabla_{[\lambda} R_{\mu]\nu}
-    = \delta_\lambda^l \delta_\mu^m \delta_\nu^n  \bigg( \frac{1}{2} g_{n[m} \partial_{l]} R_x + 2 R_x  g_{n[m} N_{l]}(x) - 2 \nabla_{[l} \Big( N_{m]} N_n \Big) \bigg)
-    + \delta_\lambda^{[l} \delta_\mu^{M]} \delta_\nu^N \, g_{MN} \bigg( \nab{l} \nab{a} M^a + \frac{R_x}{2} g_{la} M^a - 2 N_l - 2 \nab{a} \Big( M^a N_l \Big) - 2 M^a N_a N_l \bigg).
+    = \delta_\lambda^l \delta_\mu^m \delta_\nu^n  \bigg( \frac{1}{2} g_{n[m} \partial_{l]} \mathcal{R} + 2 \mathcal{R}  g_{n[m} N_{l]}(x) - 2 \nabla_{[l} \Big( N_{m]} N_n \Big) \bigg)
+    + \delta_\lambda^{[l} \delta_\mu^{M]} \delta_\nu^N \, g_{MN} \bigg( \nab{l} \nab{a} M^a + \frac{\mathcal{R}}{2} g_{la} M^a - 2 N_l - 2 \nab{a} \Big( M^a N_l \Big) - 2 M^a N_a N_l \bigg).
+    \label{OurEq}
   \end{dmath}
 \end{widetext}
 We have used that $g_{AB}(\varphi)$ is the metric of a two-sphere, and its curvature tensors are well known. In addition, since the metric $g_{ab}(x)$ is two-dimensional too, its curvature tensors are related with the metric by the relation
 \begin{dmath}
-  R_{ab}{}^c{}_d = \frac{R_x}{2} \Big( \delta^c_a g_{bd} - \delta^c_b g_{ad} \Big).
+  R_{ab}{}^c{}_d = \frac{\mathcal{R}}{2} \Big( \delta^c_a g_{bd} - \delta^c_b g_{ad} \Big).
 \end{dmath}
+
+As argue  in Refs.~\cite{bergmann1965spherically,hawking1973large},  the solution depends on the nature of the surfaces described by $\rho = \text{const.}$, which in our parametrization translate to the nature of $N_a$. We first consider the condition $g^{ab} N_a N_b > 0 $, which allows to set $\rho$ as a good radial coordinate. Therefore, the general metric ansatz $g_{ab}$ is diagonal, and the radial direction would be $\rho$, i.e.,
+\begin{equation}
+  g_{ab} = - \alpha^2(t,\rho) \de{t}_a \otimes \de{t}_b + \beta^2(t,\rho) \de{\rho}_a \otimes \de{\rho}_b.
+\end{equation}
+With this ansatz, the nontrivial components of Eq.~\eqref{OurEq} are
+\begin{align}
+  \beta^2 \pa{t} \mathcal{R} + 8 \gamma^\rho{}_{t \rho} &= 0,
+  \label{eq1}
+  \\
+  \pa{\rho} \mathcal{R} - 4 \mathcal{R} + 16 \alpha^{-2} \gamma^\rho{}_{tt} &= 0,
+  \label{eq2}
+  \\
+  \pa{t} \big( \Delta_x e^{2\rho} \big) + 4 \beta^{-2} e^{2\rho} \gamma^\rho{}_{t \rho} &= 0,
+  \label{eq3}
+\end{align}
+and
+\begin{dmath}
+  \pa{\rho} \big( \Delta_x e^{2\rho} \big) + 8 - 4 \Delta_x e^{2\rho} - 16 \beta^{-2} e^{2\rho} - 4 \beta^{-2} e^{2\rho} \gamma^{\rho}{}_{\rho\rho}  + \mathcal{R} e^{2\rho} = 0.
+  \label{eq4}
+\end{dmath}
+Equation~\eqref{eq1} can be rewritten as
+\begin{equation}
+  \pa{t} \big( \mathcal{R} - 8 \beta^{-2} \big) = 0,
+\end{equation}
+or 
+\begin{equation}
+  \mathcal{R} - 8 \beta^{-2} = G_1(\rho).
+\end{equation}
+Since
+\begin{equation}
+  \Delta_x e^{2\rho} = e^{2\rho} \bigg[ 4 \beta^{-2} + \frac{2}{\alpha \beta} \pa{\rho} \bigg( \frac{\alpha}{\beta} \bigg) \bigg] \equiv  e^{2\rho} \Big[ 4 \beta^{-2} + F \Big],
+\end{equation}
+it follows from Eq.~\eqref{eq3} that,
+\begin{equation}
+  mmmmmmmmm
+\end{equation}
