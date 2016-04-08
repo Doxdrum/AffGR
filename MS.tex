@@ -1,4 +1,4 @@
-\section{Known metric solutions to the parallel Ricci equations}
+\section{\label{Known}Known metric solutions to the parallel Ricci equations}
 
 In this Appendix, we will present a brief compendium of known (Riemannian) metric solutions of Eq.~\eqref{SimpleEOM} in four dimensions. None of these workis original ---except the analysis presented as example in Sec.~\ref{Ex:sch}, and can be found in Refs.~\cite{gray1978einstein,derdzinski1980classification,derdzinski1982compact,Derdzinski:1985,Besse}.
 
@@ -27,7 +27,7 @@ Many examples and explicit conditions of Riemannian metrics with harmonic curvat
 Although the above are examples of manifolds with parallel Ricci within the context of ``Riemannian'' geometries, examples of connnections with parallel Ricci can be found in symplectic geometries, see Ref.~\cite{cahen2000symplectic}. 
 
 
-\section{Explicit example: Schwarzschild ansatz, and (incomplete) Birkhoff theorem\label{Ex:sch}}
+\section{\label{Schw}Explicit example: Schwarzschild ansatz, and Birkhoff theorem\label{Ex:sch}}
 
 %% As a disclaimer\hl{What is this... Should this be dropped?}, we clarify that the example below is a pseudo-Riemannian manifold.
 
@@ -118,6 +118,7 @@ the field equations are so complicated, that although hints on the solubility we
     \frac{1}{4 \, r B^{2} A^{2}} \Bigg( 2 \, r^{2} B^{2} A^{2} \frac{\partial^2}{\partial r^{2}}B + r^{2} B^{2} A \frac{\partial}{\partial r^{}}B \frac{\partial}{\partial r^{}}A - r^{2} B^{3} \frac{\partial}{\partial r^{}}A^{2} + 3 \, r^{2} A \frac{\partial}{\partial t^{}}B^{2} - 2 \, r^{2} B A \frac{\partial^2}{\partial t^{2}}B + r^{2} B \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial t^{}}A - 4 \, {\left(B^{3} - B^{2}\right)} A^{2} \Bigg) \,
     \Big( \delta_{\mu\nu}^{21} \delta_\lambda^2 + \sin^2(\theta) \delta_{\mu\nu}^{31} \delta_\lambda^3 \Big)
     = 0,
+    \label{hugeeq}
   \end{dmath}
 \end{widetext}
 which are very complex, and ---to our knowledge--- these are not possible to solve in general. Nonetheless, the symmetries in some of the components of these equations seems to favour the relation $A = B$ as solution. In addition, we found a very interesting reference in which a proof of the Birkhoff theorem is given for an Einstein--Cartan theory coupled with the gravitational Yang--Mills~\cite{Ramaswamy:1979zz}, which support the hand-waving symmetry argument above.
@@ -159,6 +160,7 @@ We have used that $g_{AB}(\varphi)$ is the metric of a two-sphere, and its curva
 As argue  in Refs.~\cite{bergmann1965spherically,hawking1973large},  the solution depends on the nature of the surfaces described by $\rho = \text{const.}$, which in our parametrization translate to the nature of $N_a$. We first consider the condition $g^{ab} N_a N_b > 0 $, which allows to set $\rho$ as a good radial coordinate. Therefore, the general metric ansatz $g_{ab}$ is diagonal, and the radial direction would be $\rho$, i.e.,
 \begin{equation}
   g_{ab} = - \alpha^2(t,\rho) \de{t}_a \otimes \de{t}_b + \beta^2(t,\rho) \de{\rho}_a \otimes \de{\rho}_b.
+  \label{metr2d}
 \end{equation}
 With this ansatz, the nontrivial components of Eq.~\eqref{OurEq} are
 \begin{align}
@@ -176,19 +178,34 @@ and
   \pa{\rho} \big( \Delta_x e^{2\rho} \big) + 8 - 4 \Delta_x e^{2\rho} - 16 \beta^{-2} e^{2\rho} - 4 \beta^{-2} e^{2\rho} \gamma^{\rho}{}_{\rho\rho}  + \mathcal{R} e^{2\rho} = 0.
   \label{eq4}
 \end{dmath}
-Equation~\eqref{eq1} can be rewritten as
-\begin{equation}
-  \pa{t} \big( \mathcal{R} - 8 \beta^{-2} \big) = 0,
-\end{equation}
-or 
+From equation~\eqref{eq1} it follows that,
+%% can be rewritten as
+%% \begin{equation}
+%%   \pa{t} \big( \mathcal{R} - 8 \beta^{-2} \big) = 0,
+%%   \label{eq1a}
+%% \end{equation}
+%% or 
 \begin{equation}
   \mathcal{R} - 8 \beta^{-2} = G_1(\rho).
+  \label{eq1b}
 \end{equation}
-Since
+In addition, since
 \begin{equation}
-  \Delta_x e^{2\rho} = e^{2\rho} \bigg[ 4 \beta^{-2} + \frac{2}{\alpha \beta} \pa{\rho} \bigg( \frac{\alpha}{\beta} \bigg) \bigg] \equiv  e^{2\rho} \Big[ 4 \beta^{-2} + F \Big],
+  \Delta_x e^{2\rho}
+  = e^{2\rho} \bigg[ 4 \beta^{-2} + \frac{2}{\alpha \beta} \pa{\rho} \bigg( \frac{\alpha}{\beta} \bigg) \bigg]
+  \equiv  e^{2\rho} \Big[ 4 \beta^{-2} + \mathcal{F} \Big],
 \end{equation}
-it follows from Eq.~\eqref{eq3} that,
+it follows from Eqs.~\eqref{eq3} that,
+%% \begin{equation}
+%%   \pa{t} \big( F + 2 \beta^{-2} \big) = 0,
+%%   \label{eq3a}
+%% \end{equation}
+%% or 
 \begin{equation}
-  mmmmmmmmm
+  \mathcal{F} + 2 \beta^{-2} = G_2(\rho).
+  \label{eq3b}
 \end{equation}
+
+Equations~\eqref{eq1b} and~\eqref{eq3b} implies that all temporal dependence on time within $\mathcal{R}$, $\mathcal{F}$ and $\beta^{-2}$, enters through an additive common function, say $B(t,\rho)$. However, the consistency of these equations with the value of $\mathcal{R}$ calculated from the metric ansatz, in Eq.~\eqref{metr2d}, sets this additive function to zero, $B(t,\rho)$. Therefore, neither $\mathcal{R}$, $\mathcal{F}$ nor $\beta^{-2}$ depend on $t$. By extension---from the definition of $\mathcal{F}$---, $\alpha$ could depend on time through a multiplicative function. Nonetheless, this multiplicative function can be eliminated of the problem by a redefinition of the \emph{time} coordinate.
+
+At this stage, we have proved that \emph{any spherically symmetric (metric) solution of the Eqs.~\eqref{SimpleEOM} is necessarily static}, which is one of the main statements of Birkhoff's theorem. This result, simplifies the Eq.~\eqref{hugeeq} and makes clearer the necessity of setting $A(r) = B(r)$ to solve the equations of motion. Finally, according to Eq.~\eqref{simplef} the general (metric) solution is the (Anti-)de-Sitter--Schwarzschild metric.
