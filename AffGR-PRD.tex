@@ -546,7 +546,7 @@ In that case, we find a particular solution of Eq.~\eqref{SimpleEOMwS},%% \hl{JZ
 \begin{equation*}
   R_{\mu\nu} - \alpha \pa{\mu} \phi \pa{\nu} \phi = \Lambda g_{\mu\nu},
 \end{equation*}
-that can be written in the more conventional form~\footnote{Notice that $\alpha$ is the gravitational coupling constant, which in Einstein--Hilbert gravity is $G_N$.}
+that can be written in the more conventional form~\footnote{We have used a suggestive notation by denoting with $g_{\mu\nu}$ a covariantly constant, invertible, and symmetric two-tensor. Notice that $\alpha$ is the gravitational coupling constant, which in Einstein--Hilbert gravity is proportional to $G_N$.}
 \begin{equation}
   R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R + \Lambda g_{\mu\nu} = \alpha \Big( \pa{\mu} \phi \pa{\nu} \phi - \frac{1}{2} g_{\mu\nu} \big( \partial\phi \big)^2 \Big).
 \end{equation}
@@ -568,72 +568,150 @@ We have show, so far, that our model of polynomial purely affine gravity is comp
 \section{\label{propag}Analysis of propagators}
 
 
-A first step toward the analysis of renormalizability of the model should be the computation of the free propagators of the model around a given background. The choice of background will necessarily be taken in order to simplify the computations.  Our first task is to expand up to second order in the fields around a flat background. Under these assumptions, and using the notation of Eqs.~\eqref{GammaExp}, the relevant part of the action~\eqref{4dfull} is
+A step toward the analysis of renormalizability of the model should be the computation of the free propagators of the model around a given background. The choice of background will necessarily in order to simplify the computations.  Our first task is to expand up to second order in the fields around a maximally symmetric Riemannian background. Maximally symmetric spaces possess remarkably simple curvature tensors~\cite{weinberg1972gravitation},
+\begin{equation}
+  R_{\mu\nu}{}^\lambda{}_\rho = {K} \Big( g_{\nu\rho} \delta^\lambda_\mu - g_{\mu\rho} \delta^\lambda_\nu \Big),
+\end{equation}
+and the Einstein's field equations in vacuum
+\begin{equation}
+  R_{\mu\nu} = \Lambda \, g_{\mu\nu},
+\end{equation}
+require that $K = \frac{\Lambda}{3}$. 
+%% Additionally, 
+Therefore, in notation of Eqs.~\eqref{GammaExp} we have that $A = T = 0$, and the contribution due to the torsion (and non-metricity) enters as a perturbative effect. Thus, most terms in the action~\eqref{4dfull} do not contribute to the propagator analysis. Additionally, the first order perturbation of the curvature tensor is
+\begin{equation}
+  R_{\mu\nu}{}^\lambda{}_\rho = \frac{\Lambda}{3}\,   {\delta}^{\lambda}_{\mu} {g}_{\rho \nu} - \frac{\Lambda}{3}\,   {\delta}^{\lambda}_{\nu} {g}_{\rho \mu} + {\nabla}_{\mu}{{\gamma}^{\lambda}\,_{\rho \nu}}\,  - {\nabla}_{\nu}{{\gamma}^{\lambda}\,_{\rho \mu}}.
+\end{equation}
+Under these assumptions, the relevant terms of the action~\eqref{4dfull} are those accompanied by the couplings $B_i$, $C_i$ and $E_i$, and the second order perturbation of the action yields
 \begin{widetext}
   \begin{dmath}[compact, spread=2pt]
     \label{4dflatx}
-    S[\gamma,t,a] =
+    S^{(2)}[\gamma,t,a] =
     \int\dn{4}{x} \bigg[
-      C_1 \partial_{\mu}\gamma^{\mu}{}_{\rho\nu} \partial_\sigma t^{\nu\rho\sigma}
-      +2 C_2 \partial_{\mu}\gamma^{\rho}{}_{\nu\rho} \partial_\sigma t^{\sigma\mu\nu}
-      + E_1 \partial_{(\rho}t^{\rho\mu\nu}\partial_{\sigma)}t^{\sigma\lambda\kappa}\epsilon_{\mu\nu\lambda\kappa}
-      + E_2 \partial_{(\lambda} t^{\lambda\mu\nu}\partial_{\mu)} a_\nu
+      C_1 \big( - \Lambda {\nabla}_{\alpha}{{t}^{\beta \alpha \gamma}}\,  {g}_{\beta \gamma} - \Lambda {\gamma}^{\alpha}\,_{\beta \delta} {g}_{\alpha \gamma} {t}^{\beta \delta \gamma} + {\nabla}_{\alpha}{{\gamma}^{\alpha}\,_{\beta \delta}}\,  {\nabla}_{\gamma}{{t}^{\beta \delta \gamma}}\,  - {\nabla}_{\alpha}{{\gamma}^{\beta}\,_{\beta \delta}}\,  {\nabla}_{\gamma}{{t}^{\delta \alpha \gamma}}\, \big)
+      + 2\, C_2 {\nabla}_{\alpha}{{\gamma}^{\beta}\,_{\beta \delta}}\,  {\nabla}_{\gamma}{{t}^{\gamma \alpha \delta}}\,
+      + E_1 {\epsilon}_{\alpha \beta \delta \eta} {\nabla}_{\gamma}{{t}^{\gamma \alpha \beta}}\,  {\nabla}_{\lambda}{{t}^{\lambda \delta \eta}}\,
+      + E_2 \big({\nabla}_{\alpha}{{a}_{\beta}}\,  {\nabla}_{\gamma}{{t}^{\gamma \alpha \beta}}\,  - {\nabla}_{\alpha}{{a}_{\beta}}\,  {\nabla}_{\gamma}{{t}^{\alpha \beta \gamma}}\, \big)
+      + \Big(B_1 + \frac{1}{3}\, B_2 \Big) \Lambda {\epsilon}_{\alpha \beta \gamma \delta} {g}_{\eta \lambda} {t}^{\eta \alpha \beta} {t}^{\lambda \gamma \delta}
+      + \Big( - B_3 + \frac{2}{3}\, B_4 \Big) \Lambda {a}_{\alpha} {g}_{\beta \gamma} {t}^{\beta \alpha \gamma}
       \bigg].
+    \label{4dmax}
   \end{dmath}
 \end{widetext}
-In momentum space, the second order perturbation is
-\begin{dmath}[compact, spread=2pt]
-  \label{4dflat}
-  S =
-  \int\dn{4}{p}\bigg[
-    C_1 p_{\mu} p_\sigma\tilde\gamma^{\mu}{}_{\rho\nu}^* \tilde t^{\nu\rho\sigma}
-    + 2 C_2 p_{\mu} p_\sigma\tilde\gamma^{\rho}{}_{\nu\rho}^* \tilde t^{\sigma\mu\nu}
-    + E_1 p_{\rho} p_{\sigma} \tilde t^{\rho\mu\nu}{}^*\tilde t^{\sigma\lambda\kappa} \epsilon_{\mu\nu\lambda\kappa}
-    + E_2 p_{\lambda} p_{\mu} \tilde t^{\lambda\mu\nu}{}^* \tilde a_\nu
-    \bigg].
-\end{dmath}
-Longitudinal and transverse projectors can be introduced in order to decompose the action and specify in a more standard fashion the dynamics of Eq.~\eqref{4dflat}. This can be done since we have the metric $\eta_{\mu\nu}$ compatible with the connection and $p^\mu = \eta^{\mu\nu}p_\nu$. We define the projector into logitudinal vectors $P_{\texttt{L}}{}^\mu_\nu = \tfrac{1}{p^2}p^\mu p_\nu $, such that $$A_{\texttt{L}\mu} = P_{\texttt{L}}{}^\nu_\mu \, A_\nu = A_{\texttt{L}}{}p_{\mu},$$ where $A_{\texttt{L}}=\tfrac{1}{p^2} p^\mu A_\mu$. Similarly, $P_\perp{}^\mu_\nu=\delta^\mu_\nu -P_{\texttt{L}}{}^\mu_\nu$ defines the projector into transverse vectors, i.e., $A_{\perp \mu}=P_{\perp}{}_\mu^\nu A_\nu$. Thus,
-\begin{dmath}
-  \label{transversea}
-  \tilde a_\nu=a_\perp{}_{\nu}+a_{\texttt{L}} p_\nu,
-\end{dmath}
-\begin{dmath}
-  \label{transverset}
-  \tilde t^{\lambda\mu\nu}=\frac{1}{p}\epsilon^{\mu\nu\kappa\rho}p_\rho t_\perp^{\lambda}{}_\kappa+\frac{1}{p^2}p^\lambda\epsilon^{\mu\nu\kappa\rho}p_\rho t_{\texttt{a}\kappa}-\frac{2}{p^2}p^{[\mu}\epsilon^{\nu]\lambda\kappa\rho}p_\rho t_{\texttt{a}\kappa}+\frac{2}{p}p^{[\mu} t_{\texttt{s}}^{\nu]\lambda}+\frac{2}{p^2}p^\lambda p^{[\mu} t_{\texttt{v}}^{\nu]},
-\end{dmath}
-\begin{dmath}
-  \label{transversegamma}
-  \tilde \gamma^{\lambda}{}_{\mu\nu}=\gamma_\perp^{\lambda}{}_{\mu\nu}+\frac{1}{p}p^\lambda \gamma_{\texttt{s}}{}_{\mu\nu}+\frac{2}{p}p_{(\mu} \gamma^\lambda{}_{\nu)}+\frac{2}{p^2}p^\lambda p_{(\mu} \gamma_{\texttt{v}}{}_{\nu)}+ \frac{1}{p^2}p_{\mu} p_{\nu} \gamma'_{\texttt{v}}{}^\lambda+\frac{1}{p^3}p^\lambda p_{\mu} p_{\nu} \gamma_{\texttt{L}},
-\end{dmath}
-where all the indices are transverse except those of the momentum $p_\mu$, the subindex $\perp$ indicates that it corresponds to the fully transverse projection of the tensor in all of its indices, the subindex ${\texttt{L}}$ indicates that this is the longitudinal projection of the tensor, while the subindices $\texttt{s}$, $\texttt{a}$ and $\texttt{v}$ specify that the tensor is symmetric, antisymmetric or a vector representation. In particular, $t_\perp^{\lambda}{}_\kappa$ is traceless. Additionally, we could separate the fields into irreducible representations by projecting them into their traceless part and other lower dimensional tensor representations. In the meanwhile we shall not do this expansion.
-\begin{widetext}
-  Using Eqs.~\eqref{transversea}, \eqref{transverset} and~\eqref{transversegamma}, the action~\eqref{4dflat} is then rewritten
-  \begin{dmath}
-    \label{4dtransverse}
-    S =
-    \int\dn{4}{p}p^2
-    \bigg[
-      2C_1 \hat{p}_\mu \hat{p}_\sigma\Big(\gamma_\perp^{\mu}{}_{\rho\nu}+\hat{p}^\mu \gamma_{\texttt{s}}{}_{\rho\nu}+2\hat{p}_{(\rho} \gamma^\mu{}_{\nu)}+2\hat{p}^\mu \hat{p}_{(\rho} \gamma_{\texttt{v}}{}_{\nu)}+ \hat{p}_{\rho} \hat{p}_{\nu} \gamma'_{\texttt{v}}{}^\mu+\hat{p}^\mu \hat{p}_{\rho} \hat{p}_{\nu} \gamma_{\texttt{L}}\Big)^* \Big(\epsilon^{\rho\sigma\delta\eta}\hat{p}_\eta t_\perp^{\nu}{}_\delta+\hat{p}^\nu t_{\texttt{a}}^{\rho\sigma}-2\hat{p}^{[\rho} t_{\texttt{a}}^{\sigma]\nu}+2\hat{p}^{[\rho} t_{\texttt{s}}^{\sigma]\nu}+2\hat{p}^\nu \hat{p}^{[\rho} t_{\texttt{v}}^{\sigma]}\Big)
-      +2C_2 \hat{p}_{\mu} \hat{p}_\sigma\Big(\gamma_\perp^{\rho}{}_{\nu\rho}+\hat{p}^\rho \gamma_{\texttt{s}}{}_{\nu\rho}+2\hat{p}_{(\nu} \gamma^\rho{}_{\rho)}+2\hat{p}^\rho \hat{p}_{(\nu} \gamma_{\texttt{v}}{}_{\rho)}+\hat{p}_{\nu} \hat{p}_{\rho} \gamma'_{\texttt{v}}{}^\rho +\hat{p}^\rho \hat{p}_{\nu} \hat{p}_{\rho} \gamma_{\texttt{L}}\Big)^* \Big(\epsilon^{\mu\nu\kappa\eta}\hat{p}_\eta t_\perp^{\sigma}{}_\kappa+\hat{p}^\sigma t_{\texttt{a}}^{\mu\nu}-2\hat{p}^{[\mu} t_{\texttt{a}}^{\nu]\sigma}+2\hat{p}^{[\mu} t_{\texttt{s}}^{\nu]\sigma}+2\hat{p}^\sigma \hat{p}^{[\mu} t_{\texttt{v}}^{\nu]}\Big)
-      +E_1 \hat{p}_{\rho} \hat{p}_{\sigma}\Big(\epsilon^{\mu\nu\kappa\eta}\hat{p}_\eta t_\perp^{\rho}{}_\kappa+\hat{p}^\rho t_{\texttt{a}}^{\mu\nu}-2\hat{p}^{\mu} t_{\texttt{a}}^{\nu\rho}+2\hat{p}^{\mu} t_{\texttt{s}}^{\nu\rho}+2\hat{p}^\rho \hat{p}^{\mu} t_{\texttt{v}}^{\nu}\Big)^*\Big(\epsilon^{\lambda\kappa\delta\eta}\hat{p}_\eta t_\perp^{\sigma}{}_\delta+\hat{p}^\sigma t_{\texttt{a}}^{\lambda\kappa}-2\hat{p}^{\lambda} t_{\texttt{a}}^{\kappa\sigma}+2\hat{p}^{\lambda} t_{\texttt{s}}^{\kappa\sigma}+2\hat{p}^\sigma \hat{p}^{\lambda} t_{\texttt{v}}^{\kappa}\Big)\epsilon_{\mu\nu\lambda\kappa}
-      +E_2 \hat{p}_{\lambda} \hat{p}_{\mu} \Big(\epsilon^{\mu\nu\kappa\rho}\hat{p}_\rho t_\perp^{\lambda}{}_\kappa+\hat{p}^\lambda t_{\texttt{a}}^{\mu\nu}-2\hat{p}^{[\mu} t_{\texttt{a}}^{\nu]\lambda}+2\hat{p}^{[\mu} t_{\texttt{s}}^{\nu]\lambda}+2\hat{p}^\lambda \hat{p}^{[\mu} t_{\texttt{v}}^{\nu]}\Big)^*\Big(a_\perp{}_\nu+\hat{p}_\nu a_{\texttt{L}}\Big)
-      \bigg],
-  \end{dmath}
-\end{widetext}
-simplifiying
-\begin{dmath}
-  \label{WithGhosts}
-  S=\int d^4p\Bigg[-2C_1 p^2\gamma_{\texttt{s}\mu\nu}^*t_{\texttt{s}}^{\mu\nu}
-    +p^2\Big((-2C_1+2C_2)\gamma_{\texttt{v}\mu}+2C_2\gamma_{\perp\mu\nu}^\nu
-    +8E_1t_{\texttt{a}\mu}+E_2a_{\perp\mu}\Big)^*t_{\texttt{v}}^\mu
-    \Bigg]
-\end{dmath}
+%% In momentum space, the second order perturbation is
+%% \begin{dmath}[compact, spread=2pt]
+%%   \label{4dflat}
+%%   S =
+%%   \int\dn{4}{p}\bigg[
+%%     C_1 p_{\mu} p_\sigma\tilde\gamma^{\mu}{}_{\rho\nu}^* \tilde t^{\nu\rho\sigma}
+%%     + 2 C_2 p_{\mu} p_\sigma\tilde\gamma^{\rho}{}_{\nu\rho}^* \tilde t^{\sigma\mu\nu}
+%%     + E_1 p_{\rho} p_{\sigma} \tilde t^{\rho\mu\nu}{}^*\tilde t^{\sigma\lambda\kappa} \epsilon_{\mu\nu\lambda\kappa}
+%%     + E_2 p_{\lambda} p_{\mu} \tilde t^{\lambda\mu\nu}{}^* \tilde a_\nu
+%%     \bigg].
+%% \end{dmath}
+Longitudinal and transverse projectors can be introduced in order to decompose the action and specify in a more standard fashion the dynamics of Eq.~\eqref{4dmax}. This can be done since we have the metric $g_{\mu\nu}$ compatible with the connection, and $\nabla^\mu=g^{\mu\nu}\nabla_\nu$. Additionally we will denote by $\Delta = \nabla^\mu\nabla_\mu$ the covariant Laplacian. Let us define $P_{\texttt{L}}{}^\mu{}_\nu=\nabla^\mu\Delta^{-1} \nabla_\nu $, the projector into logitudinal vectors, and similarly $P_\perp{}^\mu{}_\nu=\delta^\mu_\nu -P_{\texttt{L}}{}^\mu{}_\nu$ is the projector into transverse vectors. Therefore, transverse indices are defined such that $\nabla_\mu A_\perp{}^{\mu}=0$.
 
+Thus, the perturbations can be split into their longitudinal and transverse components as
+\begin{dmath}
+  a_\mu = {a_\perp}_{\mu} + {\nabla}_{\mu}{aL},
+\end{dmath}
+\begin{dmath}
+  {t}^{\lambda \mu \nu} =
+  {t_\perp}^{\lambda \mu \nu}
+  + 2  {\nabla}^{\lambda} {t_{\texttt{a}}^{\mu \nu}}
+  - 2  {\nabla}^{[\mu}{{t_{\texttt{a}}}^{\nu] \lambda}} 
+  + 2  {\nabla}^{\mu}{{t_{\texttt{s}}}^{\nu \lambda}}
+  + 2  {\nabla}^{\lambda [\mu}{{t_{\texttt{v}}}^{\nu]}}
+\end{dmath}
+and
+\begin{dmath}
+  {\gamma}^{\lambda}\,_{\mu \nu}  =
+  {\gamma_\perp}^{\lambda}{}_{\mu \nu}
+  + {\nabla}^{\lambda}{{\gamma_{\texttt{s}}}_{\mu \nu}}
+  + 2  {\nabla}_{(\mu}{{\gamma}^{\lambda}\,_{\nu)}}
+  + 2  {\nabla}^{\lambda}\nabla_{(\mu}{{\gamma_{\texttt{v}}}_{\nu)}}
+  + 2  \nab{(\mu} \nab{\nu)} {{\gamma_{\texttt{v}'}}^{\lambda}} 
+  + 2  {\nabla}^{\lambda}\nab{(\mu} \nab{\nu)}{\gamma_{\texttt{L}}},
+\end{dmath}
+where all the indices are transverse except those of the derivative $\nabla_\mu$, the subindex $\perp$ indicates that it corresponds to the fully transverse projection of the tensor in all of its indices, the subindex ${\texttt{L}}$ indicates that this is the longitudinal projection of the tensor, while the sub indices $\texttt{s}$, $\texttt{a}$ and $\texttt{v}$ specify that the tensor is symmetric, antisymmetric or a vector representation. In particular, $t_\perp^{\lambda}{}_\kappa$ is traceless. \hl{check the last sentence. Is this ${t_s}^{\alpha}{}_{\alpha}$?... If true, this condition will kill the scalars contribution in the next equations}
+
+\begin{widetext}
+  \label{pert-Lambda}
+  \begin{dmath}[compact, spread=2pt]
+    S = \int \dn{4}{x} \Bigg(
+    C_1 \Big( {t_s}^{\alpha\beta }-\frac{1}{4}g^{\alpha\beta}{{t_s}^{\gamma}{}_{\gamma}} \Big) \bigg( -  (\frac{4\Lambda^2}{3}+\Lambda \Delta+\Delta^2) {\gamma_s}_{\alpha\beta}  
+    - \frac{8}{3}   \Lambda\Delta {{\gamma}_{\alpha\beta}} 
+    \bigg)
+    + {{t_v}^{\alpha}}\bigg(
+    \Big(( C_1 - 2\, C_2) \Delta^3 + \frac{1}{3}( C_1 + 2C_2 )\Lambda\Delta^2 + \frac{2}{3}( 2C_1 +  C_2 )\Lambda^2\Delta - \frac{1}{3}C_1  \Lambda^3\Big){{\gamma_v}_{\alpha}}
+    + \Big((C_1 - 2\, C_2) \Lambda\Delta - 2\, C_2 \Delta^2\Big){{\gamma_\perp}^{\beta}\,_{\beta \alpha}}
+    + 8\, E_1 {\epsilon}_{\alpha \beta \gamma \delta} \Delta{\nabla}^{\beta }\Delta{{t_a}^{\gamma\delta}}  
+    +\Big(- 2\, E_2 \Delta^2 +  (- E_2 + B_3 - \frac{2}{3}\, B_4) \Lambda\Delta\Big){a_\perp}_{\alpha} 
+    \bigg)
+    + {{t_s}^{\alpha}{}_{\alpha}}\bigg( \frac{2}{3}C_1 \Lambda\Delta{{\gamma}^{\beta}\,_{\beta}} 
+    + \frac{2}{3}E_2 \Lambda \Delta{a_L}  
+    - \frac{4}{3}C_1 \Lambda^2 \Delta{g_L}
+    - \frac{1}{4}C_1 (\Lambda + \Delta)  \Delta{{\gamma_s}^{\beta}{}_{\beta}}
+    \bigg)   \Bigg),
+  \end{dmath}
+  \hl{1.- Is it Ok? 2.- Are the $B_3$ and $B_4$ there?}
+  where $\Delta \equiv \nabla^{\alpha}\nabla_{\alpha}$ is the Laplacian operator.
+  This action sets the dynamics of two transverse-traceless tensors (or specific combination of tensors), as well as two transverse vectors and two scalars.
+\end{widetext}
+%% We define the projector into logitudinal vectors $P_{\texttt{L}}{}^\mu_\nu = \tfrac{1}{p^2}p^\mu p_\nu $, with $p^\mu = g^{\mu\nu} p_\nu$, such that $$A_{\texttt{L}\mu} = P_{\texttt{L}}{}^\nu_\mu \, A_\nu = A_{\texttt{L}} \, p_{\mu},$$ where $A_{\texttt{L}}=\tfrac{1}{p^2} p^\mu A_\mu$. Similarly, $P_\perp{}^\mu_\nu=\delta^\mu_\nu -P_{\texttt{L}}{}^\mu_\nu$ defines the projector into transverse vectors, i.e., $A_{\perp \mu}=P_{\perp}{}_\mu^\nu A_\nu$. Thus,
+%% \begin{dmath}
+%%   \label{transversea}
+%%   \tilde a_\nu=a_\perp{}_{\nu}+a_{\texttt{L}} p_\nu,
+%% \end{dmath}
+%% \begin{dmath}
+%%   \label{transverset}
+%%   \tilde t^{\lambda\mu\nu}=\frac{1}{p}\epsilon^{\mu\nu\kappa\rho}p_\rho t_\perp^{\lambda}{}_\kappa+\frac{1}{p^2}p^\lambda\epsilon^{\mu\nu\kappa\rho}p_\rho t_{\texttt{a}\kappa}-\frac{2}{p^2}p^{[\mu}\epsilon^{\nu]\lambda\kappa\rho}p_\rho t_{\texttt{a}\kappa}+\frac{2}{p}p^{[\mu} t_{\texttt{s}}^{\nu]\lambda}+\frac{2}{p^2}p^\lambda p^{[\mu} t_{\texttt{v}}^{\nu]},
+%% \end{dmath}
+%% \begin{dmath}
+%%   \label{transversegamma}
+%%   \tilde \gamma^{\lambda}{}_{\mu\nu}=\gamma_\perp^{\lambda}{}_{\mu\nu}+\frac{1}{p}p^\lambda \gamma_{\texttt{s}}{}_{\mu\nu}+\frac{2}{p}p_{(\mu} \gamma^\lambda{}_{\nu)}+\frac{2}{p^2}p^\lambda p_{(\mu} \gamma_{\texttt{v}}{}_{\nu)}+ \frac{1}{p^2}p_{\mu} p_{\nu} \gamma'_{\texttt{v}}{}^\lambda+\frac{1}{p^3}p^\lambda p_{\mu} p_{\nu} \gamma_{\texttt{L}},
+%% \end{dmath}
+%% where all the indices are transverse except those of the momentum $p_\mu$, the subindex $\perp$ indicates that it corresponds to the fully transverse projection of the tensor in all of its indices, the subindex ${\texttt{L}}$ indicates that this is the longitudinal projection of the tensor, while the subindices $\texttt{s}$, $\texttt{a}$ and $\texttt{v}$ specify that the tensor is symmetric, antisymmetric or a vector representation. In particular, $t_\perp^{\lambda}{}_\kappa$ is traceless. Additionally, we could separate the fields into irreducible representations by projecting them into their traceless part and other lower dimensional tensor representations. In the meanwhile we shall not do this expansion.
+%% \begin{widetext}
+%%   Using Eqs.~\eqref{transversea}, \eqref{transverset} and~\eqref{transversegamma}, the action~\eqref{4dflat} is then rewritten
+%%   \begin{dmath}
+%%     \label{4dtransverse}
+%%     S =
+%%     \int\dn{4}{p}p^2
+%%     \bigg[
+%%       2C_1 \hat{p}_\mu \hat{p}_\sigma\Big(\gamma_\perp^{\mu}{}_{\rho\nu}+\hat{p}^\mu \gamma_{\texttt{s}}{}_{\rho\nu}+2\hat{p}_{(\rho} \gamma^\mu{}_{\nu)}+2\hat{p}^\mu \hat{p}_{(\rho} \gamma_{\texttt{v}}{}_{\nu)}+ \hat{p}_{\rho} \hat{p}_{\nu} \gamma'_{\texttt{v}}{}^\mu+\hat{p}^\mu \hat{p}_{\rho} \hat{p}_{\nu} \gamma_{\texttt{L}}\Big)^* \Big(\epsilon^{\rho\sigma\delta\eta}\hat{p}_\eta t_\perp^{\nu}{}_\delta+\hat{p}^\nu t_{\texttt{a}}^{\rho\sigma}-2\hat{p}^{[\rho} t_{\texttt{a}}^{\sigma]\nu}+2\hat{p}^{[\rho} t_{\texttt{s}}^{\sigma]\nu}+2\hat{p}^\nu \hat{p}^{[\rho} t_{\texttt{v}}^{\sigma]}\Big)
+%%       +2C_2 \hat{p}_{\mu} \hat{p}_\sigma\Big(\gamma_\perp^{\rho}{}_{\nu\rho}+\hat{p}^\rho \gamma_{\texttt{s}}{}_{\nu\rho}+2\hat{p}_{(\nu} \gamma^\rho{}_{\rho)}+2\hat{p}^\rho \hat{p}_{(\nu} \gamma_{\texttt{v}}{}_{\rho)}+\hat{p}_{\nu} \hat{p}_{\rho} \gamma'_{\texttt{v}}{}^\rho +\hat{p}^\rho \hat{p}_{\nu} \hat{p}_{\rho} \gamma_{\texttt{L}}\Big)^* \Big(\epsilon^{\mu\nu\kappa\eta}\hat{p}_\eta t_\perp^{\sigma}{}_\kappa+\hat{p}^\sigma t_{\texttt{a}}^{\mu\nu}-2\hat{p}^{[\mu} t_{\texttt{a}}^{\nu]\sigma}+2\hat{p}^{[\mu} t_{\texttt{s}}^{\nu]\sigma}+2\hat{p}^\sigma \hat{p}^{[\mu} t_{\texttt{v}}^{\nu]}\Big)
+%%       +E_1 \hat{p}_{\rho} \hat{p}_{\sigma}\Big(\epsilon^{\mu\nu\kappa\eta}\hat{p}_\eta t_\perp^{\rho}{}_\kappa+\hat{p}^\rho t_{\texttt{a}}^{\mu\nu}-2\hat{p}^{\mu} t_{\texttt{a}}^{\nu\rho}+2\hat{p}^{\mu} t_{\texttt{s}}^{\nu\rho}+2\hat{p}^\rho \hat{p}^{\mu} t_{\texttt{v}}^{\nu}\Big)^*\Big(\epsilon^{\lambda\kappa\delta\eta}\hat{p}_\eta t_\perp^{\sigma}{}_\delta+\hat{p}^\sigma t_{\texttt{a}}^{\lambda\kappa}-2\hat{p}^{\lambda} t_{\texttt{a}}^{\kappa\sigma}+2\hat{p}^{\lambda} t_{\texttt{s}}^{\kappa\sigma}+2\hat{p}^\sigma \hat{p}^{\lambda} t_{\texttt{v}}^{\kappa}\Big)\epsilon_{\mu\nu\lambda\kappa}
+%%       +E_2 \hat{p}_{\lambda} \hat{p}_{\mu} \Big(\epsilon^{\mu\nu\kappa\rho}\hat{p}_\rho t_\perp^{\lambda}{}_\kappa+\hat{p}^\lambda t_{\texttt{a}}^{\mu\nu}-2\hat{p}^{[\mu} t_{\texttt{a}}^{\nu]\lambda}+2\hat{p}^{[\mu} t_{\texttt{s}}^{\nu]\lambda}+2\hat{p}^\lambda \hat{p}^{[\mu} t_{\texttt{v}}^{\nu]}\Big)^*\Big(a_\perp{}_\nu+\hat{p}_\nu a_{\texttt{L}}\Big)
+%%       \bigg],
+%%   \end{dmath}
+%% \end{widetext}
+%% simplifiying
+%% \begin{dmath}
+%%   \label{WithGhosts}
+%%   S=\int d^4p\Bigg[-2C_1 p^2\gamma_{\texttt{s}\mu\nu}^*t_{\texttt{s}}^{\mu\nu}
+%%     +p^2\Big((-2C_1+2C_2)\gamma_{\texttt{v}\mu}+2C_2\gamma_{\perp\mu\nu}^\nu
+%%     +8E_1t_{\texttt{a}\mu}+E_2a_{\perp\mu}\Big)^*t_{\texttt{v}}^\mu
+%%     \Bigg]
+%% \end{dmath}
+When we restrict ourselves to perturbations around a flat (Minkowski) spacetime, the above equation simplifies greatly,
+\begin{dmath}
+  S = \int \dn{4}{x} \, \bigg[
+    - C_1 ( \Delta\gamma_{\texttt{s}\mu\nu})^* \Delta t_{\texttt{s}}^{\mu\nu}
+    + \Big( ( C_1 - 2 C_2) \nabla^\nu \Delta \nabla_\nu \gamma_{\texttt{v}\mu}
+    - 2 C_2 \Delta \gamma^\nu_{\perp\nu\mu}
+    - 8 E_1 \epsilon_{\alpha\beta\nu\mu} \nabla^{\alpha} \Delta t_{\texttt{a}}^{\beta\nu}
+    - 2 E_2 \Delta a_{\perp\mu} \Big)^* \Delta t_{\texttt{v}}^\mu
+    \bigg],
+\end{dmath}
+\hl{Where are the scalars? This has 18 dof, while the previous one has 20 dof. According to the counting, there are 18... I suppose that eighteen is the correct answer, but What is wrong in the first expression?} and it is clear that there are only eighteen degrees of freedom, corresponding to a couple of transverse-traceless rank-two-tensors, and a couple of transverse vectors.
+
+We have checked, using the method introduced in Ref.~\cite{Diaz:2014yua}, that the formal counting of degrees of freedom for the effective action in Eq.~\eqref{eff-action} yields eighteen degrees of freedom. We discover during the implementation of these program, that our model presents an extra symmetry associated to the metric independence property. 
 
 %%%%%%%%% Conclusions %%%%%%%%%
 \section{\label{conclusions}Conclusions}
 
-In this paper we have shown that the \emph{purely affine gravity} presented in Ref.~\cite{Skirzewski:2014eta} is the most general (polynomial) model for an affine theory of gravity, see the Appendix~\ref{sec:ld}, consistent with invariance under diffeomorphisms. The action in Eq.~\eqref{4dfull}, is parametrized by a nineteen-dimensional moduli space---after the boundary and topological terms have been dropped---, which in some sense made us wonder about a possible \emph{duality} between this model and the one proposed in Ref.~\cite{Pagani:2015ema}, even though the last one possesses a metric field.
+In this paper we have shown that the \emph{polynomial affine gravity} presented in Ref.~\cite{Skirzewski:2014eta} is the most general (polynomial) model for an affine theory of gravity, see the Appendix~\ref{sec:ld}, consistent with invariance under diffeomorphisms. The action in Eq.~\eqref{4dfull}, is parametrized by a nineteen-dimensional moduli space---after the boundary and topological terms have been dropped---, which in some sense made us wonder about a possible \emph{duality} between this model and the one proposed in Ref.~\cite{Pagani:2015ema}, even though the last one possesses a metric field.
 %% (boundary condition, topological terms, ...)
 
 The field equations obtained from the action~\eqref{4dfull} are a set of very complex coupled partial differential equations. However, they are consistent with the limit of $T^{\lambda,\mu\nu}$ and $A_\mu$ going to zero. This consistency is what is usually called a \emph{consistent truncation} of the theory. In this paper we have restrict ourselves to such a truncation of our model, which constrained us to the torsion-less sector of the moduli space. Additionally, this truncation leaves only one nontrivial field equation, Eq.~\eqref{SimpleEOM}.
