@@ -393,7 +393,7 @@ Using the above decomposition, the most general action preserving diffeomorphism
       +F_4\,T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Bigg].
   \end{dmath}
 \end{widetext}
-In Eq.~\eqref{4dfull}, we have dropped all terms which can be related through partial integration, and those which are topological invariant. A straightforward dimensional counting shows the impossibility of other contributions into the action, see Appendix~\ref{DA}. Interestingly, the above action turns out to be power-counting renormalizable, which does not guarantee renormalizability but is a nice feature. The structure of the model yields no three-point graviton vertices, which might allow to overcome  the \emph{no-go} theorems found in Refs.~\cite{McGady:2013sga,Camanho:2014apa}. It is worth mentioning that all coupling constants are dimensionless, which might be a hint of conformal invariance of the model~\cite{Buchholz:1976hz}.
+In Eq.~\eqref{4dfull}, we have dropped all terms which can be related through partial integration, and those which are topological invariant (e.g. the Euler density). A straightforward dimensional analysis shows the impossibility of other contributions into the action, see Appendix~\ref{DA} (in particular Sec.~\ref{sec:ld}). Interestingly, the above action turns out to be power-counting renormalizable, which does not guarantee renormalizability but is a nice feature. The structure of the model yields no three-point graviton vertices, which might allow to overcome  the \emph{no-go} theorems found in Refs.~\cite{McGady:2013sga,Camanho:2014apa}. It is worth mentioning that all coupling constants are dimensionless, which might be a hint of conformal invariance of the model~\cite{Buchholz:1976hz}.
 
 Although there is no obvious equivalence between the action in Eq.~\eqref{4dfull} and General Relativity, particularly due to the lack of a source metric field, we analyzed in Ref.~\cite{Skirzewski:2014eta} the scalar perturbations and studied perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. In the rest of this section we summarize the procedure which leads to the Newtonian limit of the model.
 
@@ -404,14 +404,14 @@ First, we considered a static, homogeneous, and isotropic expansion of fields,
   \label{GammaExp} \\
   \Gamma^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu}, \notag
 \end{align}
-with $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$. Next, by analysing the first order perturbations of the actions, we found a choice of the coupling constants which allow nontrivial solutions of these field equations, together with the non-relativistic limit of the geodesic equation. Then, we substitute the field components by their their scalar perturbation decomposition,
+with $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$. Next, by analysing the first order perturbations of the actions, we found a choice of the coupling constants which allow nontrivial solutions of these field equations, together with the non-relativistic limit of the geodesic equation. Then, we substitute the field components by their scalar perturbation decomposition,
 \begin{equation}
-  a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
+  a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_{\mathtt{L}},
 \end{equation}
 \begin{equation}
   \begin{split}
-    t^{\mu,\nu\rho} &\to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
-    +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
+    t^{\mu,\nu\rho} &\to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_{\mathtt{L}} \Big)
+    +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_{\mathtt{L}}
     \\
     & \quad + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
     \\
@@ -424,38 +424,37 @@ and
     \gamma^\lambda_{\mu\nu}
     &\to
     \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
-    + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
-    + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
+    + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_{\mathtt{L}}
+    + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_{\mathtt{L}}
     \\
-    & \quad + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
+    & \quad + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_{\mathtt{L}}\Big)
     \\
-    & \quad + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
+    & \quad + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_{\mathtt{L}}\Big)
     \\
     & \quad + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2
     \\
-    & \qquad +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
+    & \qquad +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_{\mathtt{L}}\Big),
   \end{split}
 \end{equation}
-where the ``L'' sub-index identifies the longitudinal degrees of freedom.
+where the ``\texttt{L}'' sub-index identifies the longitudinal degrees of freedom.
 
 %% In the non-relativistic (low-momentum) limit, the geodesic deviation of inertial observers is also discussed.
 
 %% Additionally, we studied perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action.
-Albeit the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we assumed that the matter action would depend on the most general $\binom{2}{0}$-type symmetric tensor density, $\mathfrak{g}^{\mu \nu}$, constructed with at most quadratic terms in the available fields. The dimensional analysis in Sec.~\ref{sec:im} shows that this tensor density contains the same terms as what we call the ``Eddington's metric density''~\footnote{Despite the suggestive name, this is a $\binom{2}{0}$-tensor density which does not necessarily satisfy the metric conditions. However, for the simple case of the Einstein--Hilbert action, it is in fact the inverse metric density.}, defined as the variation of the action with respect to the symmetric part of the Ricci tensor~(see Refs.~\cite{Eddington1923math,schrodinger1950space,Poplawski:2012bw}), i.e.,%% \hl{JZ: def. $R_{(\mu\nu)}$}
+Albeit the inclusion of matter in a non-metric spacetime is a nonstandard procedure, we assumed that the matter action would depend on the most general, symmetric $\binom{2}{0}$-tensor density, $\mathfrak{g}^{\mu \nu}$, built up with the available fields. The dimensional analysis in Sec.~\ref{sec:im} shows that this tensor density contains the same terms as what we call the ``Eddington's metric density''~\footnote{Despite the suggestive name, this is a $\binom{2}{0}$-tensor density which does not necessarily satisfy the metric conditions. However, for the simple case of the Einstein--Hilbert action, it is in fact the inverse metric density.}, defined as the variation of the action with respect to the symmetric part of the Ricci tensor~(see Refs.~\cite{Eddington1923math,schrodinger1950space,Poplawski:2012bw}), i.e.,%% \hl{JZ: def. $R_{(\mu\nu)}$}
 \begin{equation}
   \label{metric}
   \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma] \equiv \sqrt{\mathsf{g}} \, \mathsf{g}^{\mu\nu} = \bar{g}^{\mu\nu}.
 \end{equation}
 %% by assuming a matter action that depends on $\bar{g}^{\mu\nu}$.
-Therefore, in the following we will restrict ourselves to consider $\mathfrak{g}^{\mu \nu} = \bar{g}^{\mu\nu}$.
+%% Therefore, in the following we will restrict ourselves to consider $\mathfrak{g}^{\mu \nu} = \bar{g}^{\mu\nu}$.
 
 From the geodesic equations and the linearized action on scalar perturbation, we found that only a few terms in the scalar perturbation affect the geodesic equation~\footnote{We cross-check our result using the software Cadabra~\cite{Peeters2007550,peeters2007symbolic,Peeters:2007wn}.}. The effective geodesic deviation is given by
 \begin{equation}
   \label{NewtonPot}
   \Gamma^i{}_{00} = - \frac{1}{8\pi} \frac{ \partial\mathcal{L}_{\text{Matter}} }{ \partial \mathfrak{g}^{00} } \, \nabla^i \left(\frac{1}{|\vec{x}|}\right),
 \end{equation}
-is the usual Newtonian force induced by a massive source.
-%% Notice that we restricted ourselves to consider $\mathfrak{g}^{\mu \nu} = \bar{g}^{\mu\nu}$ to obtain the above result.
+is the usual Newtonian force induced by a massive source, where we restricted ourselves to consider $\mathfrak{g}^{\mu \nu} = \bar{g}^{\mu\nu}$.
 
 
 \section{\label{rlimit}Relativistic limit}
@@ -480,7 +479,7 @@ with $\kappa$ a constant related with the original couplings of the model. We as
   \label{SimpleEOM}
 \end{equation}
 
-Equation~\eqref{SimpleEOM} is a generalization of a condition known in Riemannian geometry as covariantly constant Ricci curvature---aka parallel Ricci curvature---, \mbox{$\nab{\rho} R_{\mu\nu} = 0$.}  All Einstein manifolds, whose Ricci tensor is proportional to the metric, \mbox{$R_{\mu\nu} \propto g_{\mu\nu}$,} satisfy the parallel Ricci condition due to the metricity condition, and therefore every vacuum solution to the Einstein's equations solves the (torsion-free) field equations of our model. Consequently, the fact that the non-relativistic limit of the gravitational potential in Eq.~\eqref{NewtonPot} yields a Newtonian potential seems clearer, and we can argue that even the post-Newtonian corrections coming from General Relativity are present in the chosen scenario of our model. An additional comment, the parallel Ricci curvature assures that although the manifold is not Einstein in general, the metric has to be locally a product of Einstein metrics~\cite{Besse}.
+Equation~\eqref{SimpleEOM} is a generalization of a condition known in Riemannian geometry as covariantly constant Ricci curvature---aka parallel Ricci curvature---, \mbox{$\nab{\rho} R_{\mu\nu} = 0$.}  All Einstein manifolds, whose Ricci tensor is proportional to the metric, \mbox{$R_{\mu\nu} \propto g_{\mu\nu}$,} satisfy the parallel Ricci condition due to the metricity condition, and therefore every vacuum solution to the Einstein's equations solves the (simplified) field equations of our model. Consequently, the fact that the non-relativistic limit of the gravitational potential in Eq.~\eqref{NewtonPot} yields a Newtonian potential seems clearer, and we can argue that even the post-Newtonian corrections coming from General Relativity are present in the chosen scenario of our model. An additional comment, the parallel Ricci curvature assures that although the manifold is not Einstein in general, the metric has to be locally a product of Einstein metrics~\cite{Besse}.
 
 %% A corollary is that all Einstein manifolds, \mbox{$R_{\mu\nu} \propto g_{\mu\nu}$,} satisfy the parallel Ricci condition, and therefore every vacuum solution to the Einstein's equations solves the (torsion-free) field equations of our model. Consequently, the fact that the non-relativistic limit of the gravitational potential in Eq.~\eqref{NewtonPot} yields a Newtonian potential seems clearer, and we can argue that even the post-Newtonian corrections coming from GR are present in the chosen scenario of our model.
 
