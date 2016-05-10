@@ -518,7 +518,7 @@ Intriguingly enough, the effective theory is not renormalizable---according to t
 %%%%%%%%% MATTER %%%%%%%%%
 \section{\label{matter}Polynomial affine gravity coupled with a scalar field}
 
-Until now, the most general diffeomorphism-invariant and power-counting renormalizable (gravitational) theory for an affine connection has been built, and we have showed that in a certain sector it is equivalent to General Relativity. In what follows, we show an attempt of including scalar matter into the model. The theory does not require a spacetime metric, but instead we should consider the most general $\binom{2}{0}$-tensor density, $\mathfrak{g}^{\mu\nu}$,  built with the available fields, and use it to build Lagrangian densities for the matter content. Following our precept, the matter content---scalar matter---should couple to $\mathfrak{g}^{\mu\nu}$, given by
+Until now, the most general diffeomorphism-invariant and power-counting renormalizable (gravitational) theory for an affine connection has been built, and we have showed that in a certain sector it is a generalization of General Relativity. In what follows, we show an attempt of including scalar matter into the model. The theory does not require a spacetime metric, but instead we should consider the most general, symmetric $\binom{2}{0}$-tensor density, $\mathfrak{g}^{\mu\nu}$,  built with the available fields (see Appendix~\ref{sec:im}), and use it to build Lagrangian densities for the matter content. Following our precept, the matter content---scalar matter---should couple to $\mathfrak{g}^{\mu\nu}$, given by
 \begin{dmath}
   \mathfrak{g}^{\mu\nu} = \alpha \, \nabla_\lambda T^{\mu,\nu\lambda} + \beta \, A_\lambda T^{\mu,\nu\lambda} + \gamma \, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma},
   \label{geng}
@@ -530,7 +530,8 @@ We consider the action provided by the ``kinetic term''
   \label{ScalarAction}
   S_\phi = -  \int \dn{4}{x} \Big( \alpha \, \nabla_\lambda T^{\mu,\nu\lambda}  + \beta \, A_\lambda T^{\mu,\nu\lambda} + \gamma \, \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma} \Big) \partial_\mu\phi\partial_\nu\phi,
 \end{dmath}
-which makes a nontrivial contribution to the field equations once we restrict to the sector of interest, where the torsion is set to zero and the connection is compatible with a metric.
+which makes a nontrivial contribution to the field equations once we restrict to the sector of interest.
+%%, where the torsion is set to zero and the connection is compatible with a metric.
 
 The equation for the Curtright field when the scalar field is turned on is (without lost of generality we fixed the coefficient $C_1 = 1$)
 \begin{equation*}
@@ -578,7 +579,7 @@ and the Einstein's field equations in vacuum
 \end{equation}
 require that $K = \frac{\Lambda}{3}$. 
 %% Additionally, 
-Therefore, in notation of Eqs.~\eqref{GammaExp} we have that $A = T = 0$, and the contribution due to the torsion (and non-metricity) enters as a perturbative effect. Thus, most terms in the action~\eqref{4dfull} do not contribute to the propagator analysis. Additionally, the first order perturbation of the curvature tensor is
+Therefore, in notation of Eqs.~\eqref{GammaExp} we have that $A = T = 0$, and the contribution due to the torsion and non-metricity enters as a perturbative effect. Thus, most terms in the action~\eqref{4dfull} do not contribute to the propagator analysis. Additionally, the first order perturbation of the curvature tensor is
 \begin{equation}
   R_{\mu\nu}{}^\lambda{}_\rho = \frac{\Lambda}{3}\,   {\delta}^{\lambda}_{\mu} {g}_{\rho \nu} - \frac{\Lambda}{3}\,   {\delta}^{\lambda}_{\nu} {g}_{\rho \mu} + {\nabla}_{\mu}{{\gamma}^{\lambda}\,_{\rho \nu}}\,  - {\nabla}_{\nu}{{\gamma}^{\lambda}\,_{\rho \mu}}.
 \end{equation}
@@ -633,7 +634,7 @@ and
   + 2  \nab{(\mu} \nab{\nu)} {{\gamma_{\mathtt{v}'}}^{\lambda}} 
   + 2  {\nabla}^{\lambda}\nab{(\mu} \nab{\nu)}{\gamma_{\mathtt{L}}},
 \end{dmath}
-where all the indices are transverse except those of the derivative $\nabla_\mu$, the subindex $\perp$ indicates that it corresponds to the fully transverse projection of the tensor in all of its indices, the subindex ${\mathtt{L}}$ indicates that this is the longitudinal projection of the tensor, while the sub indices $\mathtt{s}$, $\mathtt{a}$ and $\mathtt{v}$ specify that the tensor is symmetric, antisymmetric or a vector representation.
+where all the indices are transverse except those of the derivative $\nabla_\mu$, the subindex $\perp$ indicates that it corresponds to the fully transverse projection of the tensor in all of its indices, the subindex ${\mathtt{L}}$ indicates that this is the longitudinal projection of the tensor, while the subindices $\mathtt{s}$, $\mathtt{a}$ and $\mathtt{v}$ specify whether the tensor is symmetric, antisymmetric or a vector representation.
 %%In particular, $t_\perp^{\lambda}{}_\kappa$ is traceless. \hl{check the last sentence. Is this ${t_s}^{\alpha}{}_{\alpha}$?... If true, this condition will kill the scalars contribution in the next equations}
 
 \begin{widetext}
