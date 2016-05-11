@@ -33,9 +33,9 @@ Although the above are examples of manifolds with parallel Ricci within the cont
 
 %% \subsubsection{Schwarzschild metric}
 
-As pointed out, all vacuum solutions of Einstein's equations ---with and without cosmological constant--- satisfy the parallel Ricci condition trivially~\cite{bourguignon1981varietes}. Nonetheless, an important result in General Relativity is the stability of the Schwarzschild metric, known as the Birkhoff theorem~\cite{Jebsen1921,Birkhoff1923,Alexandrow1923,Eisland1925}, which implies that the gravitational collapse of a spherically symmetric astrophysical object cannot emit gravitational radiation. 
+As pointed out, all vacuum solutions of Einstein's equations---with and without cosmological constant---satisfy the parallel Ricci condition trivially~\cite{bourguignon1981varietes}. Nonetheless, an important result in General Relativity is the stability of the Schwarzschild metric, known as the Birkhoff theorem~\cite{Jebsen1921,Birkhoff1923,Alexandrow1923,Eisland1925}, which implies that the gravitational collapse of a spherically symmetric astrophysical object cannot emit gravitational radiation. 
 
-In this section we show that the simplest ansatz of a static and spherically symmetric metric, which solves the Eq.~\eqref{SimpleEOM} is necessarily the $\Lambda$--Schwarzschild metric. This should be taken as a first step toward a Birkhoff theorem, despite the fact that a complete proof is far from been achieved.
+In this section we show that the simplest ansatz of a static and spherically symmetric metric, which solves the Eq.~\eqref{SimpleEOM} is necessarily the (Anti-)de-Sitter--Schwarzschild metric. This should be taken as a first step toward a Birkhoff theorem, despite the fact that a complete proof is far from been achieved.
 
 Consider first the simplest metric ansatz, whose line element is
 \begin{equation}
@@ -89,21 +89,21 @@ Consider first the simplest metric ansatz, whose line element is
   %%   \nabla_{[3} R_{1]3} &= \sin\left({\theta}\right)^{2} \nabla_{[2} R_{1]2}.
   %% \end{align}
 \end{widetext}
-Even though four out of the six nontrivial field equations are independent, the system can be solve uniquely. First, the component along the $(\mu\nu\lambda) = (2,0,2)$ yields $f = T(t) + R(r)$. Then, one notices that the equation along $(\mu\nu\lambda) = (1,0,1)$ contains a term depending solely on $t$, which implies that $\dot{T}$ vanishes, i.e., $T$ is a constant. From here, the equation for $(\mu\nu\lambda) = (2,1,2)$ gets simple enough to be solved and yields, \mbox{$R(r) = 1 - T + \frac{\alpha}{r} + \beta r^2$} or equivalently
+Even though four out of the six nontrivial field equations are independent, the system can be solved uniquely. First, the component along the $(\mu\nu\lambda) = (2,0,2)$ yields $f = T(t) + R(r)$. Then, one notices that the equation along $(\mu\nu\lambda) = (1,0,1)$ contains a term depending solely on $t$, which implies that $\dot{T}$ vanishes, i.e., $T$ is a constant. From here, the equation for $(\mu\nu\lambda) = (2,1,2)$ gets simple enough to be solved and yields, \mbox{$R(r) = 1 - T + \frac{\alpha}{r} + \beta r^2$} or equivalently
 \begin{equation}
   f(r) = 1 + \frac{\alpha}{r} + \beta r^2,
   \label{simplef}
 \end{equation}
 with $\alpha$ and $\beta$ integration constants. Finally, it can be checked that albeit the equation along the components $(\mu,\nu,\lambda) = (1,0,0)$ was not used, it is satisfied by Eq.~\eqref{simplef}.
 
-The above shows that the simplest time-dependent generalization of Schwarzschild metric is not a solution for the field equations of the considered affine model. Unless, the spacetime metric is static and exactly that for a Schwarzschild exterior solution, with or without cosmological constant.
+The above shows that the simplest time-dependent generalization of Schwarzschild metric is not a solution for the field equations of the considered affine model. Unless, the spacetime metric is static and exactly that for a Schwarzschild's exterior solution, with or without cosmological constant.
 
 However, if one tries a metric ansatz with two different factors, say
 \begin{equation}
   \de{s}^2 = - A(t,r) \de{t}^2 + \frac{ \de{r}^2 }{ B(t,r) } + r^2 \de{\Omega}^2,
   \label{ABmetric}
 \end{equation}
-the field equations are so complicated, that although hints on the solubility were found ---and yield to Eq.~\eqref{simplef} for both $A$ and $B$---, the uniqueness of the solution is far for been proved. The field equations for the metric~\eqref{ABmetric} are %%shown in Appendix~\ref{app:eqAB}.
+the field equations are so complicated, that although hints on the solubility were found---and yield to Eq.~\eqref{simplef} for both $A$ and $B$---, the uniqueness of the solution has not been proven. The field equations for the metric~\eqref{ABmetric} are %%shown in Appendix~\ref{app:eqAB}.
 \begin{widetext}
   \begin{dmath}
     \nabla_{[\mu} R_{\nu]\lambda} = \frac{1}{4 \, r^{2} B^{3} A^{2}} \Bigg( 2 \, r^{2} B^{4} \frac{\partial}{\partial r^{}}A^{3} + 2 \, r^{2} B^{4} A^{2} \frac{\partial^3}{\partial r^{3}}A + 2 \, r^{2} B^{2} A^{2} \frac{\partial^3}{\partial t^{2}\partial r^{}}B - 6 \, r^{2} B A^{2} \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{}\partial r^{}}B - r^{2} B^{2} A \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{}\partial r^{}}A + 6 \, {\left(r^{2} A^{2} \frac{\partial}{\partial r^{}}B - r B A^{2}\right)} \frac{\partial}{\partial t^{}}B^{2} - 2 \, {\left(r^{2} B^{3} A \frac{\partial}{\partial r^{}}B + r B^{4} A\right)} \frac{\partial}{\partial r^{}}A^{2} - 2 \, {\left(r^{2} B A^{2} \frac{\partial}{\partial r^{}}B - 2 \, r B^{2} A^{2}\right)} \frac{\partial^2}{\partial t^{2}}B - {\left(r^{2} B^{2} A \frac{\partial^2}{\partial t^{}\partial r^{}}B - 2 \, r^{2} B^{2} \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial r^{}}A - {\left(r^{2} B A \frac{\partial}{\partial r^{}}B - 2 \, r B^{2} A\right)} \frac{\partial}{\partial t^{}}B\right)} \frac{\partial}{\partial t^{}}A + {\left(r^{2} B^{3} A^{2} \frac{\partial^2}{\partial r^{2}}B + 2 \, r B^{3} A^{2} \frac{\partial}{\partial r^{}}B - 4 \, B^{4} A^{2} + 3 \, r^{2} B A \frac{\partial}{\partial t^{}}B^{2} - 2 \, r^{2} B^{2} A \frac{\partial^2}{\partial t^{2}}B\right)} \frac{\partial}{\partial r^{}}A + {\left(3 \, r^{2} B^{3} A^{2} \frac{\partial}{\partial r^{}}B - 4 \, r^{2} B^{4} A \frac{\partial}{\partial r^{}}A + 4 \, r B^{4} A^{2}\right)} \frac{\partial^2}{\partial r^{2}}A \Bigg) \,
@@ -121,7 +121,7 @@ the field equations are so complicated, that although hints on the solubility we
     \label{hugeeq}
   \end{dmath}
 \end{widetext}
-which are very complex, and ---to our knowledge--- these are not possible to solve in general. Nonetheless, the symmetries in some of the components of these equations seems to favour the relation $A = B$ as solution. In addition, we found a very interesting reference in which a proof of the Birkhoff theorem is given for an Einstein--Cartan theory coupled with the gravitational Yang--Mills~\cite{Ramaswamy:1979zz}, which support the hand-waving symmetry argument above.
+which are very complex. Nonetheless, the symmetries in some of the components of these equations seem to favour the relation $A = B$ as solution. In addition, we found a very interesting reference in which a proof of the Birkhoff theorem is given for an Einstein--Cartan theory coupled with the gravitational Yang--Mills~\cite{Ramaswamy:1979zz}, which support the hand-waving symmetry argument above.
 
 Hence, further analysis requires a new strategy. Instead of considering a metric, a connection ansatz is proposed based in the structure of a spherically symmetric metric of the form,
 \begin{equation}

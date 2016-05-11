@@ -20,12 +20,12 @@
 %--------- Definitions
 %------------------
 %% \input{Def-article.tex}
-\usepackage{mathtools,amsmath,amssymb,amsfonts,dsfont,mathrsfs,amsthm}
-\usepackage{graphicx}
-\usepackage{centernot}
+%% \usepackage{mathtools,amsmath,amssymb,amsfonts,dsfont,mathrsfs,amsthm}
+%% \usepackage{graphicx}
+%% \usepackage{centernot}
 %% \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage{comment}
+%% \usepackage{comment}
 %% \hypersetup{linktocpage,colorlinks=true,urlcolor=blue!80!red,linkcolor=blue,citecolor=red}
 %\usepackage{feynmf}
 \usepackage{siunitx}
@@ -40,13 +40,13 @@
 
 
 %-------------------------------Theorems
-\newtheorem{Def}{Definition}[section]
-\newtheorem{Thm}[Def]{Theorem}
-\newtheorem{Lem}[Def]{Lemma}
-\newtheorem{Pos}[Def]{Postulate}
-\newtheorem{Exa}[Def]{Example}
-\newtheorem{Cor}[Def]{Corrolary}
-\newtheorem{Pro}[Def]{Proposition}
+%% \newtheorem{Def}{Definition}[section]
+%% \newtheorem{Thm}[Def]{Theorem}
+%% \newtheorem{Lem}[Def]{Lemma}
+%% \newtheorem{Pos}[Def]{Postulate}
+%% \newtheorem{Exa}[Def]{Example}
+%% \newtheorem{Cor}[Def]{Corrolary}
+%% \newtheorem{Pro}[Def]{Proposition}
 
 %---------------------------------New commands
 \newcommand{\A}{\mathcal{A}} %% This is equivalent to \Ag (no args)
@@ -253,10 +253,10 @@
 \newcommand{\ber}{\begin{eqnarray}}
 \newcommand{\eer}{\end{eqnarray}}
 
-\renewcommand{\(}{\left(}
-\renewcommand{\)}{\right)}
-\renewcommand{\[}{\left[}
-\renewcommand{\]}{\right]}
+%% \renewcommand{\(}{\left(}
+%% \renewcommand{\)}{\right)}
+%% \renewcommand{\[}{\left[}
+%% \renewcommand{\]}{\right]}
 
 \newcommand{\uf}[2][]{\ensuremath{u_{#1}\(\vec{#2}\)}}
 \newcommand{\ufb}[2][]{\ensuremath{\bar{u}_{#1}\(\vec{#2}\)}}
@@ -326,44 +326,44 @@
 
 %% --------- Abstract
 \begin{abstract}
-  We show that the effective field equations for a recently formulated polynomial affine model of gravity, in the sector of a torsion-free connection, accept general Einstein manifolds---with or without cosmological constant---as solutions. Moreover, the effective field equations are partially those obtained from a gravitational Yang--Mills theory known as Stephenson--Kilmister--Yang theory. Additionally, we find a generalization of a minimally coupled massless scalar field in General Relativity within a ``minimally'' coupled scalar field in this affine model. Finally, we present a brief analysis of the propagators of the gravitational theory, and count the degrees of freedom. For completeness we include three appendices, including one in which we show that a Birkhoff-like theorem is valid for the analyzed sector.
+  We show that the effective field equations for a recently formulated polynomial affine model of gravity, in the sector of a torsion-free connection, accept general Einstein manifolds---with or without cosmological constant---as solutions. Moreover, the effective field equations are partially those obtained from a gravitational Yang--Mills theory known as Stephenson--Kilmister--Yang theory. Additionally, we find a generalization of a minimally coupled massless scalar field in General Relativity within a ``minimally'' coupled scalar field in this affine model. Finally, we present a brief analysis of the propagators of the gravitational theory, and count the degrees of freedom. For completeness we prove that a Birkhoff-like theorem is valid for the analyzed sector.
 \end{abstract}
 
-\pacs{02.40.Ma,04.50.Kd,04.90.+e}
-\keywords{Affine Gravity, Torsion, Generalized Gravity.}
+\pacs{02.40.Hw,04.50.Kd,04.90.+e}
+\keywords{Polynomial Affine Gravity, Torsion, Generalized Gravity.}
 
 
 \maketitle
 
 \section{\label{intro}Introduction}
 
-A hundred years ago, A.~Einstein presented by the first time the correct field equations of its relativistic theory of gravitation, known as General Relativity~\cite{einstein1915feldgleichungen}. It was not only consistent with the available observations, but it also predicted several effects that have been consistently observed and measured---see Ref.~\cite{Will:2014kxa} for a recent review---, being the last one the confirmation of the existence of the existence of gravitational waves~\cite{Abbott:2016blz}. Thus, General Relativity has become the most successful theory of gravitational interactions nowadays.
+A hundred years ago, A.~Einstein presented by the first time the correct field equations of its relativistic theory of gravitation, known as General Relativity~\cite{einstein1915feldgleichungen}. It was not only consistent with the available observations, but it also predicted several effects that have been consistently observed and measured---see Ref.~\cite{Will:2014kxa} for a recent review---, being the last one the confirmation of the existence of gravitational waves~\cite{Abbott:2016blz}. Thus, General Relativity has become the most successful theory of gravitational interactions nowadays.
 
-However, General Relativity seems to be an effective theory of a, yet to be discovered, more fundamental one. A first hint was pointed out by E.~Cartan, after remarking that the curvature is not built up from a metric field but from a connection, and that a part of it was left behind if one chooses to work with the Levi-Civita connection~\cite{Cartan1922,Cartan1923,Cartan1924,Cartan1925}. One could also see this by considering Palatini's approach in General Relativity, in which both metric and connection fields are independent, and noticing that generically the theory possesses terms which do not appear in General Relativity (when it is coupled to matter). In addition, we mention a few aspects related with the quantization: First, the fact that within the standard formalism of quantization, General Relativity is non-renormalizable~\cite{'tHooft:1973us,'tHooft:1974bx,Deser:1974cz,Deser:1974cy}, suggests the theory can be thought as an effective theory. Second, the Wheeler--DeWitt equations are not well-defined in general due to their nonpolynomial dependence on the Arnowitt--Deser--Misner (or ADM) variables~\cite{Arnowitt:1959ah,Arnowitt:1960es,WheelerGeo,DeWitt:1967yk,DeWitt:1967ub,DeWitt:1967uc}. One of the most successful quantization methods of gravitational interactions---developed from ideas by Gambini and Trias~\cite{Gambini:1980yz,Gambini:1986ew}, by Ashtekar~\cite{Ashtekar:1986yd,Ashtekar:1987gu}---, hints that General Relativity is not as complete as expected, since the Lagrangian formulation includes (at least) an extra term known as Holst term~\cite{Holst:1995pc}. Finally, it is well known that once matter couples to gravity (in particular fermionic matter), the assumption of vanishing torsion in standard General Relativity is no longer preserved as a field equation, and the best approach is to consider Cartan's generalization of General Relativity~\cite{Kibble:1961ba,Hehl:1976kj,Shapiro:2001rz,Hammond:2002rm}.
+However, General Relativity seems to be an effective theory of a, yet to be discovered, more fundamental description of gravitational effects. A first hint was pointed out by E.~Cartan, after remarking that the curvature is not built up from a metric field but from a connection, and that a part of it was left behind if one chooses to work with the Levi-Civita connection~\cite{Cartan1922,Cartan1923,Cartan1924,Cartan1925}. One could also see this by considering Palatini's approach in General Relativity, in which both metric and connection fields are independent, and noticing that generically the theory possesses terms which do not appear in General Relativity (when it is coupled to matter). In addition, we mention a few aspects related with the quantization: First, the fact that within the standard formalism of quantization, General Relativity is non-renormalizable~\cite{'tHooft:1973us,'tHooft:1974bx,Deser:1974cz,Deser:1974cy}, suggests the theory can be thought as an effective theory. Second, the Wheeler--DeWitt equations are not well-defined in general due to their nonpolynomial dependence on the Arnowitt--Deser--Misner (or ADM) variables~\cite{Arnowitt:1959ah,Arnowitt:1960es,WheelerGeo,DeWitt:1967yk,DeWitt:1967ub,DeWitt:1967uc}. One of the most successful quantization methods of gravitational interactions---developed from ideas by Gambini and Trias~\cite{Gambini:1980yz,Gambini:1986ew}, by Ashtekar~\cite{Ashtekar:1986yd,Ashtekar:1987gu}---, hints that a first order formulation of General Relativity is not as complete as expected, since the Lagrangian formulation should include an extra term known as Holst term~\cite{Holst:1995pc}. Finally, it is well known that once matter couples to gravity (in particular fermionic matter), the assumption of vanishing torsion in standard General Relativity is no longer preserved as a field equation, and the best approach is to consider Cartan's generalization of General Relativity~\cite{Kibble:1961ba,Hehl:1976kj,Shapiro:2001rz,Hammond:2002rm}.
 %%it is well known that in the standard formulation of General Relativity the skew-symmetric part of the connection (or torsion) is assumed to be zero, albeit it is known that such assumption can be relaxed once matter is added, in particular fermionic matter~\cite{Kibble:1961ba,Hehl:1976kj,Shapiro:2001rz,Hammond:2002rm}.
 
 %% Classically, General Relativity is the most successful theory of gravitational interactions. However, it is believed to be the effective theory of a, yet to be discovered, more fundamental one. Among the problems of General Relativity we mention a few aspects related with the quantization: First, the fact that in the standard formalism of quantization General Relativity is non-renormalizable~\cite{'tHooft:1973us,'tHooft:1974bx,Deser:1974cz,Deser:1974cy}. Second, the Wheeler--DeWitt equations are not well-defined in general due to their nonpolynomial dependence on the Arnowitt--Deser--Misner (or ADM) variables~\cite{Arnowitt:1959ah,Arnowitt:1960es,WheelerGeo,DeWitt:1967yk,DeWitt:1967ub,DeWitt:1967uc}. One of the most successful quantization methods of gravitational interactions---developed from ideas by Gambini and Trias~\cite{Gambini:1980yz,Gambini:1986ew}, and Ashtekar~\cite{Ashtekar:1986yd,Ashtekar:1987gu}---, hints that General Relativity is not as complete as expected, since the Lagrangian formulation includes (at least) an extra term known as Holst term~\cite{Holst:1995pc}. On the other hand, it is well known that in the standard formulation of General Relativity the skew-symmetric part of the connection (or torsion) is assumed to be zero, albeit it is known that such assumption can be relaxed once matter is added, in particular fermionic matter~\cite{Kibble:1961ba,Hehl:1976kj,Shapiro:2001rz,Hammond:2002rm}.
 
 Standing on the argument of the necessity of a quantum theory of gravity, several generalizations of Einstein's General Relativity have been proposed. One important class of these generalizations considers the connection field to be independent of the metric, known as Palatini type theories. Within this class of theories one finds the generalization due to Cartan---which considers a connection with nonvanishing torsion~\cite{Cartan1922,Cartan1923,Cartan1924,Cartan1925}---, but also a broader kind of generalization which do not require the metricity condition, see for example Refs.~\cite{Hehl:1976kj,Hehl:1994ue,Pagani:2015ema}.
 
-Interestingly, gravitational theories with a generic linear connections have degrees of freedom which do not correspond to the expected massless graviton~\cite{Sezgin:1979zf}. Albeit these gravitational theories with an arbitrary connection possess ghosts, there are examples of well-behaved (stable) systems which have ghosts, such are the cases of the Pais--Uhlenbeck oscillator~\cite{Mannheim:2004qz,Bender:2007wu,Smilga:2008pr,Ilhan:2013xe}, or the higher derivative supersymmetric quantum mechanical system presented in Ref.~\cite{Robert:2008}. The last sentence, allows to argue that a model cannot be discarded  for the presence of ghosts model, without a rigorous analysis of its stability.
+Interestingly, gravitational theories with a generic linear connections have degrees of freedom which do not correspond to the expected massless graviton~\cite{Sezgin:1979zf}. Albeit these gravitational theories with an arbitrary connection possess ghosts, there are examples of well-behaved (stable) systems which have ghosts, such are the cases of the Pais--Uhlenbeck oscillator~\cite{Mannheim:2004qz,Bender:2007wu,Smilga:2008pr,Ilhan:2013xe}, or the higher derivative supersymmetric quantum mechanical system presented in Ref.~\cite{Robert:2008}. The last sentence, allows to argue that a model cannot be disregarded for the presence of ghosts model, without a rigorous analysis of its stability.
 
 %%%%%%%%% THE MODEL %%%%%%%%%
 In order to undertake the premises of incompleteness and non-polynomial structure of the theory, in a previous paper~\cite{Skirzewski:2014eta}, we presented a polynomial (purely) affine gravitational model in four dimensions built up entirely on the basis of full diffeomorphism invariance. Worth to mention is that the most general action built this way contains only power-counting renormalizable terms (which by no means guarantees the renormalizability of the system). We showed that its non-relativistic limit, around a homogeneous and isotropic spacetime, yields a geodesic deviation corresponding to the generated by a Newtonian gravitational potential, despite the existence of torsion. We also highlighted the possibility of using standard methods to quantize the model, due to its polynomial structure (unlike the earliest proposals~\cite{Eddington1923math,schrodinger1950space}), and also the likelihood of avoiding the uniqueness of diffeomorphism-invariant states from Loop Quantum Gravity programme~\cite{Lewandowski:2005jk}, due to the absence of a fundamental metric, or in other words, the absence of flux operators.
 
-Interestingly, by construction, the polynomial affine gravity proposed in Ref.~\cite{Skirzewski:2014eta} has no explicit terms leading to three-point graviton vertices, since all graviton \emph{self-interaction} is mediated by non-Riemannian parts of the connection. This characteristic might allow to bypass the general postulates supporting the no-go theorems stated in Refs.~\cite{McGady:2013sga,Camanho:2014apa}, where it was proved that generic three-point graviton interactions are highly constrained by causality and analyticity of the $S$-matrix, and the only \emph{acceptable} structure of the three-point graviton vertices is the one coming from General Relativity.
+Interestingly, by construction, the polynomial affine gravity proposed in Ref.~\cite{Skirzewski:2014eta} has no explicit terms leading to three-point graviton vertices, since all graviton \emph{self-interaction} is mediated by non-Riemannian parts of the connection. This feature might allow to bypass the general postulates supporting the no-go theorems stated in Refs.~\cite{McGady:2013sga,Camanho:2014apa}, where it was proven that generic three-point graviton interactions are highly constrained by causality and analyticity of the $S$-matrix, and the only \emph{acceptable} structure of the three-point graviton vertices is the one coming from General Relativity.
 %%Additionally, it is well known that the three-point graviton vertices lead to non-renormalizability of a theory ---in a model independent way---~\cite{McGady:2013sga,Camanho:2014apa}. However, in the considered framework all graviton self-interaction is mediated by the torsion, which might allow to bypass the general postulates supporting the theorem.
 
 The aim of this work is to show that in the vanishing torsion sector, the field equations of the polynomial affine gravity are a generalization of the Einstein's equations. % in vacuum. In addition, we show that ---in the same sector--- under the assumption of the existence of a unique non-degenerated, covariantly constant $\binom{0}{2}$-tensor, $g$ (which could be thought as a metric), the system of a scalar field coupled with the polynomial affine gravity accepts the minimally coupled Einstein--Klein--Gordon as a solution.
-The paper is organized as follows. In Sec.~\ref{model}, we present briefly the polynomial affine gravity model, and summarize the results obtained in Ref.~\cite{Skirzewski:2014eta} concerning the Newtonian limit of the model. In Sec.~\ref{rlimit}, we restrict ourselves to the sector of the theory with vanishing torsion, and find the field equations; which surprisingly are a known generalization of the Einstein's field equation. Then, in Sec.~\ref{matter} we show that under certain considerations the coupling of the gravitational model with a scalar field represents a generalization of the minimally coupled system Einstein--Klein--Gordon. In Sec.~\ref{propag}, we present a brief analysis of the propagators of the model, which allows us to count the propagating degrees of freedom. In addition, we corroborate that result with a method equivalent to the one of Dirac. And in Sec.~\ref{conclusions} we summarize and discuss the possible implications of the results. In order to make the paper self-contained, we have included three appendices: In Appendix~\ref{DA}, we describe a dimensional analysis strategy that allowed us to build up the most general action consistent with diffeomorphisms invariance. In Appendix~\ref{Known}, we show a collection of known solutions to the effective field equations of the model. Finally, in Appendix~\ref{Schw}, we demonstrate---restricting ourselves to the vanishing torsion sector---the equivalent of the Birkhoff's theorem of the theory.
+The paper is organized as follows. In Sec.~\ref{model}, we present briefly the polynomial affine gravity model, and summarize the results obtained in Ref.~\cite{Skirzewski:2014eta} concerning the Newtonian limit of the model. In Sec.~\ref{rlimit}, we restrict ourselves to the sector of the theory with vanishing torsion, and find the field equations; which surprisingly are a known generalization of the Einstein's field equation. Then, in Sec.~\ref{matter} we show that under certain considerations the coupling of the gravitational model with a scalar field represents a generalization of the minimally coupled system Einstein--Klein--Gordon. In Sec.~\ref{propag}, we present a brief analysis of the propagators of the model, which allows us to count the propagating degrees of freedom. In addition, we corroborate that result with a method equivalent to the one of Dirac~\cite{Diaz:2014yua}. Finally, in Sec.~\ref{conclusions} we summarize and discuss the possible implications of the results. In order to make the paper self-contained, we have included three appendices: In Appendix~\ref{DA}, we describe a dimensional analysis strategy that allowed us to build up the most general action consistent with diffeomorphisms invariance. In Appendix~\ref{Known}, we show a collection of known solutions to the effective field equations of the model. Finally, in Appendix~\ref{Schw}, we demonstrate---restricting ourselves to the vanishing torsion sector---the equivalent of the Birkhoff's theorem of the theory.
 
 \section{\label{model}Polynomial affine gravity}
 
-First of all, we highlight that the model constructed below has as only fundamental field an affine connection, and no metric field is needed either for contracting nor lowering or raising indices. Moreover, in order to guarantee the correct transformation of the Lagrangian density, the geometrical objects used to write down the action will be the curvature and torsion of an affine connection, $\hat{\Gamma}^\mu{}_{\rho\sigma}$, which accepts a decomposition on irreducible components as
+First of all, we highlight that the model constructed below has as only fundamental field an affine connection, and no metric field is needed neither for contracting nor lowering or raising indices. Moreover, in order to guarantee the correct transformation of the Lagrangian density, the geometrical objects used to write down the action will be the curvature and torsion of an affine connection, $\hat{\Gamma}^\mu{}_{\rho\sigma}$, which accepts a decomposition on irreducible components as
 \begin{equation}
-  \hat{\Gamma}^\mu{}_{\rho\sigma} = {\Gamma}^\mu{}_{\rho\sigma} + T^\mu{}_{\rho\sigma} = {\Gamma}^\mu{}_{\rho\sigma} + \epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}+A_{[\rho}\delta^\mu_{\nu]},
+  \hat{\Gamma}^\mu{}_{\rho\sigma} = \hat{\Gamma}^\mu{}_{(\rho\sigma)} + \hat{\Gamma}^\mu{}_{[\rho\sigma]} = {\Gamma}^\mu{}_{\rho\sigma} + \epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}+A_{[\rho}\delta^\mu_{\nu]},
 \end{equation}
-where ${\Gamma}^\mu{}_{\rho\sigma}$ is symmetric in the lower indices, $A_\mu$ is a vector field corresponding to the trace of torsion, and  $T^{\mu,\lambda\kappa}$ is a Curtright field~\cite{Curtright:1980yk}, satisfying \mbox{$T^{\kappa,\mu\nu } = - T^{\kappa,\nu\mu }$} and $\epsilon_{\lambda\kappa\mu\nu}T^{\kappa,\mu\nu }=0$. Since no metric is present, the epsilon symbols are not related by raising (lowering) their indices, but instead we demand that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
+where ${\Gamma}^\mu{}_{\rho\sigma} = \hat{\Gamma}^\mu{}_{(\rho\sigma)}$ is symmetric in the lower indices, $A_\mu$ is a vector field corresponding to the trace of torsion, and  $T^{\mu,\lambda\kappa}$ is a Curtright field~\cite{Curtright:1980yk}, satisfying \mbox{$T^{\kappa,\mu\nu } = - T^{\kappa,\nu\mu }$} and $\epsilon_{\lambda\kappa\mu\nu}T^{\kappa,\mu\nu }=0$. Since no metric is present, the epsilon symbols are not related by raising (lowering) their indices, but instead we demand that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
 \begin{widetext}
 Using the above decomposition, the most general action preserving diffeomorphisms is
   \begin{dmath}
@@ -393,7 +393,7 @@ Using the above decomposition, the most general action preserving diffeomorphism
       +F_4\,T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Bigg].
   \end{dmath}
 \end{widetext}
-In Eq.~\eqref{4dfull}, we have dropped all terms which can be related through partial integration, and those which are topological invariant (e.g. the Euler density). A straightforward dimensional analysis shows the impossibility of other contributions into the action, see Appendix~\ref{DA} (in particular Sec.~\ref{sec:ld}). Interestingly, the above action turns out to be power-counting renormalizable, which does not guarantee renormalizability but is a nice feature. The structure of the model yields no three-point graviton vertices, which might allow to overcome  the \emph{no-go} theorems found in Refs.~\cite{McGady:2013sga,Camanho:2014apa}. It is worth mentioning that all coupling constants are dimensionless, which might be a hint of conformal invariance of the model~\cite{Buchholz:1976hz}.
+In Eq.~\eqref{4dfull}, we have dropped all terms which can be related through partial integration, and those which are topological invariant (e.g. the Euler density). A straightforward dimensional analysis shows the impossibility of other contributions into the action, see Appendix~\ref{DA} (in particular Sec.~\ref{sec:ld}). Interestingly, the above action turns out to be power-counting renormalizable, which does not guarantee renormalizability, but is a nice feature. The structure of the model yields no three-point graviton vertices, which might allow to overcome  the \emph{no-go} theorems found in Refs.~\cite{McGady:2013sga,Camanho:2014apa}. It is worth mentioning that all coupling constants are dimensionless, which might be a hint of conformal invariance of the model~\cite{Buchholz:1976hz}, and further analysis of this invariance will be presented in Ref.~\cite{OCF-future3}.
 
 Although there is no obvious equivalence between the action in Eq.~\eqref{4dfull} and General Relativity, particularly due to the lack of a source metric field, we analyzed in Ref.~\cite{Skirzewski:2014eta} the scalar perturbations and studied perturbative inhomogeneous sources to the connection field equations, by considering a generic matter action. In the rest of this section we summarize the procedure which leads to the Newtonian limit of the model.
 
@@ -404,7 +404,7 @@ First, we considered a static, homogeneous, and isotropic expansion of fields,
   \label{GammaExp} \\
   \Gamma^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^m_\mu \delta^m_\nu + F \delta^\lambda_m \delta^m_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu} + \gamma^\lambda{}_{\mu\nu}, \notag
 \end{align}
-with $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$. Next, by analysing the first order perturbations of the actions, we found a choice of the coupling constants which allow nontrivial solutions of these field equations, together with the non-relativistic limit of the geodesic equation. Then, we substitute the field components by their scalar perturbation decomposition,
+with $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$. Next, by analysing the first order perturbations of the actions, we found a choice of the coupling constants which allows nontrivial solutions of these field equations, together with the non-relativistic limit of the geodesic equation. Then, we substitute the field components by their scalar perturbation decomposition,
 \begin{equation}
   a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_{\mathtt{L}},
 \end{equation}
@@ -459,7 +459,7 @@ is the usual Newtonian force induced by a massive source, where we restricted ou
 
 \section{\label{rlimit}Relativistic limit}
 %%%%%%%%% COMPARISON GR %%%%%%%%%
-Despite we obtained the correct Newtonian gravitational potential in the non-relativistic limit, see Eq.~\eqref{NewtonPot}, a \emph{post}-Newtonian approximation is necessary to explain gravitational phenomena like Mercury's perihelion and the deviation of light by a gravitational source. Therefore, we should go beyond the Newtonian limit in order to compare our model with General Relativity.
+Despite we obtained the correct Newtonian gravitational potential in the non-relativistic limit, see Eq.~\eqref{NewtonPot}, a \emph{post}-Newtonian approximation is necessary to explain gravitational phenomena like Mercury's perihelion and the bending of light by a gravitational source. Therefore, we should go beyond the Newtonian limit in order to compare our model with General Relativity.
 
 %%\hl{A comparison between our affine model and GR requires the imposition of vanishing torsion (JZ: Why?).}
 Even though a comparison between the models does not require the imposition of vanishing torsion, for the sake of simplicity, at this stage we shall focus on a sector of the theory in which the connection is torsion-free. Notice that the vanishing torsion limit---equivalent to take $T^{\lambda,\mu\nu} \to 0$ and $A_\mu \to 0$---cannot be taken at the action level, but in the field equations. Interestingly, the field equations from Eq.~\eqref{4dfull} can be consistently \emph{truncated} under such requirements. It can be realized as follows, since only the terms of the action linear in these fields will be relevant, one can consider the effective action linear in the torsion's fields, i.e.,
@@ -495,11 +495,11 @@ and it can be shown that a manifold with harmonic curvature is equivalent (in fo
 %% Equations~\eqref{SimpleEOM} and~\eqref{harm-curv} are geometrically equivalent to the 
 Notice that Eqs.~\eqref{SimpleEOM} and~\eqref{harm-curv} accept a geometrical interpretation equivalent to that of the field equations of a pure Yang--Mills theory, which in the language of differential forms are
 \begin{align}
-  \cdf \Ff*[2] &= 0, & \cdf \st \Ff*[2] &= 0,
+  \cdf \Ff* &= 0, & \cdf \st \Ff* &= 0,
 \end{align}
-where $\Ff*[2] = \cdf \Af*[1]$ is the field strength 2-form (the curvature 2-form of the connection in the principal bundle, see for example Ref.~\cite{bourguignon1982yang,Nakahara}), and the operator $\st$ denotes the Hodge star. Now, these Yang--Mills field equations are obtained from the variation of the action functional
+where $\Ff* = \cdf \Af*$ is the field strength 2-form (the curvature 2-form of the connection in the principal bundle, see for example Ref.~\cite{bourguignon1982yang,Nakahara}), and the operator $\st$ denotes the Hodge star. Now, these Yang--Mills field equations are obtained from the variation of the action functional
 \begin{equation}
-  S_{\textsc{ym}} = \int \Tr \Big( \Ff*[2] \st \Ff*[2] \Big),
+  S_{\textsc{ym}} = \int \Tr \Big( \Ff* \st \Ff* \Big),
 \end{equation}
 and the Jacobi identity for the covariant derivative.
 
@@ -547,7 +547,9 @@ In that case, we find a particular solution of Eq.~\eqref{SimpleEOMwS},%% \hl{JZ
 \begin{equation*}
   R_{\mu\nu} - \alpha \pa{\mu} \phi \pa{\nu} \phi = \Lambda g_{\mu\nu},
 \end{equation*}
-that can be written in the more conventional form~\footnote{We have used a suggestive notation by denoting with $g_{\mu\nu}$ a covariantly constant, invertible, and symmetric two-tensor. Notice that $\alpha$ is the gravitational coupling constant, which in Einstein--Hilbert gravity is proportional to $G_N$.}
+where we have used a suggestive notation by denoting with $g_{\mu\nu}$ a covariantly constant, invertible, and symmetric two-tensor. Notice that $\alpha$ is the gravitational coupling constant, which in Einstein--Hilbert gravity is proportional to $G_N$.
+This equation can be written in the more conventional form
+%%~\footnote{We have used a suggestive notation by denoting with $g_{\mu\nu}$ a covariantly constant, invertible, and symmetric two-tensor. Notice that $\alpha$ is the gravitational coupling constant, which in Einstein--Hilbert gravity is proportional to $G_N$.}
 \begin{equation}
   R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R + \Lambda g_{\mu\nu} = \alpha \Big( \pa{\mu} \phi \pa{\nu} \phi - \frac{1}{2} g_{\mu\nu} \big( \partial\phi \big)^2 \Big).
 \end{equation}
@@ -569,7 +571,7 @@ We have show, so far, that our model of polynomial purely affine gravity is comp
 \section{\label{propag}Analysis of propagators}
 
 
-A step toward the analysis of renormalizability of the model should be the computation of the free propagators of the model around a given background. The choice of background will necessarily in order to simplify the computations.  Our first task is to expand up to second order in the fields around a maximally symmetric Riemannian background. Maximally symmetric spaces possess remarkably simple curvature tensors~\cite{weinberg1972gravitation},
+A step toward the analysis of renormalizability of the model should be the computation of the free propagators of the model around a given background. The choice of background is necessary in order to simplify the computations.  Our first task is to expand up to second order in the fields around a maximally symmetric Riemannian background. Maximally symmetric spaces possess remarkably simple curvature tensors~\cite{weinberg1972gravitation},
 \begin{equation}
   R_{\mu\nu}{}^\lambda{}_\rho = {K} \Big( g_{\nu\rho} \delta^\lambda_\mu - g_{\mu\rho} \delta^\lambda_\nu \Big),
 \end{equation}
@@ -589,7 +591,7 @@ Under these assumptions, the relevant terms of the action~\eqref{4dfull} are tho
     \label{4dflatx}
     S^{(2)}[\gamma,t,a] =
     \int\dn{4}{x} \bigg[
-      C_1 \big( - \Lambda {\nabla}_{\alpha}{{t}^{\beta \alpha \gamma}}\,  {g}_{\beta \gamma} - \Lambda {\gamma}^{\alpha}\,_{\beta \delta} {g}_{\alpha \gamma} {t}^{\beta \delta \gamma} + {\nabla}_{\alpha}{{\gamma}^{\alpha}\,_{\beta \delta}}\,  {\nabla}_{\gamma}{{t}^{\beta \delta \gamma}}\,  - {\nabla}_{\alpha}{{\gamma}^{\beta}\,_{\beta \delta}}\,  {\nabla}_{\gamma}{{t}^{\delta \alpha \gamma}}\, \big)
+      C_1 \big( - \Lambda {\gamma}^{\alpha}\,_{\beta \delta} {g}_{\alpha \gamma} {t}^{\beta \delta \gamma} + {\nabla}_{\alpha}{{\gamma}^{\alpha}\,_{\beta \delta}}\,  {\nabla}_{\gamma}{{t}^{\beta \delta \gamma}}\,  - {\nabla}_{\alpha}{{\gamma}^{\beta}\,_{\beta \delta}}\,  {\nabla}_{\gamma}{{t}^{\delta \alpha \gamma}}\, \big)
       + 2\, C_2 {\nabla}_{\alpha}{{\gamma}^{\beta}\,_{\beta \delta}}\,  {\nabla}_{\gamma}{{t}^{\gamma \alpha \delta}}\,
       + E_1 {\epsilon}_{\alpha \beta \delta \eta} {\nabla}_{\gamma}{{t}^{\gamma \alpha \beta}}\,  {\nabla}_{\lambda}{{t}^{\lambda \delta \eta}}\,
       + E_2 \big({\nabla}_{\alpha}{{a}_{\beta}}\,  {\nabla}_{\gamma}{{t}^{\gamma \alpha \beta}}\,  - {\nabla}_{\alpha}{{a}_{\beta}}\,  {\nabla}_{\gamma}{{t}^{\alpha \beta \gamma}}\, \big)
@@ -678,10 +680,10 @@ and it is clearer that there are only eighteen degrees of freedom.
 %%%%%%%%% Conclusions %%%%%%%%%
 \section{\label{conclusions}Conclusions}
 
-In this paper we have shown that the \emph{polynomial affine gravity} presented in Ref.~\cite{Skirzewski:2014eta} is the most general (polynomial) model for an affine theory of gravity, see the Appendix~\ref{sec:ld}, consistent with invariance under diffeomorphisms. The action in Eq.~\eqref{4dfull}, is parametrized by a nineteen-dimensional moduli space---after the boundary and topological terms have been dropped---, which in some sense made us wonder about a possible \emph{duality} between this model and the one proposed in Ref.~\cite{Pagani:2015ema}, even though the last one possesses a metric field.
+In this paper we have shown that the \emph{polynomial affine gravity} presented in Ref.~\cite{Skirzewski:2014eta} is the most general (polynomial) model for an affine theory of gravity, see the Appendix~\ref{sec:ld}, consistent with invariance under diffeomorphisms. The action in Eq.~\eqref{4dfull}, is parametrized by a nineteen-dimensional moduli space---after the boundary and topological terms have been dropped---, which in some sense made us wonder about a possible \emph{duality} between this model and the one proposed in Ref.~\cite{Pagani:2015ema}.
 %% (boundary condition, topological terms, ...)
 
-The field equations obtained from the action~\eqref{4dfull} are a set of very complex coupled partial differential equations. However, they are consistent with the limit of $T^{\lambda,\mu\nu}$ and $A_\mu$ going to zero. This consistency is what is usually called a \emph{consistent truncation} of the theory. In this paper we have restrict ourselves to such a truncation of our model, which constrained us to the torsion-less sector of the moduli space. Additionally, this truncation leaves only one nontrivial field equation, Eq.~\eqref{almostSimpleEOM}.
+The field equations obtained from the action~\eqref{4dfull} are a set of very complex coupled partial differential equations. However, the system is consistent with the limit of $T^{\lambda,\mu\nu}$ and $A_\mu$ going to zero. This consistency is what is usually called a \emph{consistent truncation} of the theory. In this paper we have restricted ourselves to such a truncation of our model, which constrained us to the torsion-less sector of the moduli space. Additionally, this truncation leaves only one nontrivial field equation, Eq.~\eqref{almostSimpleEOM}.
 %%, which can be obtained from a simple ``effective'' theory whose action is Eq.~\eqref{eff-action}.
 Moreover, by considering torsion-free equi-affine connections---those preserving a volume element---or a Levi-Civita connection---in the cases where the manifold is metric---, the remaining field equation simplifies even further to Eq.~\eqref{SimpleEOM}.
 
@@ -697,27 +699,395 @@ in our model the fundamental gravitational field is the connection. Equation~\eq
 
 We would like to highlight that, since all gravitational effects described by standard General Relativity are contained in our model, particularly in the sector of metric compatible, torsion-free connections, there is enough liberty to start considering new cosmological effects coming from both nonvanishing torsion and non-metric connections with vanishing torsion, beside the results reported in Ref.~\cite{Chen:2013kia,Chen:2013ota}.
 
-As a first step toward the coupling of matter with our polynomial affine gravity, we showed that there is a construct which might play the role of an inverse metric density. Notice that such a tensor density \emph{does not} necessarily satisfy a non-degeneracy condition as required for a metric, but even though it is an interesting question to ask under what considerations does this construct satisfy the properties of a metric. Using this tensor density, we proposed a \emph{kinetic} term for a scalar field (under diffeomorphisms), and show that in generically the effective field equations for gravity are equivalent to those of General Relativity, when we restrict ourselves to the torsion-free sector. Despite the fact that in this sector the field equation for the scalar field collapses, and cannot be obtained from the variation of the action, using the algorithm proposed in Ref.~\cite{Bekenstein:2014uwa}, the usual scalar field equation is recovered in virtue of the second Bianchi identity. 
+As a first step toward the coupling of matter with our polynomial affine gravity, we showed that there is a construct which might play the role of an inverse metric density. Notice that such a tensor density \emph{does not} necessarily satisfy a non-degeneracy condition as required for a metric, but even though it is an interesting question to ask under what considerations does this construct satisfy the properties of a metric. Using this tensor density, we proposed a \emph{kinetic} term for a scalar field (under diffeomorphisms), and show that the effective field equations are a generalization to those of General Relativity, when we restrict ourselves to the torsion-free sector. Despite the fact that in this sector the field equation for the scalar field collapses, and cannot be obtained from the variation of the action, using the algorithm proposed in Ref.~\cite{Bekenstein:2014uwa}, the usual scalar field equation is recovered in virtue of the second Bianchi identity. 
 
-Finally, we analyzed the second order perturbation of the action in Eq.~\eqref{4dfull}, around a maximally symmetric spacetime. From this analysis it is possible to conclude that, at perturbative level, the number of degrees of freedom are eighteen. These degrees of freedom come from a pair of transverse, symmetric, rank-two-tensors, and a pair of transverse vectors. Moreover, we applied the Lagrangian equivalent of Dirac's formalism for constrained systems (see Ref.~\cite{Diaz:2014yua}), and obtain the same number of physical states---which in principle do not need to coincide, because the perturbative analysis is not exact~\footnote{We want to thank to M.~Blagojevi\'c and B.~Cvetkovi\'c for clarifications in this respect.}.
+Finally, we analyzed the second order perturbation of the action in Eq.~\eqref{4dfull}, around a maximally symmetric spacetime. From this analysis it is possible to conclude that, at perturbative level, the number of degrees of freedom is eighteen, coming from a pair of transverse, symmetric, rank-two-tensors, and a pair of transverse vectors. Moreover, we applied the Lagrangian equivalent of Dirac's formalism for constrained systems (see Ref.~\cite{Diaz:2014yua}), and obtain the same number of physical states---it is a nice feature, because there are known physical systems for which the perturbative analysis of degrees of freedom do not coincide with the exact one~\footnote{We want to thank to M.~Blagojevi\'c, B.~Cvetkovi\'c and O.~Mi\v{s}kovi\'c for clarifications in this respect.}.
 
 %% Summarizing, we have shown that the \emph{purely affine gravity} presented in Ref.~\cite{Skirzewski:2014eta} possesses a well-defined torsionless limit, which generalizes the equations of motion  from General Relativity, and its field equations are equivalent to those obtained from a Yang--Mills theory for the spacetime connection, or Stephenson--Kilmister--Yang theory. Consequently, all gravitational effects described by standard General Relativity are contained in our model, even though the torsion field is kept to zero. Regarding this aspect, we would like to emphazise that there is enough liberty to start considering new cosmological effects coming from both nonvanishing torsion and nonmetric connections with vanishing torsion, beside the results reported in Ref.~\cite{Chen:2013kia,Chen:2013ota}.
 %% Moreover, our gravitational model coupled to a scalar field through the \emph{tensor density} $\mathfrak{g}^{\mu\nu}$ ---in the vanishing torsion consideration---, generalizes GR minimally coupled to a massless scalar field. In a forthcoming paper, we will consider more general matter content (unrelated to the work in Ref.~\cite{Cook:2008mx}), and some properties of the field equations which differ from those of General Relativity.
 
 %%%%%%%%% ACKNOWLEGMENTS %%%%%%%%%
 \begin{acknowledgments}
-  We thank to N.~Pantoja, A.~Melfo, M.~Blagojevi\'c, B.~Cvetkovi\'c, C.~Corral, V.~Sharma, O.~Orellana and R.~L.~Bryant for their helpful discussions and inspiring comments, to J.~Zanelli for his suggestions on the physical insight into the problem and careful but critical review of the manuscript.
-  This work was partially supported by CONICYT (Chile) under project No. 79140040.
+  We thank to N.~Pantoja, A.~Melfo, M.~Blagojevi\'c, B.~Cvetkovi\'c, O.~Mi\v{s}kovi\'c, C.~Corral, V.~Sharma, O.~Orellana and R.~L.~Bryant for their helpful discussions and inspiring comments, to J.~Zanelli for his suggestions on the physical insight into the problem and careful but critical review of the manuscript.
+  This work was partially supported by CONICYT (Chile) under project No. 79140040. The ``Centro Cient\'ifico y Tecnol\'ogico de Valpara\'iso'' \mbox{(CCTVal)} is funded by the
+Chilean Government through the Centers of Excellence Base Financing Program of CONICYT.
 \end{acknowledgments}
 
 \appendix
 
-\input{DA.tex}
-\input{MS.tex}
+%% \input{DA.tex}
+%% \input{MS.tex}
+\section{\label{DA}Dimensional analysis method}
+
+We built the model using six ingredients, a Curtright ($T^{\mu,\nu\lambda}$), a vector ($A_\mu$), the covariant derivative defined with the Levi-Civita connection ($\nab{\mu}$), both Levi-Civita tensors ($\epsilon_{\mu\nu\lambda\rho}$ and $\epsilon^{\mu\nu\lambda\rho}$), and the Riemannian curvature ($R_{\mu\nu}{}^\lambda{}_\rho$).
+Since the Riemannian curvature is defined as the commutator of the covariant derivative, it is not an independent field, so it will be left out of the analysis, and only five ingredients remain.
+
+Our interest is in general to build tensor densities. Therefore, we need to account for the number of \emph{free} indices, and weight density of these quantities. Denote by $N(\Phi)$  the operator which count the number (and position) of indices of the field $\Phi$, being positive (negative) for upper (lower) indices. Thus, we have that
+\begin{equation*}
+  \begin{aligned}
+    N( T^{\mu,\nu\lambda} ) &= 3 & N( A_\mu ) &= -1 & N(  \nab{\mu} ) &= -1 \\
+    N( \epsilon_{\mu\nu\lambda\rho} ) &= -4 & & & N( \epsilon^{\mu\nu\lambda\rho} ) &= 4 
+  \end{aligned}
+\end{equation*}
+Then, for a general expression of the form
+\begin{equation*}
+  T^a A^b \nabla^c {\epsilon_{\dots}}^d {\epsilon^{\dots}}^e,
+\end{equation*}
+the indices counting yield
+\begin{equation}
+  N( T^a A^b \nabla^c {\epsilon_{\dots}}^d {\epsilon^{\dots}}^e ) = n,
+\end{equation}
+with
+\begin{equation}
+  n = 3a -b -c -4d + 4e = 3 a -b - c + 4 \ell,
+  \label{ni}
+\end{equation}
+where we defined $\ell = e - d$, for the sake of simplicity.
+
+In the same spirit, we define an operator which counts the weight density,
+\begin{equation*}
+  \begin{aligned}
+    W( T^{\mu,\nu\lambda} ) &= 1 & W( A_\mu ) &= 0 & W(  \nab{\mu} ) &= 0 \\
+    W( \epsilon_{\mu\nu\lambda\rho} ) &= -1 & & & W( \epsilon^{\mu\nu\lambda\rho} ) &= 1 .
+  \end{aligned}
+\end{equation*}
+Thus, the weight ($w$) of the general expression above is given by
+\begin{equation}
+  w = a + \ell.
+  \label{wd}
+\end{equation}
+
+\subsection{\label{sec:im}Inverse metric density}
+
+Now, we illustrate the usefulness of the \emph{dimensional analysis} by building the most general symmetric $\binom{2}{0}$-tensor density, which we call the \emph{inverse metric density}. This particular case fixes $n = 2$ and $w = 1$.
+
+
+Equation~\eqref{wd} can solved by choosing either $a=1$ or $\ell = 1$, which imply that Eq.~\eqref{ni} is restricted to
+\begin{equation*}
+  3 - b - c = 2,
+\end{equation*}
+or
+\begin{equation*}
+  4 - b - c = 2,
+\end{equation*}
+respectively. The former, yields the terms
+\begin{equation}
+  T^{\mu,\nu\lambda} A_\lambda \text{ and } \nabla_\lambda T^{\mu,\nu\lambda},
+\end{equation}
+no other contraction of indices is allowed due to the symmetry. The latter, yields another possibility,
+\begin{equation}
+  \epsilon_{\lambda\kappa\rho\sigma} T^{\mu, \lambda\kappa} T^{\nu, \rho\sigma}.
+\end{equation}
+
+Finally, one can check that any other choice to solve Eq.~\eqref{wd}---by allowing negative values of $\ell$---make impossible to solve Eq.~\eqref{ni}. Ergo, there is no other term in a symmetric $\binom{2}{0}$-tensor density built up with these fields. Explicitly, this general tensor density is written in Eq.~\eqref{geng}. The summary of this analysis is presented in Table~\ref{tab:imd}.
+\begin{table}
+  \caption{Possible terms contributing to the inverse density metric. }
+  \label{tab:imd}
+  \begin{tabular}{|C{.23\linewidth}C{.23\linewidth}C{.23\linewidth}C{.23\linewidth}|}
+    \hline
+    $a$ & $b$ & $c$ & $\ell$ \\
+    \hline
+    1 & 1 & 0 & 0 \\
+    1 & 0 & 1 & 0 \\
+    2 & 0 & 0 &-1 \\
+    0 & 2 & 0 & 1 \\
+    0 & 1 & 1 & 1 \\
+    0 & 0 & 2 & 1 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{\label{sec:ld}Lagrangian density}
+
+\begin{table}
+  \caption{Possible terms contributing to the Lagrangian density.}
+  \label{tab:ld}
+  \begin{tabular}{|C{.23\linewidth}C{.23\linewidth}C{.23\linewidth}C{.23\linewidth}|}
+    \hline
+    $a$ & $b$ & $c$ & $\ell$ \\
+    \hline
+    1 & 3 & 0 & 0\\
+    1 & 2 & 1 & 0\\
+    1 & 1 & 2 & 0\\
+    1 & 0 & 3 & 0\\
+    2 & 2 & 0 & -1\\
+    2 & 1 & 1 & -1\\
+    2 & 0 & 2 & -1\\
+    3 & 1 & 0 & -2\\
+    3 & 0 & 1 & -2\\
+    4 & 0 & 0 & -3\\
+    0 & 4 & 0 & 1\\
+    0 & 3 & 1 & 1\\
+    0 & 2 & 2 & 1\\
+    0 & 1 & 3 & 1\\
+    0 & 0 & 4 & 1\\
+    \hline
+  \end{tabular}
+\end{table}
+
+The work of building up the most general scalar density with our ingredients is as simple as before, but the analysis is much longer. Thus, we will show the procedure with lesser details than before.
+
+First, we are interested in a scalar density, which sets $n = 0$ and $w = 1$ in Eqs.~\eqref{ni} and~\eqref{wd}, i.e.,
+\begin{align}
+  3a -b -c  + 4\ell &= 0, \label{nib}\\
+  a + \ell &= 1. \label{wdb}
+\end{align}
+
+A possible solution of Eq~\eqref{wdb} is $a=1$ and $\ell = 0$. Such choice allows four possible solutions of Eq.~\eqref{nib}, but only three of them are nonvanishing. These generate the terms of Eq.~\eqref{4dfull} whose coefficients were called $B_3$, $B_4$, $B_5$, $C_1$, $C_2$, $D_6$, $D_7$ and $E_2$.
+
+If one choose $\ell = 1$ for solving Eq.~\eqref{wdb}, all possible solutions for Eq.~\eqref{nib} are either vanishing or yield topological terms.
+%%The action in Eq.~\eqref{4dfull} was written up to topological and boundary terms, thus 
+
+The case with $a=2$ and $\ell = -1$ gives three possibilities to solve Eq.~\eqref{nib}. These choices give the terms the Lagrangian density whose coefficients are $B_1$, $B_2$, $D_4$, $D_5$, $E_1$, and $F_4$.
+
+For $a = 3$ and $\ell = -2$ there are only two possible solutions of Eq.~\eqref{nib}, and these yield the terms of the action with coefficients $D_1$, $D_2$, $D_3$ and $F_3$. And also, the choice $a = 4$ and $\ell = -3$ solves the equations, and yield the terms in the action with coefficients $F_1$ and $F_2$.
+
+Notice that for values $a \ge 5$, it is not possible to solve both Eqs.~\eqref{nib} and~\eqref{wdb} simultaneously. Therefore, we conclude that Eq.~\eqref{4dfull} is the most general action built up with these fields. A summary of the choices for building the Lagrangian density is presented in Table~\ref{tab:ld}.
+
+\section{\label{Known}Known metric solutions to the parallel Ricci equations}
+
+In this Appendix, we will present a brief compendium of known (Riemannian) metric solutions of Eq.~\eqref{SimpleEOM} in four dimensions. The results presented in this Appendix is not original, and can be found in Refs.~\cite{gray1978einstein,derdzinski1980classification,derdzinski1982compact,Derdzinski:1985,Besse}.
+
+\paragraph{Einstein spaces.---} The simplest example of a manifold with parallel Ricci is a Riemannian Einstein manifols. This example was explained on the main text.
+
+\paragraph{Riemannian products.---} The Riemamian product of manifolds with harmonic curvature.
+
+\paragraph{Conformally flat manifolds.---} These are solutions in four dimensions if their scalar curvature is constant.
+
+
+\paragraph{Warped products.---} Compact warped products of the form \mbox{$(S^1 \times \bar{M}, \de{t}^2 + f(t) \de{s}^2(\bar{g}) )$,} where $(\bar{M}, \bar{g})$ is an Einstein manifold with positive scalar curvature, $\bar{R} > 0$, and $f$ is a positive function on $S^1$ satisfying the differential equation
+\begin{equation}
+  \ddot{f} - \frac{1}{3} \bar{R} = c f,
+\end{equation}
+for a negative constant $c$.
+
+{Twisted} warped products of the form $(\R \times \bar{M} ) / \Z$ have parallel Ricci, if the $\Z$-action on the product metric involves an isometry of $\bar{g}$.
+
+Compact warped products of the form \mbox{$(M_1 \times M_2, f^{2} \cdot (g_1 \times g_2) )$,} where $M_i$ are two two-dimensional manifolds, $M_1$ has constant Gau\ss{}ian curvature, $K_1 < 0$, and $M_2$ is an Einstein manifold with scalar curvature $R_2 = - 2 K_1$. The function $f: M_1 \to \R^+$ is a $C^\infty$ solution of 
+\begin{equation*}
+  \Lap f = c \, f^3 \text{ for } c > 0.
+\end{equation*}
+
+Many examples and explicit conditions of Riemannian metrics with harmonic curvature, and conditions for them to have parallel Ricci, can be found in Ref.~\cite{derdzinski1988riemannian}.
+
+Although the above are examples of manifolds with parallel Ricci within the context of ``Riemannian'' geometries, examples of connnections with parallel Ricci can be found in symplectic geometries, see Ref.~\cite{cahen2000symplectic}. 
+
+
+\section{\label{Schw}Explicit example: Schwarzschild ansatz, and Birkhoff theorem}
+
+%% As a disclaimer\hl{What is this... Should this be dropped?}, we clarify that the example below is a pseudo-Riemannian manifold.
+
+%% \subsubsection{Schwarzschild metric}
+
+As pointed out, all vacuum solutions of Einstein's equations---with and without cosmological constant---satisfy the parallel Ricci condition trivially~\cite{bourguignon1981varietes}. Nonetheless, an important result in General Relativity is the stability of the Schwarzschild metric, known as the Birkhoff theorem~\cite{Jebsen1921,Birkhoff1923,Alexandrow1923,Eisland1925}, which implies that the gravitational collapse of a spherically symmetric astrophysical object cannot emit gravitational radiation. 
+
+In this section we show that the simplest ansatz of a static and spherically symmetric metric, which solves the Eq.~\eqref{SimpleEOM} is necessarily the (Anti-)de-Sitter--Schwarzschild metric. This should be taken as a first step toward a Birkhoff theorem, despite the fact that a complete proof is far from been achieved.
+
+Consider first the simplest metric ansatz, whose line element is
+\begin{equation}
+  \de{s}^2 = - f(t,r) \de{t}^2 + \frac{ \de{r}^2 }{ f(t,r) } + r^2 \de{\Omega}^2.
+  \label{simpleSchw}
+\end{equation}
+\begin{widetext}
+  The nontrivial field equation for the ansatz~\eqref{simpleSchw} are
+  \begin{dmath}
+    \nabla_{[\mu} R_{\nu]\lambda} = \frac{1}{2 \, r^{2} f^{3}} \Bigg( r^{2} f^{4} \frac{\partial^3}{\partial r^{3}}f + 2 \, r f^{4} \frac{\partial^2}{\partial r^{2}}f + r^{2} f^{2} \frac{\partial^3}{\partial t^{2}\partial r^{}}f - 4 \, r^{2} f \frac{\partial}{\partial t^{}}f \frac{\partial^2}{\partial t^{}\partial r^{}}f - 2 \, f^{4} \frac{\partial}{\partial r^{}}f + 2 \, {\left(3 \, r^{2} \frac{\partial}{\partial r^{}}f - 2 \, r f\right)} \frac{\partial}{\partial t^{}}f^{2} - 2 \, {\left(r^{2} f \frac{\partial}{\partial r^{}}f - r f^{2}\right)} \frac{\partial^2}{\partial t^{2}}f \Bigg) \,
+    \delta_{\mu\nu}^{10} \delta_\lambda^0
+    +
+    \frac{1}{2 \, r^{2} f^{5}} \Bigg( r^{2} f^{4} \frac{\partial^3}{\partial t^{}\partial r^{2}}f + 2 \, f^{4} \frac{\partial}{\partial t^{}}f + 6 \, r^{2} \frac{\partial}{\partial t^{}}f^{3} - 6 \, r^{2} f \frac{\partial}{\partial t^{}}f \frac{\partial^2}{\partial t^{2}}f + r^{2} f^{2} \frac{\partial^3}{\partial t^{3}}f \Bigg) \,
+    \delta_{\mu\nu}^{10} \delta_\lambda^1
+    +
+    r \frac{\partial^2}{\partial t^{}\partial r^{}}f \,
+    \Big( \delta_{\mu\nu}^{20} \delta_\lambda^2 + \sin^2(\theta) \delta_{\mu\nu}^{30} \delta_\lambda^3 \Big)
+    +
+    \frac{1}{2 \, r f^{3}} \Bigg(r^{2} f^{3} \frac{\partial^2}{\partial r^{2}}f - 2 \, f^{4} + 2 \, r^{2} \frac{\partial}{\partial t^{}}f^{2} - r^{2} f \frac{\partial^2}{\partial t^{2}}f + 2 \, f^{3} \Bigg) \,
+    \Big( \delta_{\mu\nu}^{21} \delta_\lambda^2 + \sin^2(\theta) \delta_{\mu\nu}^{31} \delta_\lambda^3 \Big)
+    = 0
+  \end{dmath}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%   \begin{dmath}
+  %%   \nabla_{[1} R_{0]0} = \frac{1}{2 \, r^{2} f^{3}} \Bigg( r^{2} f^{4} \frac{\partial^3}{\partial r^{3}}f + 2 \, r f^{4} \frac{\partial^2}{\partial r^{2}}f + r^{2} f^{2} \frac{\partial^3}{\partial t^{2}\partial r^{}}f - 4 \, r^{2} f \frac{\partial}{\partial t^{}}f \frac{\partial^2}{\partial t^{}\partial r^{}}f - 2 \, f^{4} \frac{\partial}{\partial r^{}}f + 2 \, {\left(3 \, r^{2} \frac{\partial}{\partial r^{}}f - 2 \, r f\right)} \frac{\partial}{\partial t^{}}f^{2} - 2 \, {\left(r^{2} f \frac{\partial}{\partial r^{}}f - r f^{2}\right)} \frac{\partial^2}{\partial t^{2}}f \Bigg) ,
+  %%   \label{e100}
+  %% \end{dmath}
+  %% \begin{dmath}
+  %%   \nabla_{[1} R_{0]1} = \frac{1}{2 \, r^{2} f^{5}} \Bigg( r^{2} f^{4} \frac{\partial^3}{\partial t^{}\partial r^{2}}f + 2 \, f^{4} \frac{\partial}{\partial t^{}}f + 6 \, r^{2} \frac{\partial}{\partial t^{}}f^{3} - 6 \, r^{2} f \frac{\partial}{\partial t^{}}f \frac{\partial^2}{\partial t^{2}}f + r^{2} f^{2} \frac{\partial^3}{\partial t^{3}}f \Bigg) .
+  %%   \label{e101}
+  %% \end{dmath}
+  %% \begin{dmath}
+  %%   \nabla_{[2} R_{0]2} = r \frac{\partial^2}{\partial t^{}\partial r^{}}f,
+  %%   \label{e202}
+  %% \end{dmath}
+  %% \begin{dmath}
+  %%   \nabla_{[2} R_{1]2} = \frac{1}{2 \, r f^{3}} \Bigg(r^{2} f^{3} \frac{\partial^2}{\partial r^{2}}f - 2 \, f^{4} + 2 \, r^{2} \frac{\partial}{\partial t^{}}f^{2} - r^{2} f \frac{\partial^2}{\partial t^{2}}f + 2 \, f^{3} \Bigg),
+  %%   \label{e212}
+  %% \end{dmath}
+  %% %% \begin{dmath}
+  %% %%   \nabla_{[3} R_{0]3} = r \sin\left({\theta}\right)^{2} \frac{\partial^2}{\partial t^{}\partial r^{}}f,
+  %% %%   \label{e303}
+  %% %% \end{dmath}
+  %% %% and
+  %% %% \begin{dmath}
+  %% %%   \nabla_{[3} R_{1]3} = \frac{1}{2 \, r f^{3}} \Bigg(r^{2} f^{3} \frac{\partial^2}{\partial r^{2}}f - 2 \, f^{4} + 2 \, r^{2} \frac{\partial}{\partial t^{}}f^{2} - r^{2} f \frac{\partial^2}{\partial t^{2}}f + 2 \, f^{3}\Bigg) \sin\left({\theta}\right)^{2}.
+  %% %%   \label{e313}
+  %% %% \end{dmath}
+  %% \begin{align}
+  %%   \nabla_{[3} R_{0]3} &= \sin\left({\theta}\right)^{2} \nabla_{[2} R_{0]2}, &
+  %%   \nabla_{[3} R_{1]3} &= \sin\left({\theta}\right)^{2} \nabla_{[2} R_{1]2}.
+  %% \end{align}
+\end{widetext}
+Even though four out of the six nontrivial field equations are independent, the system can be solved uniquely. First, the component along the $(\mu\nu\lambda) = (2,0,2)$ yields $f = T(t) + R(r)$. Then, one notices that the equation along $(\mu\nu\lambda) = (1,0,1)$ contains a term depending solely on $t$, which implies that $\dot{T}$ vanishes, i.e., $T$ is a constant. From here, the equation for $(\mu\nu\lambda) = (2,1,2)$ gets simple enough to be solved and yields, \mbox{$R(r) = 1 - T + \frac{\alpha}{r} + \beta r^2$} or equivalently
+\begin{equation}
+  f(r) = 1 + \frac{\alpha}{r} + \beta r^2,
+  \label{simplef}
+\end{equation}
+with $\alpha$ and $\beta$ integration constants. Finally, it can be checked that albeit the equation along the components $(\mu,\nu,\lambda) = (1,0,0)$ was not used, it is satisfied by Eq.~\eqref{simplef}.
+
+The above shows that the simplest time-dependent generalization of Schwarzschild metric is not a solution for the field equations of the considered affine model. Unless, the spacetime metric is static and exactly that for a Schwarzschild's exterior solution, with or without cosmological constant.
+
+However, if one tries a metric ansatz with two different factors, say
+\begin{equation}
+  \de{s}^2 = - A(t,r) \de{t}^2 + \frac{ \de{r}^2 }{ B(t,r) } + r^2 \de{\Omega}^2,
+  \label{ABmetric}
+\end{equation}
+the field equations are so complicated, that although hints on the solubility were found---and yield to Eq.~\eqref{simplef} for both $A$ and $B$---, the uniqueness of the solution has not been proven. The field equations for the metric~\eqref{ABmetric} are %%shown in Appendix~\ref{app:eqAB}.
+\begin{widetext}
+  \begin{dmath}
+    \nabla_{[\mu} R_{\nu]\lambda} = \frac{1}{4 \, r^{2} B^{3} A^{2}} \Bigg( 2 \, r^{2} B^{4} \frac{\partial}{\partial r^{}}A^{3} + 2 \, r^{2} B^{4} A^{2} \frac{\partial^3}{\partial r^{3}}A + 2 \, r^{2} B^{2} A^{2} \frac{\partial^3}{\partial t^{2}\partial r^{}}B - 6 \, r^{2} B A^{2} \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{}\partial r^{}}B - r^{2} B^{2} A \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{}\partial r^{}}A + 6 \, {\left(r^{2} A^{2} \frac{\partial}{\partial r^{}}B - r B A^{2}\right)} \frac{\partial}{\partial t^{}}B^{2} - 2 \, {\left(r^{2} B^{3} A \frac{\partial}{\partial r^{}}B + r B^{4} A\right)} \frac{\partial}{\partial r^{}}A^{2} - 2 \, {\left(r^{2} B A^{2} \frac{\partial}{\partial r^{}}B - 2 \, r B^{2} A^{2}\right)} \frac{\partial^2}{\partial t^{2}}B - {\left(r^{2} B^{2} A \frac{\partial^2}{\partial t^{}\partial r^{}}B - 2 \, r^{2} B^{2} \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial r^{}}A - {\left(r^{2} B A \frac{\partial}{\partial r^{}}B - 2 \, r B^{2} A\right)} \frac{\partial}{\partial t^{}}B\right)} \frac{\partial}{\partial t^{}}A + {\left(r^{2} B^{3} A^{2} \frac{\partial^2}{\partial r^{2}}B + 2 \, r B^{3} A^{2} \frac{\partial}{\partial r^{}}B - 4 \, B^{4} A^{2} + 3 \, r^{2} B A \frac{\partial}{\partial t^{}}B^{2} - 2 \, r^{2} B^{2} A \frac{\partial^2}{\partial t^{2}}B\right)} \frac{\partial}{\partial r^{}}A + {\left(3 \, r^{2} B^{3} A^{2} \frac{\partial}{\partial r^{}}B - 4 \, r^{2} B^{4} A \frac{\partial}{\partial r^{}}A + 4 \, r B^{4} A^{2}\right)} \frac{\partial^2}{\partial r^{2}}A \Bigg) \,
+    \delta_{\mu\nu}^{10} \delta_\lambda^0
+    +
+    \frac{1}{4 \, r^{2} B^{4} A^{3}} \Bigg( 2 \, r^{2} B^{4} A^{2} \frac{\partial^3}{\partial t^{}\partial r^{2}}A + r^{2} B^{3} A^{2} \frac{\partial^2}{\partial t^{}\partial r^{}}B \frac{\partial}{\partial r^{}}A - r^{2} B^{3} A \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial r^{}}A^{2} + 2 \, r^{2} B^{3} A^{2} \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial r^{2}}A + 4 \, B^{3} A^{3} \frac{\partial}{\partial t^{}}B + 6 \, r^{2} A^{2} \frac{\partial}{\partial t^{}}B^{3} - 8 \, r^{2} B A^{2} \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{2}}B + 2 \, r^{2} B^{2} A^{2} \frac{\partial^3}{\partial t^{3}}B + 2 \, r^{2} B^{2} \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial t^{}}A^{2} - r^{2} B^{2} A \frac{\partial}{\partial t^{}}B \frac{\partial^2}{\partial t^{2}}A - {\left(r^{2} B^{3} A \frac{\partial}{\partial r^{}}B \frac{\partial}{\partial r^{}}A - 2 \, r^{2} B^{4} \frac{\partial}{\partial r^{}}A^{2} + 2 \, r^{2} B^{4} A \frac{\partial^2}{\partial r^{2}}A - 4 \, r^{2} B A \frac{\partial}{\partial t^{}}B^{2} + 3 \, r^{2} B^{2} A \frac{\partial^2}{\partial t^{2}}B\right)} \frac{\partial}{\partial t^{}}A + {\left(r^{2} B^{3} A^{2} \frac{\partial}{\partial r^{}}B - 2 \, r^{2} B^{4} A \frac{\partial}{\partial r^{}}A\right)} \frac{\partial^2}{\partial t^{}\partial r^{}}A \Bigg) \,
+    \delta_{\mu\nu}^{10} \delta_\lambda^1
+    +
+    \frac{1}{2 \, A^{2}} \Bigg( r A^{2} \frac{\partial^2}{\partial t^{}\partial r^{}}B + r B A \frac{\partial^2}{\partial t^{}\partial r^{}}A + r A \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial r^{}}A - r B \frac{\partial}{\partial t^{}}A \frac{\partial}{\partial r^{}}A \Bigg) \,
+    \Big( \delta_{\mu\nu}^{20} \delta_\lambda^2 + \sin^2(\theta) \delta_{\mu\nu}^{30} \delta_\lambda^3 \Big)
+    +
+    \frac{1}{4 \, r B^{2} A^{2}} \Bigg( 2 \, r^{2} B^{2} A^{2} \frac{\partial^2}{\partial r^{2}}B + r^{2} B^{2} A \frac{\partial}{\partial r^{}}B \frac{\partial}{\partial r^{}}A - r^{2} B^{3} \frac{\partial}{\partial r^{}}A^{2} + 3 \, r^{2} A \frac{\partial}{\partial t^{}}B^{2} - 2 \, r^{2} B A \frac{\partial^2}{\partial t^{2}}B + r^{2} B \frac{\partial}{\partial t^{}}B \frac{\partial}{\partial t^{}}A - 4 \, {\left(B^{3} - B^{2}\right)} A^{2} \Bigg) \,
+    \Big( \delta_{\mu\nu}^{21} \delta_\lambda^2 + \sin^2(\theta) \delta_{\mu\nu}^{31} \delta_\lambda^3 \Big)
+    = 0,
+    \label{hugeeq}
+  \end{dmath}
+\end{widetext}
+which are very complex. Nonetheless, the symmetries in some of the components of these equations seem to favour the relation $A = B$ as solution. In addition, we found a very interesting reference in which a proof of the Birkhoff theorem is given for an Einstein--Cartan theory coupled with the gravitational Yang--Mills~\cite{Ramaswamy:1979zz}, which support the hand-waving symmetry argument above.
+
+Hence, further analysis requires a new strategy. Instead of considering a metric, a connection ansatz is proposed based in the structure of a spherically symmetric metric of the form,
+\begin{equation}
+  \de{s}^2 = g_{ab}(x) \, \de{x}^a\de{x}^b + e^{2\rho(x)} \, g_{AB}(\vph)  \de{\vph}^A\de{\vph}^B,
+  \label{sphere-gen}
+\end{equation}
+where $x^m$ represent the temporal an radial directions, while $\vph^M$ represent angular coordinates. Notice that the four-dimensional indices have been partitioned as \mbox{$\mu = (a,A)$,} then the general form of the connection is
+%~\footnote{For the metric of Eq.~\eqref{sphere-gen}, the factors are \mbox{$M^a(x) = - e^{2\rho(x)} g^{am}\partial_m \rho$} and \mbox{$N_c = \partial_c \rho$.}}
+\begin{dmath}
+  \Ga^\lambda{}_{\mu\nu} = \delta^\lambda_a \delta^b_\mu \delta^c_\nu \ga^a{}_{bc} + \delta^\lambda_A \delta^B_\mu \delta^C_\nu \ga^A{}_{BC} + \delta^\lambda_a \delta^B_\mu \delta^C_\nu g_{BC} M^a(x) +  \delta^\lambda_A \delta^A_{(\mu} \delta^c_{\nu)} N_{c}(x),
+  \label{connSchw}
+\end{dmath}
+where $\ga^a{}_{bc}$ and $\ga^A{}_{BC}$ are the Levi-Civita connection for the metrics $g_{ab}$ and $g_{AB}$ respectively, and the factors are \mbox{$M^a(x) = - \tfrac{1}{2}  g^{am}\partial_m e^{2\rho(x)}$} and \mbox{$N_c = 2 \partial_c \rho$}.
+
+From the connection ansatz~\eqref{connSchw} the Ricci tensor is
+\begin{dmath}
+  R_{\mu\nu}
+  = \delta_\mu^m \delta_\nu^n \big( R_{mn} - 2 \nab{m} N_n - 2 N_m N_n \big)
+  + \delta_\mu^M \delta_\nu^N \big( R_{MN} + g_{MN} \nab{a} M^a \big),
+  %% + ( \delta_\mu^M \delta_\nu^n + \delta_\mu^n \delta_\nu^M ) \gamma^A{}_{AM} N_n
+\end{dmath}
+and the equations of motion are
+\begin{widetext}
+  \begin{dmath}
+    \nabla_{[\lambda} R_{\mu]\nu}
+    = \delta_\lambda^l \delta_\mu^m \delta_\nu^n  \bigg( \frac{1}{2} g_{n[m} \partial_{l]} \mathcal{R} + 2 \mathcal{R}  g_{n[m} N_{l]}(x) - 2 \nabla_{[l} \Big( N_{m]} N_n \Big) \bigg)
+    + \delta_\lambda^{[l} \delta_\mu^{M]} \delta_\nu^N \, g_{MN} \bigg( \nab{l} \nab{a} M^a + \frac{\mathcal{R}}{2} g_{la} M^a - 2 N_l - 2 \nab{a} \Big( M^a N_l \Big) - 2 M^a N_a N_l \bigg).
+    \label{OurEq}
+  \end{dmath}
+\end{widetext}
+We have used that $g_{AB}(\varphi)$ is the metric of a two-sphere, and its curvature tensors are well known. In addition, since the metric $g_{ab}(x)$ is two-dimensional too, its curvature tensors are related with the metric by the relation
+\begin{dmath}
+  R_{ab}{}^c{}_d = \frac{\mathcal{R}}{2} \Big( \delta^c_a g_{bd} - \delta^c_b g_{ad} \Big).
+\end{dmath}
+
+As argue  in Refs.~\cite{bergmann1965spherically,hawking1973large},  the solution depends on the nature of the surfaces described by $\rho = \text{const.}$, which in our parametrization translate to the nature of $N_a$. We first consider the condition $g^{ab} N_a N_b > 0 $, which allows to set $\rho$ as a good radial coordinate. Therefore, the general metric ansatz $g_{ab}$ is diagonal, and the radial direction would be $\rho$, i.e.,
+\begin{equation}
+  g_{ab} = - \alpha^2(t,\rho) \de{t}_a \otimes \de{t}_b + \beta^2(t,\rho) \de{\rho}_a \otimes \de{\rho}_b.
+  \label{metr2d}
+\end{equation}
+With this ansatz, the nontrivial components of Eq.~\eqref{OurEq} are
+\begin{align}
+  \beta^2 \pa{t} \mathcal{R} + 8 \gamma^\rho{}_{t \rho} &= 0,
+  \label{eq1}
+  \\
+  \pa{\rho} \mathcal{R} - 4 \mathcal{R} + 16 \alpha^{-2} \gamma^\rho{}_{tt} &= 0,
+  \label{eq2}
+  \\
+  \pa{t} \big( \Delta_x e^{2\rho} \big) + 4 \beta^{-2} e^{2\rho} \gamma^\rho{}_{t \rho} &= 0,
+  \label{eq3}
+\end{align}
+and
+\begin{dmath}
+  \pa{\rho} \big( \Delta_x e^{2\rho} \big) + 8 - 4 \Delta_x e^{2\rho} - 16 \beta^{-2} e^{2\rho} - 4 \beta^{-2} e^{2\rho} \gamma^{\rho}{}_{\rho\rho}  + \mathcal{R} e^{2\rho} = 0.
+  \label{eq4}
+\end{dmath}
+From equation~\eqref{eq1} it follows that,
+%% can be rewritten as
+%% \begin{equation}
+%%   \pa{t} \big( \mathcal{R} - 8 \beta^{-2} \big) = 0,
+%%   \label{eq1a}
+%% \end{equation}
+%% or 
+\begin{equation}
+  \mathcal{R} - 8 \beta^{-2} = G_1(\rho).
+  \label{eq1b}
+\end{equation}
+In addition, since
+\begin{equation}
+  \Delta_x e^{2\rho}
+  = e^{2\rho} \bigg[ 4 \beta^{-2} + \frac{2}{\alpha \beta} \pa{\rho} \bigg( \frac{\alpha}{\beta} \bigg) \bigg]
+  \equiv  e^{2\rho} \Big[ 4 \beta^{-2} + \mathcal{F} \Big],
+\end{equation}
+it follows from Eqs.~\eqref{eq3} that,
+%% \begin{equation}
+%%   \pa{t} \big( F + 2 \beta^{-2} \big) = 0,
+%%   \label{eq3a}
+%% \end{equation}
+%% or 
+\begin{equation}
+  \mathcal{F} + 2 \beta^{-2} = G_2(\rho).
+  \label{eq3b}
+\end{equation}
+
+Equations~\eqref{eq1b} and~\eqref{eq3b} implies that all temporal dependence on time within $\mathcal{R}$, $\mathcal{F}$ and $\beta^{-2}$, enters through an additive common function, say $B(t,\rho)$. However, the consistency of these equations with the value of $\mathcal{R}$ calculated from the metric ansatz, in Eq.~\eqref{metr2d}, sets this additive function to zero, $B(t,\rho)$. Therefore, neither $\mathcal{R}$, $\mathcal{F}$ nor $\beta^{-2}$ depend on $t$. By extension---from the definition of $\mathcal{F}$---, $\alpha$ could depend on time through a multiplicative function. Nonetheless, this multiplicative function can be eliminated of the problem by a redefinition of the \emph{time} coordinate.
+
+At this stage, we have proved that \emph{any spherically symmetric (metric) solution of the Eqs.~\eqref{SimpleEOM} is necessarily static}, which is one of the main statements of Birkhoff's theorem.
+
+This result, simplifies the Eq.~\eqref{hugeeq} but the equations are still non-linear. However, one can get ride off the non-linearity by setting $A(r) = B(r)$. In this \emph{linearized} regime, according to Eq.~\eqref{simplef} the general (metric) solution is the (Anti-)de-Sitter--Schwarzschild metric.
+
+Although we restricted ourselves to the \emph{linearized} regime of the field equations, it is possible to go a bit further in the nonlinear regime. As a preliminary result~\cite{OCF-future2}, we have found that using the Frobenius methods with a Laurent series expansion, the leading order of the solutions is three-fold in the radial coordinate. These solutions correspond to the pairs given by $(\alpha,\beta)$---$\alpha$ (resp. $\beta)$ is the leading order of the series expansion for the function $A(r)$ (resp. $B(r)$)---equals to $(-1,-1)$, $(2,-2)$ and $(0,-1)$.
+%%Two of these branches coincide with the reciprocal and quadratic dependence on $r$ of $A$ and $B$, while the third one gives novel dependence,
+%% \begin{equation}
+%%   A(r) = 1 + \frac{\alpha}{r} + \beta r^2 + \frac{\gamma}{r^2},
+%% \end{equation}
+%% and
+%% \begin{equation}
+%%   B(r) = 1 + \frac{\alpha}{r} + (\beta + \gamma) r^2.
+%% \end{equation}
+
+
+%% \section{extra... DELETE IT}
+
+%% \begin{widetext}
+%%   \begin{dmath*}
+%%     todo2 :=
+%%     %% \Lambda {\epsilon}_{\alpha \beta \gamma \delta} (B_1 + \frac{1}{3}\, B_2) {t_{\perp}}_{\eta}\,^{\alpha \beta} {t_{\perp}}^{\eta \gamma \delta} + \Lambda {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}_{\eta}{{ta}^{\alpha \beta}}\,  (4\, B_1 + \frac{4}{3}\, B_2) {t_{\perp}}^{\eta \gamma \delta} + \Lambda {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}^{\alpha}\,_{\eta}{{t_{\mathtt{v}}}^{\beta}}\,  (4\, B_1 + \frac{4}{3}\, B_2) {t_{\perp}}^{\eta \gamma \delta} + \Lambda {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}_{\eta}{{ta}^{\alpha \beta}}\,  {\nabla}^{\eta}{{ta}^{\gamma \delta}}\,  (4\, B_1 + \frac{4}{3}\, B_2) + \Lambda {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}_{\eta}{{ta}^{\alpha \beta}}\,  {\nabla}^{\gamma}{{ts}^{\delta \eta}}\,  (8\, B_1 + \frac{8}{3}\, B_2) + \Lambda {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}_{\eta}{{ta}^{\alpha \beta}}\,  {\nabla}^{\gamma \eta}{{t_{\mathtt{v}}}^{\delta}}\,  (8\, B_1 + \frac{8}{3}\, B_2) + \Lambda {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}^{\alpha}\,_{\eta}{{t_{\mathtt{v}}}^{\beta}}\,  {\nabla}^{\gamma \eta}{{t_{\mathtt{v}}}^{\delta}}\,  (4\, B_1 + \frac{4}{3}\, B_2)
+%%     + \Lambda ( - B_3 + \frac{2}{3}\, B_4) {at}_{\alpha} {t_{\perp}}_{\beta}\,^{\alpha \beta} + \Lambda {\nabla}^{\alpha}\,_{\beta}{{t_{\mathtt{v}}}^{\beta}}\,  ( - B_3 + \frac{2}{3}\, B_4) {at}_{\alpha} + \Lambda {\nabla}^{\alpha}\,_{\alpha}{{t_{\mathtt{v}}}^{\beta}}\,  (B_3 - \frac{2}{3}\, B_4) {at}_{\beta} + \Lambda {\nabla}_{\alpha}{aL}\,  ( - B_3 + \frac{2}{3}\, B_4) {t_{\perp}}_{\beta}\,^{\alpha \beta} + \Lambda {\nabla}_{\alpha}{aL}\,  {\nabla}^{\alpha}\,_{\beta}{{t_{\mathtt{v}}}^{\beta}}\,  ( - B_3 + \frac{2}{3}\, B_4) + \Lambda {\nabla}_{\alpha}{aL}\,  {\nabla}^{\beta}\,_{\beta}{{t_{\mathtt{v}}}^{\alpha}}\,  (B_3 - \frac{2}{3}\, B_4) + C_1 \Lambda {gt}_{\alpha \beta \gamma} {t_{\perp}}^{\beta \alpha \gamma} + C_1 \Lambda {\nabla}_{\alpha}{{gs}_{\beta \gamma}}\,  {t_{\perp}}^{\beta \alpha \gamma} + 3\, C_1 \Lambda {\nabla}_{\alpha}{{gs}_{\beta \gamma}}\,  {\nabla}^{\beta}{{ta}^{\alpha \gamma}}\,  - C_1 \Lambda {\nabla}_{\alpha}{{gs}_{\beta \gamma}}\,  {\nabla}^{\beta}{{ts}^{\alpha \gamma}}\,  - C_1 \Lambda {\nabla}^{\alpha}\,_{\alpha}{{ts}^{\beta \gamma}}\,  {gs}_{\beta \gamma} - C_1 \Lambda {\nabla}_{\alpha}{{gs}_{\beta \gamma}}\,  {\nabla}^{\beta \gamma}{{t_{\mathtt{v}}}^{\alpha}}\, %
+%%     + C_1 \Lambda {\nabla}_{\alpha}{{gs}_{\beta \gamma}}\,  {\nabla}^{\alpha \beta}{{t_{\mathtt{v}}}^{\gamma}}\,  + C_1 \Lambda {\nabla}_{\alpha \beta}{{gv}_{\gamma}}\,  {t_{\perp}}^{\alpha \beta \gamma} + 2\, C_1 \Lambda {\nabla}_{\alpha}{{ts}^{\beta \gamma}}\,  {\nabla}^{\alpha}\,_{\beta}{{gv}_{\gamma}}\,  - C_1 \Lambda {\nabla}_{\alpha \beta}{{gv}_{\gamma}}\,  {\nabla}^{\alpha \gamma}{{t_{\mathtt{v}}}^{\beta}}\,  + C_1 \Lambda {\nabla}_{\alpha \beta}{{gv}_{\gamma}}\,  {\nabla}^{\alpha \beta}{{t_{\mathtt{v}}}^{\gamma}}\,  + 2\, C_1 \Lambda {\nabla}_{\alpha}{{ts}^{\beta \gamma}}\,  {\nabla}_{\beta \gamma}{{gvp}^{\alpha}}\,  + 2\, C_1 \Lambda {\nabla}_{\alpha}{{ts}^{\beta \gamma}}\,  {\nabla}^{\alpha}\,_{\beta \gamma}{gL}\,  + 2\, C_1 \Lambda {\nabla}^{\alpha}\,_{\beta}{{t_{\mathtt{v}}}^{\gamma}}\,  {\nabla}_{\alpha}\,^{\beta}\,_{\gamma}{gL}\,  + 3\, C_1 {\nabla}^{\alpha}\,_{\alpha}{{gs}_{\beta \gamma}}\,  {\nabla}^{\beta}\,_{\delta}{{ta}^{\gamma \delta}}\,  - C_1 {\nabla}^{\alpha}\,_{\alpha}{{gs}_{\beta \gamma}}\,  {\nabla}^{\delta}\,_{\delta}{{ts}^{\beta \gamma}}\,  - C_1 {\nabla}^{\alpha}\,_{\alpha}{{gs}_{\beta \gamma}}\,  {\nabla}^{\beta \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\gamma}}\,  + 3\, C_1 {\nabla}_{\alpha \beta}{{gp}^{\alpha}\,_{\gamma}}\,  {\nabla}^{\beta}\,_{\delta}{{ta}^{\gamma \delta}}\,  + 3\, C_1 {\nabla}_{\alpha \beta}{{gp}^{\alpha}\,_{\gamma}}\,  {\nabla}^{\gamma}\,_{\delta}{{ta}^{\beta \delta}}\,  - 2\, C_1 {\nabla}_{\alpha \beta}{{gp}^{\alpha}\,_{\gamma}}\,  {\nabla}^{\delta}\,_{\delta}{{ts}^{\beta \gamma}}\,  - C_1 {\nabla}_{\alpha \beta}{{gp}^{\alpha}\,_{\gamma}}\,  {\nabla}^{\beta \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\gamma}}\,  - C_1 {\nabla}_{\alpha \beta}{{gp}^{\alpha}\,_{\gamma}}\,  {\nabla}^{\gamma \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\beta}}\,  + {\nabla}^{\alpha}\,_{\beta}{{ta}^{\beta \gamma}}\,  {\nabla}_{\alpha}\,^{\delta}\,_{\delta}{{gv}_{\gamma}}\,  ( - 2\, C_1 + 2\, C_2) + {\nabla}^{\alpha}\,_{\beta}{{ta}^{\beta \gamma}}\,  {\nabla}_{\gamma}\,^{\delta}\,_{\delta}{{gv}_{\alpha}}\,  ( - C_1 - 2\, C_2) + {\nabla}^{\alpha}\,_{\alpha}{{ta}^{\beta \gamma}}\,  {\nabla}_{\beta}\,^{\delta}\,_{\delta}{{gv}_{\gamma}}\,  ( - C_1 + 4\, C_2) - C_1 {\nabla}^{\alpha}\,_{\alpha}{{ts}^{\beta \gamma}}\,  {\nabla}_{\beta}\,^{\delta}\,_{\delta}{{gv}_{\gamma}}\, %
+%%     + {\nabla}^{\alpha}\,_{\alpha \beta}{{gv}_{\gamma}}\,  {\nabla}^{\beta \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\gamma}}\,  ( - C_1 + 2\, C_2) + {\nabla}_{\alpha}{{gt}^{\beta}\,_{\beta \gamma}}\,  {\nabla}^{\gamma}\,_{\delta}{{ta}^{\alpha \delta}}\,  ( - 2\, C_1 + 2\, C_2) + {\nabla}_{\alpha}{{gt}^{\beta}\,_{\beta \gamma}}\,  {\nabla}^{\alpha}\,_{\delta}{{ta}^{\gamma \delta}}\,  ( - C_1 - 2\, C_2) + {\nabla}_{\alpha}{{gt}^{\beta}\,_{\beta \gamma}}\,  {\nabla}^{\delta}\,_{\delta}{{ta}^{\alpha \gamma}}\,  ( - C_1 + 4\, C_2) + C_1 {\nabla}_{\alpha}{{gt}^{\beta}\,_{\beta \gamma}}\,  {\nabla}^{\delta}\,_{\delta}{{ts}^{\alpha \gamma}}\,  + {\nabla}_{\alpha}{{gt}^{\beta}\,_{\beta \gamma}}\,  {\nabla}^{\gamma \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\alpha}}\,  (C_1 - 2\, C_2) - 3\, C_1 {\nabla}_{\alpha \beta}{{gp}^{\gamma}\,_{\gamma}}\,  {\nabla}^{\alpha}\,_{\delta}{{ta}^{\beta \delta}}\,  + C_1 {\nabla}_{\alpha \beta}{{gp}^{\gamma}\,_{\gamma}}\,  {\nabla}^{\delta}\,_{\delta}{{ts}^{\alpha \beta}}\,  + C_1 {\nabla}_{\alpha \beta}{{gp}^{\gamma}\,_{\gamma}}\,  {\nabla}^{\alpha \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\beta}}\,  + 3\, C_1 {\nabla}^{\alpha}\,_{\beta}{{ta}^{\beta \gamma}}\,  {\nabla}_{\alpha \gamma}\,^{\delta}{{gv}_{\delta}}\,  + C_1 {\nabla}^{\alpha}\,_{\alpha}{{ts}^{\beta \gamma}}\,  {\nabla}_{\beta \gamma}\,^{\delta}{{gv}_{\delta}}\,  + C_1 {\nabla}^{\alpha}\,_{\beta \gamma}{{gv}_{\alpha}}\,  {\nabla}^{\beta \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\gamma}}\,  + 2\, C_2 {\nabla}_{\alpha}{{gt}^{\beta}\,_{\beta \gamma}}\,  {\nabla}^{\alpha \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\gamma}}\,  - 2\, C_2 {\nabla}^{\alpha}\,_{\alpha \beta}{{gv}_{\gamma}}\,  {\nabla}^{\gamma \delta}\,_{\delta}{{t_{\mathtt{v}}}^{\beta}}\,
+%%     %% + 4\, E_1 {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}^{\eta}\,_{\eta}{{ta}^{\alpha \beta}}\,  {\nabla}^{\lambda}\,_{\lambda}{{ta}^{\gamma \delta}}\,  - 8\, E_1 {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}^{\alpha}\,_{\eta}{{ta}^{\beta \eta}}\,  {\nabla}^{\lambda}\,_{\lambda}{{ta}^{\gamma \delta}}\,  + 8\, E_1 {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}^{\eta}\,_{\eta}{{ta}^{\alpha \beta}}\,  {\nabla}^{\gamma \lambda}\,_{\lambda}{{t_{\mathtt{v}}}^{\delta}}\,  + 4\, E_1 {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}^{\alpha}\,_{\eta}{{ta}^{\beta \eta}}\,  {\nabla}^{\gamma}\,_{\lambda}{{ta}^{\delta \lambda}}\,  - 8\, E_1 {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}^{\alpha}\,_{\eta}{{ta}^{\beta \eta}}\,  {\nabla}^{\gamma \lambda}\,_{\lambda}{{t_{\mathtt{v}}}^{\delta}}\,  + 4\, E_1 {\epsilon}_{\alpha \beta \gamma \delta} {\nabla}^{\alpha \eta}\,_{\eta}{{t_{\mathtt{v}}}^{\beta}}\,  {\nabla}^{\gamma \lambda}\,_{\lambda}{{t_{\mathtt{v}}}^{\delta}}\, %
+%%     + 3\, E_2 {\nabla}_{\alpha}{{at}_{\beta}}\,  {\nabla}^{\gamma}\,_{\gamma}{{ta}^{\alpha \beta}}\,  - 3\, E_2 {\nabla}_{\alpha}{{at}_{\beta}}\,  {\nabla}^{\alpha}\,_{\gamma}{{ta}^{\beta \gamma}}\,  + 2\, E_2 {\nabla}_{\alpha}{{at}_{\beta}}\,  {\nabla}^{\alpha \gamma}\,_{\gamma}{{t_{\mathtt{v}}}^{\beta}}\,  - E_2 {\nabla}_{\alpha}{{at}_{\beta}}\,  {\nabla}^{\beta \gamma}\,_{\gamma}{{t_{\mathtt{v}}}^{\alpha}}\,  - 3\, E_2 {\nabla}_{\alpha \beta}{aL}\,  {\nabla}^{\alpha}\,_{\gamma}{{ta}^{\beta \gamma}}\,  + E_2 {\nabla}_{\alpha \beta}{aL}\,  {\nabla}^{\alpha \gamma}\,_{\gamma}{{t_{\mathtt{v}}}^{\beta}}\,  + E_2 {\nabla}_{\alpha}{{at}_{\beta}}\,  {\nabla}^{\gamma}\,_{\gamma}{{ts}^{\alpha \beta}}\,  + E_2 {\nabla}_{\alpha \beta}{aL}\,  {\nabla}^{\gamma}\,_{\gamma}{{ts}^{\alpha \beta}}\, ;
+%%   \end{dmath*}
+%% \end{widetext}
+
 
 %%%%%%%%% BIBLIOGRAPHY %%%%%%%%%
-%%\bibliographystyle{apsrev4-1}
+%% \bibliographystyle{utphys}
 \bibliography{References.bib}
+
 
 \end{document}
 
