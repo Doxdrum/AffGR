@@ -1,4 +1,4 @@
-\documentclass[aps,prd,12pt,twocolumn,superscriptaddress,showpacs,showkeys,reprint%,longbibliography
+\documentclass[aps,prd,12pt,twocolumn,superscriptaddress,showpacs,showkeys,reprint,longbibliography
 ]{revtex4-1}
 
 \usepackage{amsmath,amsthm,latexsym,amssymb,amsfonts}
@@ -9,7 +9,7 @@
   linkcolor=blue,
   citecolor=blue
 ]{hyperref}
-\usepackage{etoolbox}
+%\usepackage{etoolbox}
 \usepackage{breqn}
 
 \makeatletter
@@ -28,14 +28,14 @@
 %% \usepackage{comment}
 %% \hypersetup{linktocpage,colorlinks=true,urlcolor=blue!80!red,linkcolor=blue,citecolor=red}
 %\usepackage{feynmf}
-\usepackage{siunitx}
+%\usepackage{siunitx}
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 %% \usepackage{ulem}
 %\usepackage{tikz}
-\usepackage{braket}
+%\usepackage{braket}
 \usepackage{xparse}
 
 
@@ -223,14 +223,14 @@
 
 %% \newcommand{\ket}[1]{\left.\left|#1\right.\right>}
 %% \newcommand{\bra}[1]{\left.\left<#1\right.\right|}
-\renewcommand\bra[1]{\Bra{#1}}
-\renewcommand\ket[1]{\Ket{#1}}
+%% \renewcommand\bra[1]{\Bra{#1}}
+%% \renewcommand\ket[1]{\Ket{#1}}
 \newcommand{\bkt}[3]{\Braket{ {#1} | {#2} | {#3} } }
 \newcommand{\bk}[2]{\Braket{ {#1} | {#2} } }
 \newcommand{\comm}[2]{\left[#1,#2\right]}
 \newcommand{\acomm}[2]{\left\{#1,#2\right\}}
 \newcommand{\vev}[1]{\ensuremath{\left<#1\right>}}
-\renewcommand{\set}[1]{\ensuremath{\Set{ #1 }}}
+%% \renewcommand{\set}[1]{\ensuremath{\Set{ #1 }}}
 
 \newcommand{\relphantom}[1]{\mathrel{\phantom{#1}}}
 
@@ -1085,8 +1085,901 @@ Although we restricted ourselves to the \emph{linearized} regime of the field eq
 
 
 %%%%%%%%% BIBLIOGRAPHY %%%%%%%%%
-%% \bibliographystyle{utphys}
-\bibliography{References.bib}
+%% \bibliographystyle{unsrt}
+%% \bibliography{References.bib}
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (0) dotless jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (1) range
+%Control: year (0) verbatim
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{86}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Einstein}(1915)}]{einstein1915feldgleichungen}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Albert}\ \bibnamefont
+  {Einstein}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Die
+  feldgleichungen der gravitation},}\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {Sitzungsber. preuss. Akad. Wiss.}\ }\textbf {\bibinfo
+  {volume} {1}},\ \bibinfo {pages} {844--847} (\bibinfo {year}
+  {1915})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Will}(2014)}]{Will:2014kxa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Clifford~M.}\
+  \bibnamefont {Will}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{The
+  confrontation between Gerenal Relativity and experiment}},}\ }\href {\doibase
+  10.12942/lrr-2014-4} {\bibfield  {journal} {\bibinfo  {journal} {Living Rev.
+  Rel.}\ }\textbf {\bibinfo {volume} {17}},\ \bibinfo {pages} {4} (\bibinfo
+  {year} {2014})},\ \Eprint {http://arxiv.org/abs/1403.7377} {arXiv:1403.7377
+  [gr-qc]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1002.4928;%%
+\bibitem [{\citenamefont {Abbott}\ \emph {et~al.}(2016)\citenamefont {Abbott}
+  \emph {et~al.}}]{Abbott:2016blz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~P.}\ \bibnamefont
+  {Abbott}} \emph {et~al.} (\bibinfo {collaboration} {{Virgo and LIGO
+  scientific}}),\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Observation
+  of gravitational waves from a binary black hole merger}},}\ }\href {\doibase
+  10.1103/PhysRevLett.116.061102} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {116}},\ \bibinfo {pages}
+  {061102} (\bibinfo {year} {2016})},\ \Eprint
+  {http://arxiv.org/abs/1602.03837} {arXiv:1602.03837 [gr-qc]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1602.03837;%%
+\bibitem [{\citenamefont {Cartan}(1922)}]{Cartan1922}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Elie}\ \bibnamefont
+  {Cartan}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Sur une
+  g\'en\'eralisation de la notion de courbure de riemann et les espaces \`a
+  torsion},}\ }\href {http://gallica.bnf.fr/ark:/12148/bpt6k3127j.image.langFR}
+  {\bibfield  {journal} {\bibinfo  {journal} {C. R. Acad. Sci. Paris}\ }\textbf
+  {\bibinfo {volume} {174}},\ \bibinfo {pages} {593} (\bibinfo {year}
+  {1922})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cartan}(1923)}]{Cartan1923}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Elie}\ \bibnamefont
+  {Cartan}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Sur les
+  vari{\'e}t{\'e}s {\`a} connexion affine et la th{\'e}orie de la
+  relativit{\'e} g{\'e}n{\'e}ralis{\'e}e (premi{\`e}re partie)},}\ }\href
+  {http://archive.numdam.org/article/ASENS_1923_3_40__325_0.pdf} {\bibfield
+  {journal} {\bibinfo  {journal} {Ann. Ec. Norm. Super.}\ }\textbf {\bibinfo
+  {volume} {40}},\ \bibinfo {pages} {325} (\bibinfo {year} {1923})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Cartan}(1924)}]{Cartan1924}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Elie}\ \bibnamefont
+  {Cartan}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Sur les
+  vari\'et\'es \`a connexion affine, et la th\'eorie de la relativit\'e
+  g\'en\'eralis\'ee (premi\`ere partie) (suite)},}\ }\href
+  {http://www.numdam.org/numdam-bin/item?id=ASENS_1924_3_41__1_0} {\bibfield
+  {journal} {\bibinfo  {journal} {Ann. Ec. Norm. Super.}\ }\textbf {\bibinfo
+  {volume} {41}},\ \bibinfo {pages} {1} (\bibinfo {year} {1924})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Cartan}(1925)}]{Cartan1925}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Elie}\ \bibnamefont
+  {Cartan}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Sur les
+  vari\'et\'es \`a connexion affine et la th\'eorie de la relativit\'e
+  g\'en\'eralis\'ee, part ii,},}\ }\href
+  {http://www.numdam.org/numdam-bin/item?id=ASENS_1925_3_42__17_0} {\bibfield
+  {journal} {\bibinfo  {journal} {Ann. Ec. Norm. Super.}\ }\textbf {\bibinfo
+  {volume} {42}},\ \bibinfo {pages} {17} (\bibinfo {year} {1925})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {'t~Hooft}(1973)}]{'tHooft:1973us}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Gerard}\ \bibnamefont
+  {'t~Hooft}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{An algorithm
+  for the poles at dimension four in the dimensional regularization
+  procedure}},}\ }\href {\doibase 10.1016/0550-3213(73)90263-0} {\bibfield
+  {journal} {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf {\bibinfo {volume}
+  {62}},\ \bibinfo {pages} {444} (\bibinfo {year} {1973})}\BibitemShut
+  {NoStop}%
+%%CITATION = NUPHA,B62,444;%%
+\bibitem [{\citenamefont {'t~Hooft}\ and\ \citenamefont
+  {Veltman}(1974)}]{'tHooft:1974bx}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Gerard}\ \bibnamefont
+  {'t~Hooft}}\ and\ \bibinfo {author} {\bibfnamefont {M.~J.~G.}\ \bibnamefont
+  {Veltman}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{One loop
+  divergencies in the theory of gravitation}},}\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {Annales Poincare Phys. Theor. A}\ }\textbf
+  {\bibinfo {volume} {20}},\ \bibinfo {pages} {69} (\bibinfo {year}
+  {1974})}\BibitemShut {NoStop}%
+%%CITATION = AHPAA,A20,69;%%
+\bibitem [{\citenamefont {Deser}\ and\ \citenamefont {van
+  Nieuwenhuizen}(1974{\natexlab{a}})}]{Deser:1974cz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Stanley}\ \bibnamefont
+  {Deser}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {van
+  Nieuwenhuizen}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{One Loop
+  Divergences of Quantized Einstein-Maxwell Fields}},}\ }\href {\doibase
+  10.1103/PhysRevD.10.401} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. D}\ }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {401} (\bibinfo
+  {year} {1974}{\natexlab{a}})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,D10,401;%%
+\bibitem [{\citenamefont {Deser}\ and\ \citenamefont {van
+  Nieuwenhuizen}(1974{\natexlab{b}})}]{Deser:1974cy}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Stanley}\ \bibnamefont
+  {Deser}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {van
+  Nieuwenhuizen}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Nonrenormalizability of the Quantized Dirac-Einstein System}},}\ }\href
+  {\doibase 10.1103/PhysRevD.10.411} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {411}
+  (\bibinfo {year} {1974}{\natexlab{b}})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,D10,411;%%
+\bibitem [{\citenamefont {Arnowitt}\ \emph {et~al.}(1959)\citenamefont
+  {Arnowitt}, \citenamefont {Deser},\ and\ \citenamefont
+  {Misner}}]{Arnowitt:1959ah}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Richard~L.}\
+  \bibnamefont {Arnowitt}}, \bibinfo {author} {\bibfnamefont {Stanley}\
+  \bibnamefont {Deser}}, \ and\ \bibinfo {author} {\bibfnamefont {Charles~W.}\
+  \bibnamefont {Misner}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Dynamical Structure and Definition of Energy in General Relativity}},}\
+  }\href {\doibase 10.1103/PhysRev.116.1322} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {116}},\ \bibinfo {pages}
+  {1322} (\bibinfo {year} {1959})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,116,1322;%%
+\bibitem [{\citenamefont {Arnowitt}\ \emph {et~al.}(1960)\citenamefont
+  {Arnowitt}, \citenamefont {Deser},\ and\ \citenamefont
+  {Misner}}]{Arnowitt:1960es}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Richard~L.}\
+  \bibnamefont {Arnowitt}}, \bibinfo {author} {\bibfnamefont {Stanley}\
+  \bibnamefont {Deser}}, \ and\ \bibinfo {author} {\bibfnamefont {Charles~W.}\
+  \bibnamefont {Misner}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Canonical variables for general relativity}},}\ }\href {\doibase
+  10.1103/PhysRev.117.1595} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev.}\ }\textbf {\bibinfo {volume} {117}},\ \bibinfo {pages} {1595} (\bibinfo
+  {year} {1960})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,117,1595;%%
+\bibitem [{\citenamefont {Wheeler}(1964)}]{WheelerGeo}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {John~A.}\ \bibnamefont
+  {Wheeler}},\ }\enquote {\bibinfo {title} {{R}elativity, groups and
+  topology},}\ \ (\bibinfo  {publisher} {Gordon and Breach},\ \bibinfo {year}
+  {1964})\ Chap.\ \bibinfo {chapter} {{G}eometrodynamics and the issue of the
+  final state}, p.\ \bibinfo {pages} {317}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {DeWitt}(1967{\natexlab{a}})}]{DeWitt:1967yk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Bryce~S.}\
+  \bibnamefont {DeWitt}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Quantum Theory of Gravity. 1. The Canonical Theory}},}\ }\href {\doibase
+  10.1103/PhysRev.160.1113} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev.}\ }\textbf {\bibinfo {volume} {160}},\ \bibinfo {pages} {1113} (\bibinfo
+  {year} {1967}{\natexlab{a}})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,160,1113;%%
+\bibitem [{\citenamefont {DeWitt}(1967{\natexlab{b}})}]{DeWitt:1967ub}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Bryce~S.}\
+  \bibnamefont {DeWitt}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Quantum Theory of Gravity. 2. The Manifestly Covariant Theory}},}\ }\href
+  {\doibase 10.1103/PhysRev.162.1195} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {162}},\ \bibinfo {pages}
+  {1195} (\bibinfo {year} {1967}{\natexlab{b}})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,162,1195;%%
+\bibitem [{\citenamefont {DeWitt}(1967{\natexlab{c}})}]{DeWitt:1967uc}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Bryce~S.}\
+  \bibnamefont {DeWitt}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Quantum Theory of Gravity. 3. Applications of the Covariant Theory}},}\
+  }\href {\doibase 10.1103/PhysRev.162.1239} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {162}},\ \bibinfo {pages}
+  {1239} (\bibinfo {year} {1967}{\natexlab{c}})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,162,1239;%%
+\bibitem [{\citenamefont {Gambini}\ and\ \citenamefont
+  {Trias}(1981)}]{Gambini:1980yz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Gambini}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Trias}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{On the
+  Geometrical Origin of Gauge Theories}},}\ }\href {\doibase
+  10.1103/PhysRevD.23.553} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. D}\ }\textbf {\bibinfo {volume} {23}},\ \bibinfo {pages} {553} (\bibinfo
+  {year} {1981})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,D23,553;%%
+\bibitem [{\citenamefont {Gambini}\ and\ \citenamefont
+  {Trias}(1986)}]{Gambini:1986ew}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Rodolfo}\ \bibnamefont
+  {Gambini}}\ and\ \bibinfo {author} {\bibfnamefont {Antoni}\ \bibnamefont
+  {Trias}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Gauge Dynamics
+  in the C Representation}},}\ }\href {\doibase 10.1016/0550-3213(86)90221-X}
+  {\bibfield  {journal} {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf
+  {\bibinfo {volume} {278}},\ \bibinfo {pages} {436} (\bibinfo {year}
+  {1986})}\BibitemShut {NoStop}%
+%%CITATION = NUPHA,B278,436;%%
+\bibitem [{\citenamefont {Ashtekar}(1986)}]{Ashtekar:1986yd}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Ashtekar}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{New Variables
+  for Classical and Quantum Gravity}},}\ }\href {\doibase
+  10.1103/PhysRevLett.57.2244} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {57}},\ \bibinfo {pages}
+  {2244--2247} (\bibinfo {year} {1986})}\BibitemShut {NoStop}%
+%%CITATION = PRLTA,57,2244;%%
+\bibitem [{\citenamefont {Ashtekar}(1987)}]{Ashtekar:1987gu}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Ashtekar}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{New
+  Hamiltonian Formulation of General Relativity}},}\ }\href {\doibase
+  10.1103/PhysRevD.36.1587} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. D}\ }\textbf {\bibinfo {volume} {36}},\ \bibinfo {pages} {1587}
+  (\bibinfo {year} {1987})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,D36,1587;%%
+\bibitem [{\citenamefont {Holst}(1996)}]{Holst:1995pc}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Soren}\ \bibnamefont
+  {Holst}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Barbero's
+  Hamiltonian derived from a generalized Hilbert-Palatini action}},}\ }\href
+  {\doibase 10.1103/PhysRevD.53.5966} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {53}},\ \bibinfo
+  {pages} {5966} (\bibinfo {year} {1996})},\ \Eprint
+  {http://arxiv.org/abs/gr-qc/9511026} {arXiv:gr-qc/9511026 [gr-qc]}
+  \BibitemShut {NoStop}%
+%%CITATION = GR-QC/9511026;%%
+\bibitem [{\citenamefont {Kibble}(1961)}]{Kibble:1961ba}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~W.~B.}\
+  \bibnamefont {Kibble}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Lorentz invariance and the gravitational field}},}\ }\href {\doibase
+  10.1063/1.1703702} {\bibfield  {journal} {\bibinfo  {journal} {J. Math.
+  Phys.}\ }\textbf {\bibinfo {volume} {2}},\ \bibinfo {pages} {212--221}
+  (\bibinfo {year} {1961})}\BibitemShut {NoStop}%
+%%CITATION = JMAPA,2,212;%%
+\bibitem [{\citenamefont {Hehl}\ \emph {et~al.}(1976)\citenamefont {Hehl},
+  \citenamefont {von~der Heyde}, \citenamefont {Kerlick},\ and\ \citenamefont
+  {Nester}}]{Hehl:1976kj}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Friedrich~W.}\
+  \bibnamefont {Hehl}}, \bibinfo {author} {\bibfnamefont {Paul}\ \bibnamefont
+  {von~der Heyde}}, \bibinfo {author} {\bibfnamefont {G.~David}\ \bibnamefont
+  {Kerlick}}, \ and\ \bibinfo {author} {\bibfnamefont {James~M.}\ \bibnamefont
+  {Nester}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {General
+  relativity with spin and torsion: Foundations and prospects},}\ }\href
+  {\doibase 10.1103/RevModPhys.48.393} {\bibfield  {journal} {\bibinfo
+  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo
+  {pages} {393} (\bibinfo {year} {1976})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shapiro}(2002)}]{Shapiro:2001rz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~L.}\ \bibnamefont
+  {Shapiro}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Physical
+  aspects of the space-time torsion}},}\ }\href {\doibase
+  10.1016/S0370-1573(01)00030-8} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rep.}\ }\textbf {\bibinfo {volume} {357}},\ \bibinfo {pages} {113}
+  (\bibinfo {year} {2002})},\ \Eprint {http://arxiv.org/abs/hep-th/0103093}
+  {arXiv:hep-th/0103093 [hep-th]} \BibitemShut {NoStop}%
+%%CITATION = HEP-TH/0103093;%%
+\bibitem [{\citenamefont {Hammond}(2002)}]{Hammond:2002rm}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~T.}\ \bibnamefont
+  {Hammond}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Torsion
+  gravity}},}\ }\href {\doibase 10.1088/0034-4885/65/5/201} {\bibfield
+  {journal} {\bibinfo  {journal} {Rept. Prog. Phys.}\ }\textbf {\bibinfo
+  {volume} {65}},\ \bibinfo {pages} {599} (\bibinfo {year} {2002})}\BibitemShut
+  {NoStop}%
+%%CITATION = RPPHA,65,599;%%
+\bibitem [{\citenamefont {Hehl}\ \emph {et~al.}(1995)\citenamefont {Hehl},
+  \citenamefont {McCrea}, \citenamefont {Mielke},\ and\ \citenamefont
+  {Ne'eman}}]{Hehl:1994ue}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Friedrich~W.}\
+  \bibnamefont {Hehl}}, \bibinfo {author} {\bibfnamefont {J.~Dermott}\
+  \bibnamefont {McCrea}}, \bibinfo {author} {\bibfnamefont {Eckehard~W.}\
+  \bibnamefont {Mielke}}, \ and\ \bibinfo {author} {\bibfnamefont {Yuval}\
+  \bibnamefont {Ne'eman}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Metric affine gauge theory of gravity: Field equations, Noether identities,
+  world spinors, and breaking of dilation invariance}},}\ }\href {\doibase
+  10.1016/0370-1573(94)00111-F} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rep.}\ }\textbf {\bibinfo {volume} {258}},\ \bibinfo {pages} {1--171}
+  (\bibinfo {year} {1995})},\ \Eprint {http://arxiv.org/abs/gr-qc/9402012}
+  {arXiv:gr-qc/9402012 [gr-qc]} \BibitemShut {NoStop}%
+%%CITATION = GR-QC/9402012;%%
+\bibitem [{\citenamefont {Pagani}\ and\ \citenamefont
+  {Percacci}(2015)}]{Pagani:2015ema}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Carlo}\ \bibnamefont
+  {Pagani}}\ and\ \bibinfo {author} {\bibfnamefont {Roberto}\ \bibnamefont
+  {Percacci}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Quantum
+  gravity with torsion and non-metricity}},}\ }\href {\doibase
+  10.1088/0264-9381/32/19/195019} {\bibfield  {journal} {\bibinfo  {journal}
+  {Class. Quant. Grav.}\ }\textbf {\bibinfo {volume} {32}},\ \bibinfo {pages}
+  {195019} (\bibinfo {year} {2015})},\ \Eprint
+  {http://arxiv.org/abs/1506.02882} {arXiv:1506.02882 [gr-qc]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1506.02882;%%
+\bibitem [{\citenamefont {Sezgin}\ and\ \citenamefont {van
+  Nieuwenhuizen}(1980)}]{Sezgin:1979zf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Sezgin}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {van
+  Nieuwenhuizen}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{New Ghost
+  Free Gravity Lagrangians with Propagating Torsion}},}\ }\href {\doibase
+  10.1103/PhysRevD.21.3269} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. D}\ }\textbf {\bibinfo {volume} {21}},\ \bibinfo {pages} {3269}
+  (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,D21,3269;%%
+\bibitem [{\citenamefont {Mannheim}\ and\ \citenamefont
+  {Davidson}(2005)}]{Mannheim:2004qz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Philip~D.}\
+  \bibnamefont {Mannheim}}\ and\ \bibinfo {author} {\bibfnamefont {Aharon}\
+  \bibnamefont {Davidson}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Dirac quantization of the Pais-Uhlenbeck fourth order oscillator}},}\
+  }\href {\doibase 10.1103/PhysRevA.71.042110} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {71}},\ \bibinfo
+  {pages} {042110} (\bibinfo {year} {2005})},\ \Eprint
+  {http://arxiv.org/abs/hep-th/0408104} {arXiv:hep-th/0408104 [hep-th]}
+  \BibitemShut {NoStop}%
+%%CITATION = HEP-TH/0408104;%%
+\bibitem [{\citenamefont {Bender}\ and\ \citenamefont
+  {Mannheim}(2008{\natexlab{a}})}]{Bender:2007wu}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Carl~M.}\ \bibnamefont
+  {Bender}}\ and\ \bibinfo {author} {\bibfnamefont {Philip~D.}\ \bibnamefont
+  {Mannheim}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{No-ghost
+  theorem for the fourth-order derivative Pais-Uhlenbeck oscillator model}},}\
+  }\href {\doibase 10.1103/PhysRevLett.100.110402} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {100}},\
+  \bibinfo {pages} {110402} (\bibinfo {year} {2008}{\natexlab{a}})},\ \Eprint
+  {http://arxiv.org/abs/0706.0207} {arXiv:0706.0207 [hep-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:0706.0207;%%
+\bibitem [{\citenamefont {Smilga}(2009)}]{Smilga:2008pr}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Smilga}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Comments on the
+  dynamics of the Pais-Uhlenbeck oscillator}},}\ }\bibfield  {booktitle} {\emph
+  {\bibinfo {booktitle} {{Proceedings, 7th Workshop on Quantum Physics with
+  Non-Hermitian Operators (PHHQP VII)}}},\ }\href {\doibase
+  10.3842/Sigma.2009.017} {\bibfield  {journal} {\bibinfo  {journal} {SIGMA}\
+  }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages} {017} (\bibinfo {year}
+  {2009})},\ \Eprint {http://arxiv.org/abs/0808.0139} {arXiv:0808.0139
+  [quant-ph]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:0808.0139;%%
+\bibitem [{\citenamefont {Ilhan}\ and\ \citenamefont
+  {Kovner}(2013)}]{Ilhan:2013xe}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Ibrahim~Burak}\
+  \bibnamefont {Ilhan}}\ and\ \bibinfo {author} {\bibfnamefont {Alex}\
+  \bibnamefont {Kovner}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Some Comments on Ghosts and Unitarity: The Pais-Uhlenbeck Oscillator
+  Revisited}},}\ }\href {\doibase 10.1103/PhysRevD.88.044045} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume}
+  {88}},\ \bibinfo {pages} {044045} (\bibinfo {year} {2013})},\ \Eprint
+  {http://arxiv.org/abs/1301.4879} {arXiv:1301.4879 [hep-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1301.4879;%%
+\bibitem [{\citenamefont {Robert}\ and\ \citenamefont
+  {Smilga}(2008)}]{Robert:2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Robert}}\ and\ \bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Smilga}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Supersymmetry
+  versus ghosts}},}\ }\href {\doibase 10.1063/1.2904474} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Math. Phys.}\ }\textbf {\bibinfo {volume} {49}},\
+  \bibinfo {eid} {042104} (\bibinfo {year} {2008}),\
+  10.1063/1.2904474}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Castillo-Felisola}\ and\ \citenamefont
+  {Skirzewski}(2015)}]{Skirzewski:2014eta}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Oscar}\ \bibnamefont
+  {Castillo-Felisola}}\ and\ \bibinfo {author} {\bibfnamefont {Aureliano}\
+  \bibnamefont {Skirzewski}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{A polynomial model of purely affine Gravity}},}\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {Rev. Mex. Fis.}\ }\textbf {\bibinfo {volume}
+  {61}},\ \bibinfo {pages} {421} (\bibinfo {year} {2015})},\ \Eprint
+  {http://arxiv.org/abs/1410.6183} {arXiv:1410.6183 [gr-qc]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1410.6183;%%
+\bibitem [{\citenamefont {Eddington}(1923)}]{Eddington1923math}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Arthur~S.}\
+  \bibnamefont {Eddington}},\ }\href@noop {} {\emph {\bibinfo {title} {The
+  mathematical theory of relativity}}}\ (\bibinfo  {publisher} {Cambridge
+  University Press},\ \bibinfo {year} {1923})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schr{\"o}dinger}(1950)}]{schrodinger1950space}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Erwin}\ \bibnamefont
+  {Schr{\"o}dinger}},\ }\href@noop {} {\emph {\bibinfo {title} {Space-time
+  structure}}}\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo
+  {year} {1950})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lewandowski}\ \emph {et~al.}(2006)\citenamefont
+  {Lewandowski}, \citenamefont {Okolow}, \citenamefont {Sahlmann},\ and\
+  \citenamefont {Thiemann}}]{Lewandowski:2005jk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Jerzy}\ \bibnamefont
+  {Lewandowski}}, \bibinfo {author} {\bibfnamefont {Andrzej}\ \bibnamefont
+  {Okolow}}, \bibinfo {author} {\bibfnamefont {Hanno}\ \bibnamefont
+  {Sahlmann}}, \ and\ \bibinfo {author} {\bibfnamefont {Thomas}\ \bibnamefont
+  {Thiemann}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Uniqueness of
+  diffeomorphism invariant states on holonomy-flux algebras}},}\ }\href
+  {\doibase 10.1007/s00220-006-0100-7} {\bibfield  {journal} {\bibinfo
+  {journal} {Commun. Math. Phys.}\ }\textbf {\bibinfo {volume} {267}},\
+  \bibinfo {pages} {703} (\bibinfo {year} {2006})},\ \Eprint
+  {http://arxiv.org/abs/gr-qc/0504147} {arXiv:gr-qc/0504147 [gr-qc]}
+  \BibitemShut {NoStop}%
+%%CITATION = GR-QC/0504147;%%
+\bibitem [{\citenamefont {McGady}\ and\ \citenamefont
+  {Rodina}(2014)}]{McGady:2013sga}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {David~A.}\
+  \bibnamefont {McGady}}\ and\ \bibinfo {author} {\bibfnamefont {Laurentiu}\
+  \bibnamefont {Rodina}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Higher-spin massless $S$-matrices in four-dimensions}},}\ }\href {\doibase
+  10.1103/PhysRevD.90.084048} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. D}\ }\textbf {\bibinfo {volume} {90}},\ \bibinfo {pages} {084048}
+  (\bibinfo {year} {2014})},\ \Eprint {http://arxiv.org/abs/1311.2938}
+  {arXiv:1311.2938 [hep-th]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1311.2938;%%
+\bibitem [{\citenamefont {Camanho}\ \emph {et~al.}(2014)\citenamefont
+  {Camanho}, \citenamefont {Edelstein}, \citenamefont {Maldacena},\ and\
+  \citenamefont {Zhiboedov}}]{Camanho:2014apa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Xian~O.}\ \bibnamefont
+  {Camanho}}, \bibinfo {author} {\bibfnamefont {Jose~D.}\ \bibnamefont
+  {Edelstein}}, \bibinfo {author} {\bibfnamefont {Juan}\ \bibnamefont
+  {Maldacena}}, \ and\ \bibinfo {author} {\bibfnamefont {Alexander}\
+  \bibnamefont {Zhiboedov}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Causality Constraints on Corrections to the Graviton Three-Point
+  Coupling}},}\ }\href@noop {} {\  (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/1407.5597} {arXiv:1407.5597 [hep-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1407.5597;%%
+\bibitem [{\citenamefont {Diaz}\ \emph {et~al.}(2014)\citenamefont {Diaz},
+  \citenamefont {Higuita},\ and\ \citenamefont {Montesinos}}]{Diaz:2014yua}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Bogar}\ \bibnamefont
+  {Diaz}}, \bibinfo {author} {\bibfnamefont {Daniel}\ \bibnamefont {Higuita}},
+  \ and\ \bibinfo {author} {\bibfnamefont {Merced}\ \bibnamefont
+  {Montesinos}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Lagrangian
+  approach to the physical degree of freedom count}},}\ }\href {\doibase
+  10.1063/1.4903183} {\bibfield  {journal} {\bibinfo  {journal} {J. Math.
+  Phys.}\ }\textbf {\bibinfo {volume} {55}},\ \bibinfo {pages} {122901}
+  (\bibinfo {year} {2014})},\ \Eprint {http://arxiv.org/abs/1406.1156}
+  {arXiv:1406.1156 [hep-th]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1406.1156;%%
+\bibitem [{\citenamefont {Curtright}(1985)}]{Curtright:1980yk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Thomas}\ \bibnamefont
+  {Curtright}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Generalized
+  Gauge Fields}},}\ }\href {\doibase 10.1016/0370-2693(85)91235-3} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Lett. B}\ }\textbf {\bibinfo {volume}
+  {165}},\ \bibinfo {pages} {304} (\bibinfo {year} {1985})}\BibitemShut
+  {NoStop}%
+%%CITATION = PHLTA,B165,304;%%
+\bibitem [{\citenamefont {Buchholz}\ and\ \citenamefont
+  {Fredenhagen}(1977)}]{Buchholz:1976hz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Buchholz}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Fredenhagen}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Dilations
+  and Interaction}},}\ }\href {\doibase 10.1063/1.523370} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Math. Phys.}\ }\textbf {\bibinfo {volume} {18}},\
+  \bibinfo {pages} {1107} (\bibinfo {year} {1977})}\BibitemShut {NoStop}%
+%%CITATION = JMAPA,18,1107;%%
+\bibitem [{\citenamefont {Castillo-Felisola}\ and\ \citenamefont
+  {Skirzewski}()}]{OCF-future3}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Oscar}\ \bibnamefont
+  {Castillo-Felisola}}\ and\ \bibinfo {author} {\bibfnamefont {Aureliano}\
+  \bibnamefont {Skirzewski}},\ }\href@noop {} {\enquote {\bibinfo {title}
+  {{M}etric, torsion, non-metricity and background independence in polynomial
+  affine gravity},}\ }\bibinfo {note} {(in preparation)}\BibitemShut {NoStop}%
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {Despite the suggestive name, this is a $\protect \genfrac
+  {}(){0pt}{2}{0}$-tensor density which does not necessarily satisfy the metric
+  conditions. However, for the simple case of the Einstein--Hilbert action, it
+  is in fact the inverse metric density.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Pop{\l}awski}(2014)}]{Poplawski:2012bw}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Nikodem~J.}\
+  \bibnamefont {Pop{\l}awski}},\ }\bibfield  {title} {\enquote {\bibinfo
+  {title} {{Affine theory of gravitation}},}\ }\href {\doibase
+  10.1007/s10714-013-1625-7} {\bibfield  {journal} {\bibinfo  {journal} {Gen.
+  Rel. Grav.}\ }\textbf {\bibinfo {volume} {46}},\ \bibinfo {pages} {1625}
+  (\bibinfo {year} {2014})},\ \Eprint {http://arxiv.org/abs/1203.0294}
+  {arXiv:1203.0294 [gr-qc]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1203.0294;%%
+\bibitem [{Note2()}]{Note2}%
+  \BibitemOpen
+  \bibinfo {note} {We cross-check our result using the software Cadabra~\cite
+  {Peeters2007550,peeters2007symbolic,Peeters:2007wn}.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Nomizu}\ and\ \citenamefont
+  {Sasaki}(1994)}]{nomizu1994affine}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Katsumi}\ \bibnamefont
+  {Nomizu}}\ and\ \bibinfo {author} {\bibfnamefont {Takeshi}\ \bibnamefont
+  {Sasaki}},\ }\href@noop {} {\emph {\bibinfo {title} {Affine differential
+  geometry}}}\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo
+  {year} {1994})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bryant}()}]{MO-Bryant02}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Robert~L.}\
+  \bibnamefont {Bryant}},\ }\href@noop {} {\enquote {\bibinfo {title}
+  {{S}ymmetries of non-{R}iemannian curvature tensor (answer)},}\ }\bibinfo
+  {howpublished} {{MathOverflow}},\ \bibinfo {note}
+  {{URL}:~\url{http://mathoverflow.net/a/212794/25356} (visited on
+  2015-08-03)}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Besse}(2007)}]{Besse}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Arthur~L.}\
+  \bibnamefont {Besse}},\ }\href@noop {} {\emph {\bibinfo {title} {Einstein
+  manifolds}}}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year}
+  {2007})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bourguignon}(1981)}]{bourguignon1981varietes}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Jean-Pierre}\
+  \bibnamefont {Bourguignon}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {Les vari{\'e}t{\'e}s de dimension 4 {\`a} signature non nulle dont la
+  courbure est harmonique sont d'einstein},}\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {Inventiones mathematicae}\ }\textbf {\bibinfo
+  {volume} {63}},\ \bibinfo {pages} {263} (\bibinfo {year} {1981})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Berger}\ and\ \citenamefont
+  {Ebin}(1969)}]{Berger:1969}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Berger}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Ebin}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {{S}ome decomposition of the
+  space of symmetric tensors on riemannian manifold},}\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Diff. Geom.}\ }\textbf
+  {\bibinfo {volume} {3}} (\bibinfo {year} {1969})}\BibitemShut {NoStop}%
+\bibitem [{Note3()}]{Note3}%
+  \BibitemOpen
+  \bibinfo {note} {A Codazzi tensor is a symmetric $(0,2)$-type tensor, $T$,
+  satisfying the condition \unhbox \voidb@x \hbox {$D_X T(Y,Z) = D_Y
+  T(X,Z)$~\cite {Derdzinski01071983}.}}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Derdzi\'nski}(1985)}]{Derdzinski:1985}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Andrzej}\ \bibnamefont
+  {Derdzi\'nski}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Riemannian
+  manifolds with harmonic curvature},}\ }in\ \href {\doibase
+  10.1007/BFb0075087} {\emph {\bibinfo {booktitle} {Global Differential
+  Geometry and Global Analysis 1984}}},\ \bibinfo {series} {Lecture Notes in
+  Mathematics}, Vol.\ \bibinfo {volume} {1156},\ \bibinfo {editor} {edited by\
+  \bibinfo {editor} {\bibfnamefont {Dirk}\ \bibnamefont {Ferus}}, \bibinfo
+  {editor} {\bibfnamefont {Robert~B.}\ \bibnamefont {Gardner}}, \bibinfo
+  {editor} {\bibfnamefont {Sigurdur}\ \bibnamefont {Helgason}}, \ and\ \bibinfo
+  {editor} {\bibfnamefont {Udo}\ \bibnamefont {Simon}}}\ (\bibinfo  {publisher}
+  {Springer Berlin Heidelberg},\ \bibinfo {year} {1985})\ p.~\bibinfo {pages}
+  {74}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bourguignon}\ and\ \citenamefont
+  {Lawson~Jr}(1982)}]{bourguignon1982yang}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Jean-Pierre}\
+  \bibnamefont {Bourguignon}}\ and\ \bibinfo {author} {\bibfnamefont
+  {H.~Blaine}\ \bibnamefont {Lawson~Jr}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {Yang-mills theory: its physical origins and differential
+  geometric aspects},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle}
+  {Seminar on differential Geometry}}},\ Vol.\ \bibinfo {volume} {102}\
+  (\bibinfo {organization} {Annals of Mathematics Studies},\ \bibinfo {year}
+  {1982})\ p.\ \bibinfo {pages} {395}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nakahara}(2005)}]{Nakahara}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Mikio}\ \bibnamefont
+  {Nakahara}},\ }\href@noop {} {\emph {\bibinfo {title} {Geometry, Topology and
+  Physics}}}\ (\bibinfo  {publisher} {Institute Of Physics},\ \bibinfo {year}
+  {2005})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stephenson}(1958)}]{stephenson1958quadratic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Stephenson}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Quadratic
+  lagrangians and general relativity},}\ }\href {\doibase 10.1007/BF02724929}
+  {\bibfield  {journal} {\bibinfo  {journal} {Il Nuovo Cimento Series 10}\
+  }\textbf {\bibinfo {volume} {9}},\ \bibinfo {pages} {263--269} (\bibinfo
+  {year} {1958})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kilmister}\ and\ \citenamefont
+  {Newman}(1961)}]{kilmister1961use}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
+  {Kilmister}}\ and\ \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Newman}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {The use of
+  algebraic structures in physics},}\ }in\ \href {\doibase
+  10.1017/S0305004100036008} {\emph {\bibinfo {booktitle} {Mathematical
+  Proceedings of the Cambridge Philosophical Society}}},\ Vol.~\bibinfo
+  {volume} {57}\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo
+  {year} {1961})\ p.\ \bibinfo {pages} {851}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yang}(1974)}]{Yang1974}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~N.}\ \bibnamefont
+  {Yang}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Integral formalism
+  for gauge fields},}\ }\href {\doibase 10.1103/PhysRevLett.33.445} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {33}},\ \bibinfo {pages} {445} (\bibinfo {year} {1974})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Zanelli}()}]{JZcomm}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Jorge}\ \bibnamefont
+  {Zanelli}},\ }\href@noop {} {\enquote {\bibinfo {title} {Private
+  communication},}\ }\bibinfo {note} {We thank J.~Zanelli for sharing his
+  personal communications with C.~N.~Yang, and clarify this aspect of the
+  effective model.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Chen}(2010)}]{Chen:2010at}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Pisin}\ \bibnamefont
+  {Chen}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Gauge Theory of
+  Gravity with de Sitter Symmetry as a Solution to the Cosmological Constant
+  Problem and the Dark Energy Puzzle}},}\ }\href {\doibase
+  10.1142/9789814335614_0029, 10.1142/S0217732310034274} {\bibfield  {journal}
+  {\bibinfo  {journal} {Mod. Phys. Lett. A}\ }\textbf {\bibinfo {volume}
+  {25}},\ \bibinfo {pages} {2795} (\bibinfo {year} {2010})},\ \Eprint
+  {http://arxiv.org/abs/1002.4275} {arXiv:1002.4275 [gr-qc]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1002.4275;%%
+\bibitem [{\citenamefont {Kleinert}(1987)}]{Kleinert:1987eb}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Kleinert}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Spontaneous
+  quantum gravity: a soluble model}},}\ }\href {\doibase
+  10.1016/0370-2693(87)90747-7} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Lett. B}\ }\textbf {\bibinfo {volume} {196}},\ \bibinfo {pages} {355}
+  (\bibinfo {year} {1987})}\BibitemShut {NoStop}%
+%%CITATION = PHLTA,B196,355;%%
+\bibitem [{\citenamefont {Bender}\ and\ \citenamefont
+  {Mannheim}(2008{\natexlab{b}})}]{Bender:2008vh}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Carl~M.}\ \bibnamefont
+  {Bender}}\ and\ \bibinfo {author} {\bibfnamefont {Philip~D.}\ \bibnamefont
+  {Mannheim}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Giving up the
+  ghost}},}\ }\href {\doibase 10.1088/1751-8113/41/30/304018} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Phys. A}\ }\textbf {\bibinfo {volume}
+  {41}},\ \bibinfo {pages} {304018} (\bibinfo {year} {2008}{\natexlab{b}})},\
+  \Eprint {http://arxiv.org/abs/0807.2607} {arXiv:0807.2607 [hep-th]}
+  \BibitemShut {NoStop}%
+%%CITATION = ARXIV:0807.2607;%%
+\bibitem [{\citenamefont {Mannheim}(2013)}]{Mannheim:2009zj}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Philip~D.}\
+  \bibnamefont {Mannheim}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{PT symmetry as a necessary and sufficient condition for unitary time
+  evolution}},}\ }\href {\doibase 10.1098/rsta.2012.0060} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phil. Trans. Roy. Soc. Lond. A}\ }\textbf {\bibinfo
+  {volume} {371}},\ \bibinfo {pages} {20120060} (\bibinfo {year} {2013})},\
+  \Eprint {http://arxiv.org/abs/0912.2635} {arXiv:0912.2635 [hep-th]}
+  \BibitemShut {NoStop}%
+%%CITATION = ARXIV:0912.2635;%%
+\bibitem [{\citenamefont {Bekenstein}\ and\ \citenamefont
+  {Majhi}(2015)}]{Bekenstein:2014uwa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Jacob~D.}\
+  \bibnamefont {Bekenstein}}\ and\ \bibinfo {author} {\bibfnamefont
+  {Bibhas~Ranjan}\ \bibnamefont {Majhi}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {{Is the principle of least action a must?}}}\ }\href
+  {\doibase 10.1016/j.nuclphysb.2015.01.015} {\bibfield  {journal} {\bibinfo
+  {journal} {Nucl. Phys. B}\ }\textbf {\bibinfo {volume} {892}},\ \bibinfo
+  {pages} {337} (\bibinfo {year} {2015})},\ \Eprint
+  {http://arxiv.org/abs/1411.2424} {arXiv:1411.2424 [hep-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1411.2424;%%
+\bibitem [{\citenamefont {Weinberg}(1972)}]{weinberg1972gravitation}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Steven}\ \bibnamefont
+  {Weinberg}},\ }\href@noop {} {\emph {\bibinfo {title} {Gravitation and
+  cosmology: principles and applications of the general theory of
+  relativity}}}\ (\bibinfo  {publisher} {Wiley},\ \bibinfo {year}
+  {1972})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Castillo-Felisola}\ \emph {et~al.}()\citenamefont
+  {Castillo-Felisola}, \citenamefont {Orellana},\ and\ \citenamefont
+  {Skirzewski}}]{OCF-future2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Oscar}\ \bibnamefont
+  {Castillo-Felisola}}, \bibinfo {author} {\bibfnamefont {Oscar}\ \bibnamefont
+  {Orellana}}, \ and\ \bibinfo {author} {\bibfnamefont {Aureliano}\
+  \bibnamefont {Skirzewski}},\ }\href@noop {} {\enquote {\bibinfo {title}
+  {Spherically symmetric solutions to the polynomial affine gravity},}\
+  }\bibinfo {note} {(in preparation)}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chen}(2014)}]{Chen:2013kia}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Pisin}\ \bibnamefont
+  {Chen}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Recent Progress
+  in Cosmology and Particle Astrophysics}},}\ }\href {\doibase
+  10.7566/JPSCP.1.011002} {\bibfield  {journal} {\bibinfo  {journal} {JPS Conf.
+  Proc.}\ }\textbf {\bibinfo {volume} {1}},\ \bibinfo {pages} {011002}
+  (\bibinfo {year} {2014})},\ \Eprint {http://arxiv.org/abs/1310.1107}
+  {arXiv:1310.1107 [hep-ph]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1310.1107;%%
+\bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2013)\citenamefont {Chen},
+  \citenamefont {Izumi},\ and\ \citenamefont {Tung}}]{Chen:2013ota}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Pisin}\ \bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {Keisuke}\ \bibnamefont {Izumi}}, \
+  and\ \bibinfo {author} {\bibfnamefont {Nien-En}\ \bibnamefont {Tung}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {{Natural emergence of
+  cosmological constant and dark radiation from the
+  Stephenson-Kilmister-Yang-Camenzind theory of gravity}},}\ }\href {\doibase
+  10.1103/PhysRevD.88.123006} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. D}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo {pages} {123006}
+  (\bibinfo {year} {2013})},\ \Eprint {http://arxiv.org/abs/1304.6334}
+  {arXiv:1304.6334 [gr-qc]} \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1304.6334;%%
+\bibitem [{Note4()}]{Note4}%
+  \BibitemOpen
+  \bibinfo {note} {We want to thank to M.~Blagojevi\'c, B.~Cvetkovi\'c and
+  O.~Mi\v {s}kovi\'c for clarifications in this respect.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Gray}(1978)}]{gray1978einstein}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Alfred}\ \bibnamefont
+  {Gray}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Einstein-like
+  manifolds which are not einstein},}\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {Geometriae dedicata}\ }\textbf {\bibinfo {volume}
+  {7}},\ \bibinfo {pages} {259} (\bibinfo {year} {1978})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont
+  {Derdzi{\'n}ski}(1980)}]{derdzinski1980classification}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Andrzej}\ \bibnamefont
+  {Derdzi{\'n}ski}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {{Classification of certain compact Riemannian manifolds with harmonic
+  curvature and non-parallel Ricci tensor}},}\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {Mathematische Zeitschrift}\ }\textbf
+  {\bibinfo {volume} {172}},\ \bibinfo {pages} {273} (\bibinfo {year}
+  {1980})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Derdzi{\'n}ski}(1982)}]{derdzinski1982compact}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Andrzej}\ \bibnamefont
+  {Derdzi{\'n}ski}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {On
+  compact riemannian manifolds with harmonic curvature},}\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {Mathematische Annalen}\ }\textbf
+  {\bibinfo {volume} {259}},\ \bibinfo {pages} {145} (\bibinfo {year}
+  {1982})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Derdzi{\'n}ski}(1988)}]{derdzinski1988riemannian}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Andrzej}\ \bibnamefont
+  {Derdzi{\'n}ski}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {Riemannian metrics with harmonic curvature on 2-sphere bundles over compact
+  surfaces},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Bulletin de la Soci{\'e}t{\'e} Math{\'e}matique de France}\ }\textbf
+  {\bibinfo {volume} {116}},\ \bibinfo {pages} {133--156} (\bibinfo {year}
+  {1988})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cahen}\ \emph {et~al.}(2000)\citenamefont {Cahen},
+  \citenamefont {Gutt},\ and\ \citenamefont {Rawnsley}}]{cahen2000symplectic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Michel}\ \bibnamefont
+  {Cahen}}, \bibinfo {author} {\bibfnamefont {Simone}\ \bibnamefont {Gutt}}, \
+  and\ \bibinfo {author} {\bibfnamefont {John}\ \bibnamefont {Rawnsley}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Symplectic connections with
+  parallel ricci tensor},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {Banach Center Publications}\ }\textbf {\bibinfo {volume} {51}},\
+  \bibinfo {pages} {31} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jebsen}(1921)}]{Jebsen1921}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J{\o}rg~Tofte}\
+  \bibnamefont {Jebsen}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {Ark. Mat. Ast. Fys.}\ }\textbf {\bibinfo {volume} {15}} (\bibinfo
+  {year} {1921})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Birkhoff}(1923)}]{Birkhoff1923}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Garrett~D.}\
+  \bibnamefont {Birkhoff}},\ }\href@noop {} {\emph {\bibinfo {title}
+  {Relativity and Modern Physics}}}\ (\bibinfo  {publisher} {Harvard University
+  Press},\ \bibinfo {year} {1923})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Alexandrow}(1923)}]{Alexandrow1923}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Alexandrow}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Ann. der Phys.}\ }\textbf {\bibinfo {volume} {72}},\ \bibinfo {pages} {141}
+  (\bibinfo {year} {1923})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Eisland}(1925)}]{Eisland1925}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Eisland}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Trans. Amer. Math. Soc.}\ }\textbf {\bibinfo {volume} {23}},\ \bibinfo
+  {pages} {213} (\bibinfo {year} {1925})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ramaswamy}\ and\ \citenamefont
+  {Yasskin}(1979)}]{Ramaswamy:1979zz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Sriram}\ \bibnamefont
+  {Ramaswamy}}\ and\ \bibinfo {author} {\bibfnamefont {Philip~B.}\ \bibnamefont
+  {Yasskin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Birkhoff
+  theorem for an $R+R^2$ theory of gravity with torsion}},}\ }\href {\doibase
+  10.1103/PhysRevD.19.2264} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. D}\ }\textbf {\bibinfo {volume} {19}},\ \bibinfo {pages} {2264}
+  (\bibinfo {year} {1979})}\BibitemShut {NoStop}%
+%%CITATION = PHRVA,D19,2264;%%
+\bibitem [{\citenamefont {Bergmann}\ \emph {et~al.}(1965)\citenamefont
+  {Bergmann}, \citenamefont {Cahen},\ and\ \citenamefont
+  {Komar}}]{bergmann1965spherically}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~G.}\ \bibnamefont
+  {Bergmann}}, \bibinfo {author} {\bibfnamefont {Michel}\ \bibnamefont
+  {Cahen}}, \ and\ \bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
+  {Komar}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{S}pherically
+  symmetric gravitational fields},}\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Math. Phys.}\ }\textbf {\bibinfo {volume} {6}},\
+  \bibinfo {pages} {1--5} (\bibinfo {year} {1965})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hawking}\ and\ \citenamefont
+  {Ellis}(1973)}]{hawking1973large}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Stephen~W.}\
+  \bibnamefont {Hawking}}\ and\ \bibinfo {author} {\bibfnamefont {George
+  Francis~Rayner}\ \bibnamefont {Ellis}},\ }\href@noop {} {\emph {\bibinfo
+  {title} {The large scale structure of space-time}}}\ (\bibinfo  {publisher}
+  {Cambridge University Press},\ \bibinfo {year} {1973})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Peeters}(2007{\natexlab{a}})}]{Peeters2007550}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Kasper}\ \bibnamefont
+  {Peeters}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Cadabra: a
+  field-theory motivated symbolic computer algebra system},}\ }\href {\doibase
+  http://dx.doi.org/10.1016/j.cpc.2007.01.003} {\bibfield  {journal} {\bibinfo
+  {journal} {Comput. Phys. Commun.}\ }\textbf {\bibinfo {volume} {176}},\
+  \bibinfo {pages} {550} (\bibinfo {year} {2007}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Peeters}(2007{\natexlab{b}})}]{peeters2007symbolic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Kasper}\ \bibnamefont
+  {Peeters}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Symbolic field
+  theory with cadabra},}\ }\href
+  {http://www.fachgruppe-computeralgebra.de/CA-Rundbrief/car41.pdf} {\bibfield
+  {journal} {\bibinfo  {journal} {Computeralgebra Rundbrief}\ }\textbf
+  {\bibinfo {volume} {41}},\ \bibinfo {pages} {16} (\bibinfo {year}
+  {2007}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Peeters}(2007{\natexlab{c}})}]{Peeters:2007wn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Kasper}\ \bibnamefont
+  {Peeters}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Introducing
+  Cadabra: A Symbolic computer algebra system for field theory problems}},}\
+  }\href@noop {} {\  (\bibinfo {year} {2007}{\natexlab{c}})},\ \Eprint
+  {http://arxiv.org/abs/hep-th/0701238} {arXiv:hep-th/0701238 [hep-th]}
+  \BibitemShut {NoStop}%
+%%CITATION = HEP-TH/0701238;%%
+\bibitem [{\citenamefont {Derdzi{\'n}ski}\ and\ \citenamefont
+  {Shen}(1983)}]{Derdzinski01071983}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Andrzej}\ \bibnamefont
+  {Derdzi{\'n}ski}}\ and\ \bibinfo {author} {\bibfnamefont {Chun-Li}\
+  \bibnamefont {Shen}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {Codazzi tensor fields, curvature and pontryagin forms},}\ }\href {\doibase
+  10.1112/plms/s3-47.1.15} {\bibfield  {journal} {\bibinfo  {journal}
+  {Proceedings of the London Mathematical Society}\ }\textbf {\bibinfo {volume}
+  {s3-47}},\ \bibinfo {pages} {15} (\bibinfo {year} {1983})}\BibitemShut
+  {NoStop}%
+\end{thebibliography}%
 
 
 \end{document}
